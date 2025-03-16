@@ -1,0 +1,23 @@
+{% for item in params.items %}
+<div class="lthc-card{% if params.classes %} {{ params.classes }}{% endif %}">
+
+  <div class="lthc-card__heading">
+    <h3 class="lthc-card__title govuk-heading-m">{{ item.name }}</h3>
+  </div>
+
+  <div class="lthc-card__content">
+
+    <p class="govuk-body">{{ item.description | safe }}</p>
+
+    <p class="govuk-body">
+      {% if item.url | startsWithHttps %}
+        <a class="govuk-link govuk-link--no-visited-state" href="{{ item.url }}" rel="noopener noreferrer" target="_blank">{{ item.urlText }}<span class="govuk-visually-hidden"> (opens in a new tab)</span></a>
+      {% else %}
+        <a class="govuk-link govuk-link--no-visited-state" href="{{ item.url }}">{{ item.urlText }}</a>
+      {% endif %}
+    </p>
+
+  </div>
+
+</div>
+{% endfor %}

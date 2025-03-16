@@ -1,0 +1,36 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}{{ application.name }} - GOV.UK{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    "href": "/stretch/your-applications/",
+    "text": "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">{{ application.name }}</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <p class="govuk-body">View the details of your application, including its status, key dates, and any required actions.</p>
+
+      {% include "includes/application-details.njk" ignore missing %}
+
+      {% include "includes/application-payment-details.njk" ignore missing %}
+
+      {% include "includes/application-content.njk" ignore missing %}
+
+   </div>
+
+  </div>
+
+{% endblock %}

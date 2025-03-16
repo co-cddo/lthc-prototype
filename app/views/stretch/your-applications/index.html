@@ -1,0 +1,172 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Your applications - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Your applications</h1>
+      <p class="govuk-body govuk-!-margin-bottom-7">Help track progress of your applications, understand requirements and take the next steps easily.</p>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-!-padding-right-6">
+
+        {% set statusClassesLookup = {
+          "approved": "govuk-tag--green govuk-!-margin-bottom-1",
+          "decision pending": "govuk-tag--light-blue govuk-!-margin-bottom-1",
+          "action needed": "govuk-tag--yellow govuk-!-margin-bottom-1",
+          "rejected": "govuk-tag--red govuk-!-margin-bottom-1"
+        } %}
+
+        {% set currentApplications = [] %}
+        {% set progressingApplications = [] %}
+        {% set previousApplications = [] %}
+
+        {% for item in supportApplications %}
+
+          {% if (item.type == "current") %}
+
+            {% set currentApplications = currentApplications | merge([item]) %}
+
+          {% elif item.type == "progressing" %}
+
+           {% set progressingApplications = progressingApplications | merge([item]) %}
+
+          {% else %}
+
+            {% set previousApplications = previousApplications | merge([item]) %}
+
+          {% endif %}
+
+        {% endfor %}
+
+        {% if currentApplications | length > 0 %}
+          <h2 class="govuk-heading-l">Support you currently receive</h2>
+          {% for item in currentApplications %}
+            {% set statusLower = item.status | lower %}
+            {% set statusClasses = statusClassesLookup[statusLower] or "govuk-tag--grey govuk-!-margin-bottom-1" %}
+            {% set status = govukTag({ classes: statusClasses, text: item.status }) %}
+
+            {% if item.statusOverview %}
+              {% set status = status + "<p class='govuk-body'>" + item.statusOverview + "</p>" %}
+            {% endif %}
+
+            {% set rows = [
+              { "key": { "text": "Status" }, "value": { "html": status } },
+              { "key": { "text": "Reference" }, "value": { "html": item.id } },
+              { "key": { "text": "Date received" }, "value": { "html": item.dateReceived | friendlyDateLong } }
+            ] %}
+
+            {% if item.dateRejected %}
+              {% set rows = rows | merge([{ "key": { "text": "Date rejected" }, "value": { "html": item.dateRejected | friendlyDateLong } }]) %}
+            {% endif %}
+
+            {% if item.dateDeadline %}
+              {% set rows = rows | merge([{ "key": { "text": "Deadline date" }, "value": { "html": item.dateDeadline | friendlyDateLong } }]) %}
+            {% endif %}
+
+            {{ govukSummaryList({
+              card: {
+                title: { text: item.name },
+                actions: {
+                  items: [
+                    { classes: "govuk-link--no-visited-state", href: "/stretch/your-applications/" + item.id | upper + "/", text: "View application" }
+                  ]
+                }
+              },
+              rows: rows
+            }) }}
+          {% endfor %}
+        {% endif %}
+
+        {% if progressingApplications | length > 0 %}
+          <h2 class="govuk-heading-l govuk-!-margin-top-7">Applications in progress</h2>
+          {% for item in progressingApplications %}
+            {% set statusLower = item.status | lower %}
+            {% set statusClasses = statusClassesLookup[statusLower] or "govuk-tag--grey govuk-!-margin-bottom-1" %}
+            {% set status = govukTag({ classes: statusClasses, text: item.status }) %}
+
+            {% if item.statusOverview %}
+              {% set status = status + "<p class='govuk-body'>" + item.statusOverview + "</p>" %}
+            {% endif %}
+
+            {% set rows = [
+              { "key": { "text": "Status" }, "value": { "html": status } },
+              { "key": { "text": "Reference" }, "value": { "html": item.id } },
+              { "key": { "text": "Date received" }, "value": { "html": item.dateReceived | friendlyDateLong } }
+            ] %}
+
+            {% if item.dateRejected %}
+              {% set rows = rows | merge([{ "key": { "text": "Date rejected" }, "value": { "html": item.dateRejected | friendlyDateLong } }]) %}
+            {% endif %}
+
+            {% if item.dateDeadline %}
+              {% set rows = rows | merge([{ "key": { "text": "Deadline date" }, "value": { "html": item.dateDeadline | friendlyDateLong } }]) %}
+            {% endif %}
+
+            {{ govukSummaryList({
+              card: {
+                title: { text: item.name },
+                actions: {
+                  items: [
+                    { classes: "govuk-link--no-visited-state", href: "/stretch/your-applications/" + item.id | upper + "/", text: "View application" }
+                  ]
+                }
+              },
+              rows: rows
+            }) }}
+          {% endfor %}
+        {% endif %}
+
+        {% if previousApplications | length > 0 %}
+          <h2 class="govuk-heading-l govuk-!-margin-top-7">Previous support or applications</h2>
+          {% for item in previousApplications %}
+            {% set statusLower = item.status | lower %}
+            {% set statusClasses = statusClassesLookup[statusLower] or "govuk-tag--grey govuk-!-margin-bottom-1" %}
+            {% set status = govukTag({ classes: statusClasses, text: item.status }) %}
+
+            {% if item.statusOverview %}
+              {% set status = status + "<p class='govuk-body'>" + item.statusOverview + "</p>" %}
+            {% endif %}
+
+            {% set rows = [
+              { "key": { "text": "Status" }, "value": { "html": status } },
+              { "key": { "text": "Reference" }, "value": { "html": item.id } },
+              { "key": { "text": "Date received" }, "value": { "html": item.dateReceived | friendlyDateLong } }
+            ] %}
+
+            {% if item.dateRejected %}
+              {% set rows = rows | merge([{ "key": { "text": "Date rejected" }, "value": { "html": item.dateRejected | friendlyDateLong } }]) %}
+            {% endif %}
+
+            {% if item.dateDeadline %}
+              {% set rows = rows | merge([{ "key": { "text": "Deadline date" }, "value": { "html": item.dateDeadline | friendlyDateLong } }]) %}
+            {% endif %}
+
+            {{ govukSummaryList({
+              card: {
+                title: { text: item.name },
+                actions: {
+                  items: [
+                    { classes: "govuk-link--no-visited-state", href: "/stretch/your-applications/" + item.id | upper + "/", text: "View application" }
+                  ]
+                }
+              },
+              rows: rows
+            }) }}
+          {% endfor %}
+        {% endif %}
+
+      </div>
+
+    </div>
+
+  </div>
+
+{% endblock %}

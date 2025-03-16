@@ -1,0 +1,122 @@
+{% extends "layouts/browse.html" %}
+
+{% set heading = "Support if you’ve been given a fit note by a healthcare professional" %}
+{% set body    = "If you have a fit note you may be able to get additional support to help you stay in work or return to work." %}
+
+{% block pageTitle %}Support if you’ve been given a fit note by a healthcare professional - GOV.UK{% endblock %}
+
+{% block main %}
+
+  {% include "includes/browse-breadcrumb.njk" ignore missing %}
+
+  <main id="main-content" role="main">
+
+    <div class="browse__header-wrapper govuk-!-margin-bottom-7">
+      <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <div class="gem-c-heading gem-c-heading--inverse govuk-!-margin-bottom-6">
+              <h1 class="gem-c-heading__text govuk-heading-xl">{{ heading }}</h1>
+            </div>
+            <p class="gem-c-lead-paragraph gem-c-lead-paragraph--inverse govuk-body-l govuk-!-margin-bottom-2">{{ body }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-width-container">
+
+      {% block content %}
+
+        <div class="govuk-grid-row">
+
+          <div class="govuk-grid-column-two-thirds">
+
+            {{ govukAccordion({
+              classes: "govuk-!-margin-bottom-0",
+              id: "accordion-with-summary-sections",
+              items: [
+                {
+                  heading: {
+                    text: "Money and benefits"
+                  },
+                  summary: {
+                    text: "Financial help you may be able to get."
+                  },
+                  content: {
+                    html:
+                    '<ul class="govuk-list govuk-list--spaced">
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/work/sick-leave-and-sick-pay/check-if-you-can-get-sick-pay/" rel="nofollow external">Check if you can get sick pay</a></li>
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/benefits-calculators/">Check other benefits you can get while on sick leave</a></li>
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/work/sick-leave-and-sick-pay/getting-money-after-your-sick-pay-runs-out/" rel="nofollow external">Getting money after your sick pay runs out</a></li>
+                    </ul>'
+                  }
+                },
+                {
+                  heading: {
+                    text: "Dealing with your employer"
+                  },
+                  summary: {
+                    text: "Understand your rights and get help with your employment."
+                  },
+                  content: {
+                    html:
+                    '<ul class="govuk-list govuk-list--spaced">
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/taking-sick-leave/">Taking sick leave</a></li>
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/access-to-work/">Access to Work - get support if you have a disability or health condition</a></li>
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/reasonable-adjustments-for-disabled-workers/">Reasonable adjustments for workers with disabilities or health conditions</a></li>
+                    </ul>'
+                  }
+                },
+                {
+                  heading: {
+                    text: "Managing your health"
+                  },
+                  summary: {
+                    text: "Help if your health condition or disability is stopping you from working."
+                  },
+                  content: {
+                    html:
+                    '<ul class="govuk-list govuk-list--spaced">
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="#0">NHS working well</a></li>
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="#0">Mental health counselling</a></li>
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="#0">NHS Sleepio</a></li>
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="#0">Talking Therapies</a></li>
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="#0">Pain Management</a></li>
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="#0">Personal Health Budget</a></li>
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="#0">Occupational health support</a></li>
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="#0">Blue Badge Scheme</a></li>
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="#0">Disabled Facilities Grants</a></li>
+                    </ul>'
+                  }
+                },
+                {
+                  heading: {
+                    text: "Legal advice and other support"
+                  },
+                  summary: {
+                    text: "Organisations that may be able to help you."
+                  },
+                  content: {
+                    html:
+                    '<ul class="govuk-list govuk-list--spaced">
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="#0">Citizens Advice</a></li>
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="#0">ACAS</a></li>
+                      <li><a class="govuk-link govuk-link--no-visited-state" href="#0">Find support groups near you</a></li>
+                    </ul>'
+                  }
+                }
+              ]
+            }) }}
+
+          </div>
+
+        </div>
+
+      {% endblock %}
+
+    </div>
+
+  </main>
+
+{% endblock %}

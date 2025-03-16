@@ -1,0 +1,69 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Give consent to share your information - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Give consent to share your information</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <p class="govuk-body">To personalise your results, we will need to share:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Your medical information from the NHS</li>
+        <li>Your benefits information from the DWP</li>
+      </ul>
+
+      <p class="govuk-body">This information will only be used to:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Check what benefits and support you may be entitled to</li>
+        <li>Connect you with relevant resources</li>
+      </ul>
+
+      {# replace with a form tag #}
+      <div class="govuk-!-margin-top-6">
+
+        {{ govukRadios({
+          "name": "consent-v2",
+          "id": "consent-v2",
+          "fieldset": {
+            "legend": {
+              "text": "Do you consent to sharing your information?",
+              "isPageHeading": true,
+              "classes": "govuk-fieldset__legend--m"
+            }
+          },
+          "hint": {
+            "text": "We will use your information to check what benefits and support you may be\neligible for."
+          },
+          "items": [
+            {
+              "value": "yes",
+              "html": 'Yes<span class="govuk-visually-hidden">, I give my consent</span>'
+            },
+            {
+              "value": "no",
+              "html": 'No<span class="govuk-visually-hidden">, I don’t give my consent</span>'
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          "text": "Continue"
+        }) }}
+
+      </div>
+
+    </div>
+
+  </div>
+
+{% endblock %}

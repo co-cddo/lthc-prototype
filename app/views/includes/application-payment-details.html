@@ -1,0 +1,46 @@
+{% if application.paymentDetails %}
+
+  {% set rows = [] %}
+
+  {% for item in application.paymentDetails %}
+
+    {% if item.firstPaymentDate %}
+      {% set rows = rows | merge([{
+        "key": { "text": "First payment" },
+        "value": { "html": item.firstPaymentDate | friendlyDateLong }
+      }]) %}
+    {% endif %}
+
+    {% if item.paymentAmount %}
+      {% set rows = rows | merge([{
+        "key": { "text": "Payment amount" },
+        "value": { "html": item.paymentAmount }
+      }]) %}
+    {% endif %}
+
+    {% if item.nextPaymentDate %}
+      {% set rows = rows | merge([{
+        "key": { "text": "Next payment date" },
+        "value": { "html": item.nextPaymentDate | friendlyDateLong }
+      }]) %}
+    {% endif %}
+
+    {% if item.paymentMethod %}
+      {% set rows = rows | merge([{
+        "key": { "text": "Payment method" },
+        "value": { "html": item.paymentMethod }
+      }]) %}
+    {% endif %}
+
+  {% endfor %}
+
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+  <h2 class="govuk-heading-l">Payment details</h2>
+
+  {{ govukSummaryList({
+    "classes": "govuk-summary-list--no-border",
+    "rows": rows
+  }) }}
+
+{% endif %}

@@ -1,0 +1,66 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Get support for your long term health condition or disability - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Get support for your long term health condition or disability</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <p class="govuk-body">This service helps you find benefits, support, and resources tailored to your long-term health condition.</p>
+
+      <p class="govuk-body">To give you the most accurate recommendations, we will need to share some of your information:</p>
+
+      <p class="govuk-body">What we’ll use:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Your medical information from the NHS</li>
+        <li>Benefits information from the Department for Work and Pensions</li>
+      </ul>
+
+      <p class="govuk-body">You will be asked to consent to share your data once you sign in.</p>
+
+      <h2 class="govuk-heading-m">Before you start</h2>
+
+      <p class="govuk-body">You’ll need a GOV.UK One Login to use this service. If you do not have a GOV.UK One Login, you can create one.</p>
+
+      {{ govukButton({
+        classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-0",
+        text: "Start now",
+        isStartButton: true
+      }) }}
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      {{ lthcRelatedNavigation({
+        title: "Related content",
+        links: [
+          { href: "#0", text: "Benefits calculators" },
+          { href: "#0", text: "Housing benefits and support" },
+          { href: "#0", text: "Local authority support services" },
+          { href: "#0", text: "Help with health costs" },
+          { href: "#0", text: "Citizen’s advice legal aid" }
+        ],
+        "sections": [
+          {
+            id: "collection",
+            heading: "Collection",
+            links: [
+              { href: "#0", text: "Employment and Support Allowance" },
+              { href: "#0", text: "Disability Living Allowance" }
+            ]
+          }
+        ]
+      }) }}
+    </div>
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "layouts/base.html" %}
+
+{% block main %}
+
+  {% include "includes/browse-breadcrumb.html" ignore missing %}
+
+  <main id="main-content" role="main">
+
+    <div class="browse__header-wrapper govuk-!-margin-bottom-7">
+      <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <div class="gem-c-heading gem-c-heading--inverse govuk-!-margin-bottom-6">
+              <h1 class="gem-c-heading__text govuk-heading-xl">{{ heading}}</h1>
+            </div>
+            <p class="gem-c-lead-paragraph gem-c-lead-paragraph--inverse govuk-body-l govuk-!-margin-bottom-2">{{ body }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-width-container">
+      {% block content %}{% endblock %}
+    </div>
+
+  </main>
+
+{% endblock %}

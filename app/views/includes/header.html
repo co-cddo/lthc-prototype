@@ -1,0 +1,51 @@
+{% set homepageUrl = "/" %}
+
+{% if headerType == "signedin" %}
+
+  {{ govukHeader({
+    homepageUrl: homepageUrl,
+    classes: "govuk-header--full-width-border"
+  }) }}
+
+  {% if serviceNav %}
+    {{ govukServiceNavigation({
+      serviceName: "Long term health condition",
+      serviceUrl: "/stretch/",
+      navigation: [
+        {
+          href: "/stretch/your-applications/",
+          text: "Your applications",
+          active: (currentPage == "your-applications")
+        },
+        {
+          href: "/stretch/your-timeline/",
+          text: "Your timeline",
+          active:  (currentPage == "your-timeline")
+        }
+      ]
+    }) }}
+  {% endif %}
+
+{% elif headerType == "signedout" %}
+
+  {{ lthcLayoutSuperNavigationHeader() }}
+
+  {% if not browse %}
+    <div class="gem-c-layout-for-public__blue-bar govuk-width-container"></div>
+  {% endif %}
+
+{% elif headerType == "simple" %}
+
+  {{ govukHeader({
+    homepageUrl: homepageUrl,
+    serviceName: serviceName if serviceName,
+    serviceUrl: serviceUrl if serviceUrl
+  }) }}
+
+{% else %}
+
+  {{ govukHeader({
+    homepageUrl: homepageUrl
+  }) }}
+
+{% endif %}

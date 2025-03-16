@@ -1,0 +1,18 @@
+<div class="lthc-timeline{% if params.classes %} {{ params.classes }}{% endif %}">
+
+  {% for item in params.items %}
+    <div class="lthc-timeline__item">
+
+      <div class="lthc-timeline__heading">
+        <h3 class="lthc-timeline__title govuk-heading-m">{{ item.title }}</h3>
+        <time class="govuk-body-s govuk-text--secondary" datetime="{{ item.date }}">{{ item.date | friendlyDateLong }}</time>
+      </div>
+
+      <div class="lthc-timeline__content">
+        {{ item.content | formatContent | safe }}
+      </div>
+
+    </div>
+  {% endfor %}
+
+</div>

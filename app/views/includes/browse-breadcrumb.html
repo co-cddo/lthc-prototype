@@ -1,0 +1,25 @@
+{# Breadcrumb #}
+<div class="browse__breadcrumb-wrapper">
+
+  <div class="govuk-width-container">
+
+    <div class="browse__breadcrumb-border"></div>
+
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-full">
+
+        {% block beforeContent %}
+          {{ govukBreadcrumbs({
+            classes: "govuk-breadcrumbs--inverse gem-c-breadcrumbs govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile gem-c-breadcrumbs--inverse",
+            items: breadcrumbs
+          }) }}
+        {% endblock %}
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

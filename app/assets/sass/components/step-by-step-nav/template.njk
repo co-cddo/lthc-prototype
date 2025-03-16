@@ -1,0 +1,37 @@
+<div id="step-by-step-navigation" class="gem-c-step-nav js-hidden gem-c-step-nav--large{% if params.classes %} {{ params.classes }}{% endif %}" data-module="gemstepnav" data-show-text="Show" data-hide-text="Hide" data-show-all-text="Show all steps" data-hide-all-text="Hide all steps">
+  <ol class="gem-c-step-nav__steps">
+    {% set stepNumber = 1 %}
+    {% for step in steps %}
+      <li class="gem-c-step-nav__step js-step" id="{{ step.id }}" data-track-count="stepNavSection">
+        <div class="gem-c-step-nav__header js-toggle-panel" data-position="{{ loop.index }}">
+          <h2 class="gem-c-step-nav__title">
+            <span class="gem-c-step-nav__circle{% if step.type == 'number' %} gem-c-step-nav__circle--number{% endif %}{% if step.type == 'logic' %} gem-c-step-nav__circle--logic{% endif %}">
+              <span class="gem-c-step-nav__circle-inner">
+                <span class="gem-c-step-nav__circle-background">
+                  {% if step.type == 'number' %}
+                    <span class="gem-c-step-nav__circle-step-label govuk-!-display-none-print visuallyhidden">Step</span>
+                    {{ stepNumber }}<span class="gem-c-step-nav__circle-step-colon govuk-!-display-none-print visuallyhidden" aria-hidden="true">:</span>
+                    {% set stepNumber = stepNumber + 1 %}
+                  {% else %}
+                    {{ step.text }}
+                  {% endif %}
+                </span>
+              </span>
+            </span>
+            <span class="js-step-title">{{ step.title }}</span>
+          </h2>
+        </div>
+
+        <div class="gem-c-step-nav__panel js-panel" id="step-panel-{{ step.id }}-{{ loop.index }}">
+          {% if step.content is iterable and step.content is not string %}
+            {% for paragraph in step.content %}
+              {{ paragraph | safe }}
+            {% endfor %}
+          {% else %}
+            <p class="gem-c-step-nav__paragraph">{{ step.content | safe }}</p>
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+</div>

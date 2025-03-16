@@ -1,0 +1,379 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Get help if you’re taking time off work due to a health condition - GOV.UK{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script type="text/javascript">
+    var $element = document.querySelector('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav($element).init()
+  </script>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Get help if you’re taking time off work due to a health condition</h1>
+
+      <p class="govuk-body">How to use your fit note to get sick pay and other benefits. Also get support to return to work, and what to do if you cannot return to work.</p>
+
+      {% set stepOne %}
+        <p class="govuk-body">You need to do this to claim sick pay.</p>
+        <p class="govuk-body">You can scan it and email it to your employer. Or you can forward them a digital copy.</p>
+        <h3 class="govuk-heading-s" id="ask-your-employer-if-you-will-get-sick-pay">Ask your employer if you’ll get sick pay</h3>
+        <p class="govuk-body">Some employers have their own sick pay scheme and you may get full pay for a period of time.</p>
+        <p class="govuk-body">If your employer does not have its own sick pay scheme, check if you’re eligible for <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/statutory-sick-pay/what-youll-get/">Statutory Sick Pay (SSP)</a>.</p>
+        <p class="govuk-body">SSP is £116.75 for 26 weeks.</p>
+        <p class="govuk-body">If you’re not eligible for sick pay, check <a class="govuk-link govuk-link--no-visited-state" href="#step-three">other benefits</a> you can get.</p>
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/work/sick-leave-and-sick-pay/check-if-you-can-get-sick-pay/" rel="nofollow external">Check if you can get sick pay</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/work/sick-leave-and-sick-pay/how-to-get-sick-pay/" rel="nofollow external">How to to get sick pay</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/work/sick-leave-and-sick-pay/getting-sick-pay-when-youre-pregnant/" rel="nofollow external">Getting sick pay if you’re pregnant</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/work/sick-leave-and-sick-pay/if-your-employer-refuses-to-pay-you-sick-pay/" rel="nofollow external">If your employer refuses to pay you sick pay</a></li>
+        </ul>
+      {% endset %}
+
+      {% set stepTwo %}
+        <p class="govuk-body">Employers can contact you during sick leave but the amount of contact should be reasonable.</p>
+        <p class="govuk-body">You do not have to tell them private and confidential information, if you do not want to.</p>
+        <p class="govuk-body">Agree what’s appropriate between you. If the contact is too overwhelming for you, you can say that.</p>
+        <p class="govuk-body">You could also have a friend of family member who liaises with your employer on your behalf instead.</p>
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://acas.org.uk/keeping-in-touch-during-absence/" rel="nofollow external">Keeping in touch during absence</a></li>
+        </ul>
+      {% endset %}
+
+      {% set stepThree %}
+        <p class="govuk-body">You may get benefits if:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>you need help on top of sick pay</li>
+          <li>you’re not eligible for sick pay</li>
+          <li>sick pay has ended</li>
+        </ul>
+        <p class="govuk-body">Use a <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/benefits-calculators/">benefits calculator</a> to work out which benefits you could get and how much you might receive each week.</p>
+        <p class="govuk-body">You might also be eligible for other help as well as benefits.</p>
+        <h3 class="govuk-heading-s" id="health-costs">Health costs</h3>
+        <p class="govuk-body">Get help with <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/help-nhs-costs/">NHS prescriptions, dental treatment, eye tests and other costs</a>.</p>
+        <h3 class="govuk-heading-s" id="bills">Bills</h3>
+        <p class="govuk-body">Get help with the <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/cost-of-living/">cost of living if you have a health condition or disability</a>.</p>
+        <p class="govuk-body">For example you might be able to get:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>your water bill capped through the <a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/consumer/water/problems-with-paying-your-water-bill/watersure-scheme-help-with-paying-water-bills/" rel="nofollow external">Watersure scheme</a></li>
+          <li>£150 off energy bills with the <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/the-warm-home-discount-scheme/">Warm Home Discount Scheme</a></li>
+          <li>a discount on your <a class="govuk-link govuk-link--no-visited-state" href="https://ofcom.org.uk/phones-and-broadband/saving-money/social-tariffs/" rel="nofollow external">broadband bills</a>, if you’re claiming benefits</li>
+        </ul>
+        <h3 class="govuk-heading-s" id="travel">Travel</h3>
+        <p class="govuk-body">You may get help with <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/financial-help-disabled/vehicles-and-transport/">transport costs</a> if you have a disability.</p>
+      {% endset %}
+
+      {% set stepFour %}
+        <p class="govuk-body">Talk with your healthcare professional about support you can get for your condition.</p>
+        <p class="govuk-body">You might qualify for a <a class="govuk-link govuk-link--no-visited-state" href="https://nhs.uk/nhs-services/help-with-health-costs/what-is-a-personal-health-budget/" rel="nofollow external">personal health budget</a> from the NHS to support you with treatment, equipment and personal care.</p>
+        <p class="govuk-body">If you’re eligible for, an NHS local team will work with you to plan how to spend the money on your care.</p>
+        <h3 class="govuk-heading-s">Help with specific conditions</h3>
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://rcseng.ac.uk/patient-care/recovering-from-surgery/" rel="nofollow external">Recovering from surgery</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://action-on-pain.co.uk/" rel="nofollow external">Help with managing pain</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://nhs.uk/mental-health/advice-for-life-situations-and-events/return-to-work-after-mental-health-issues/" rel="nofollow external">Returning to work after mental health issues</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://nhs.uk/nhs-services/mental-health-services/find-nhs-talking-therapies-for-anxiety-and-depression/" rel="nofollow external">Find NHS talking therapies for anxiety and depression</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://macmillan.org.uk/cancer-information-and-support/impacts-of-cancer/work-and-cancer/" rel="nofollow external">Work and cancer</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://csp.org.uk/documents/making-reasonable-adjustments/" rel="nofollow external">Reasonable-adjustments advice from Chartered Society of Physiotherapy</a></li>
+        </ul>
+      {% endset %}
+
+      {% set stepFive %}
+        <p class="govuk-body">Discuss with them if you’re able to return to work.</p>
+        <p class="govuk-body">You can go back earlier than the end date on your fit note if you’re well enough. You do not have to see a healthcare professional again to go back to work.</p>
+        <p class="govuk-body">You employer must discuss with you how they can help you return.</p>
+        <p class="govuk-body">You can use the <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/government/publications/health-adjustment-passport/">Health Adjustments Passport</a> form when talking with your employer.</p>
+        <p class="govuk-body">It helps you identify what help or changes you need to return to work or stay in work. For example, you may:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>need a <a class="govuk-link govuk-link--no-visited-state" href="https://acas.org.uk/returning-to-work-after-absence/phased-return-to-work/" rel="nofollow external">phased return</a>, flexible or part-time working</li>
+          <li>need some <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/reasonable-adjustments-for-disabled-workers/">reasonable adjustments</a> before you can go back</li>
+          <li>want to apply for an <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/access-to-work/">Access to Work</a> grant, which will pay for support you need to stay in your job</li>
+          <li>speak to an occupational health adviser in your organisation</li>
+          <li>have to meet certain rules before you can return after illness, for example, if you drive a lorry or bus, <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/driving-medical-conditions/">find out about driving with a medical condition</a></li>
+        </ul>
+        <p class="govuk-body">If your employer wants to dismiss you on sick leave, read about <a class="govuk-link govuk-link--no-visited-state" href="#step-nine">your rights</a>.</p>
+        <p class="govuk-body">There are also organisations who can advise and help you liaise with your employer:</p>
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/work/negotiating-with-your-employer/dealing-with-a-problem-at-work/" rel="nofollow external">Get help with talking to your employer from Citizens Advice</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://acas.org.uk/returning-to-work-after-absence/" rel="nofollow external">Get free advice on returning to work after absence from ACAS</a></li>
+        </ul>
+      {% endset %}
+
+      {% set stepSix %}
+        <p class="govuk-body">When you’re back, your employer may set up a return to work meeting.</p>
+        <p class="govuk-body">These are usually just an informal chat about:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>anything that’s changed at work while you were off</li>
+          <li>support you may need</li>
+          <li>what you’d like other employees to know about your absence</li>
+          <li>what must stay confidential</li>
+        </ul>
+        <p class="govuk-body">You should also discuss with your employer:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>whether you can have time off for <a class="govuk-link govuk-link--no-visited-state" href="https://acas.org.uk/time-off-for-medical-appointments/" rel="nofollow external">health appointments</a></li>
+          <li>if you’re finding it impossible to continue in the same role</li>
+        </ul>
+        <p class="govuk-body">Your employer has a duty to support you to remain in your job.</p>
+        <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="https://acas.org.uk/" rel="nofollow external">Get free advice from ACAS</a></p>
+      {% endset %}
+
+      {% set stepSeven %}
+        <p class="govuk-body">It may not be possible to continue doing the same job as before.</p>
+        <p class="govuk-body">Depending on your employer, some options could be:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>retraining</li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://moneyhelper.org.uk/en/pensions-and-retirement/taking-your-pension/early-retirement-because-of-illness-sickness-or-disability/" rel="nofollow external">ill-heath retirement</a></li>
+          <li>voluntary redundancy</li>
+        </ul>
+        <p class="govuk-body">You employer could potentially dismiss you if you have an ongoing or long-term illness that makes it impossible to do your job.</p>
+        <p class="govuk-body">But before this, your employer must:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>consider how to support you, for example, check whether your job itself is making you ill and make changes</li>
+          <li>make any reasonable adjustments so that you’re not disadvantaged</li>
+          <li>give you reasonable time to recover from illness</li>
+        </ul>
+        <p class="govuk-body">Your employer has a legal duty to <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/rights-disabled-person/employment/">support disability (which includes long-term sickness) in the workplace</a>.</p>
+        <p class="govuk-body">Dismissal because of a disability may be unlawful discrimination.</p>
+        <p class="govuk-body">Your long term condition might count as a disability and, if so, you might be able to argue discrimination.</p>
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/work/dismissal/check-your-rights-if-youre-dismissed/if-your-employer-wants-to-dismiss-you-because-of-long-term-sickness/" rel="nofollow external">If your employer wants to dismiss you because of long term sickness</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/if-you-become-disabled/if-youre-in-employment-and-become-disabled/">What to do if you’re employed and become disabled</a></li>
+        </ul>
+        <h3 class="govuk-heading-s" id="get-help-and-legal-advice">Get help and legal advice</h3>
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/" rel="nofollow external">Citizens Advice</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://acas.org.uk/" rel="nofollow external">Get free advice from ACAS</a></li>
+        </ul>
+      {% endset %}
+
+      {% set steps = [
+        {
+          "id": "step-one",
+          "type": "number",
+          "title": "Give your fit note to your employer",
+          "content": stepOne
+        },
+        {
+          "id": "step-two",
+          "type": "number",
+          "title": "Keep in touch with your employer",
+          "content": stepTwo
+        },
+        {
+          "id": "step-three",
+          "type": "number",
+          "title": "Check financial help you can get",
+          "content": stepThree
+        },
+        {
+          "id": "step-four",
+          "type": "number",
+          "title": "Get support with your health",
+          "content": stepFour
+        },
+        {
+          "id": "step-five",
+          "type": "number",
+          "title": "Talk to your employer about returning to work",
+          "content": stepFive
+        },
+        {
+          "id": "step-six",
+          "type": "number",
+          "title": "Return to work",
+          "content": stepSix
+        },
+        {
+          "id": "step-seven",
+          "type": "number",
+          "title": "If you cannot return or your employer wants to dismiss you",
+          "content": stepSeven
+        }
+      ] %}
+
+      <div class="app-step-nav js-hidden app-step-nav--large govuk-!-margin-bottom-0" data-module="appstepnav" id="step-by-step-navigation" data-show-text="Show" data-hide-text="Hide" data-show-all-text="Show all steps" data-hide-all-text="Hide all steps">
+
+        <ol class="app-step-nav__steps">
+
+          <li class="app-step-nav__step js-step" id="give-your-fit-note-to-your-employer">
+
+            <div class="app-step-nav__header js-toggle-panel" data-position="1">
+
+              <h2 class="app-step-nav__title">
+                <span class="app-step-nav__circle app-step-nav__circle--number">
+                  <span class="app-step-nav__circle-inner">
+                    <span class="app-step-nav__circle-background">
+                      <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 1<span class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                    </span>
+                  </span>
+                </span>
+
+                <span class="js-step-title">Give your fit note to your employer</span>
+              </h2>
+
+            </div>
+
+            <div class="app-step-nav__panel js-panel" id="step-panel-give-your-fit-note-to-your-employer">
+              {{ stepOne | safe }}
+            </div>
+
+          </li>
+
+          <li class="app-step-nav__step js-step" id="keep-in-touch-with-your-employer">
+
+            <div class="app-step-nav__header js-toggle-panel" data-position="2">
+
+              <h2 class="app-step-nav__title">
+                <span class="app-step-nav__circle app-step-nav__circle--number">
+                  <span class="app-step-nav__circle-inner">
+                    <span class="app-step-nav__circle-background">
+                      <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 2<span class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                    </span>
+                  </span>
+                </span>
+
+                <span class="js-step-title">Keep in touch with your employer</span>
+
+              </h2>
+
+            </div>
+
+            <div class="app-step-nav__panel js-panel" id="step-panel-keep-in-touch-with-your-employer">
+              {{ stepTwo | safe }}
+            </div>
+
+          </li>
+
+          <li class="app-step-nav__step js-step" id="check-financial-help-you-can-get">
+
+            <div class="app-step-nav__header js-toggle-panel" data-position="3">
+              <h2 class="app-step-nav__title">
+                <span class="app-step-nav__circle app-step-nav__circle--number">
+                  <span class="app-step-nav__circle-inner">
+                    <span class="app-step-nav__circle-background">
+                      <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 3<span class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                    </span>
+                  </span>
+                </span>
+
+                <span class="js-step-title">Check financial help you can get</span>
+
+              </h2>
+
+            </div>
+
+            <div class="app-step-nav__panel js-panel" id="step-panel-check-financial-help-you-can-get">
+              {{ stepThree | safe }}
+            </div>
+
+          </li>
+
+          <li class="app-step-nav__step js-step" id="get-support-with-your-health">
+
+            <div class="app-step-nav__header js-toggle-panel" data-position="4">
+              <h2 class="app-step-nav__title">
+                <span class="app-step-nav__circle app-step-nav__circle--number">
+                  <span class="app-step-nav__circle-inner">
+                    <span class="app-step-nav__circle-background">
+                      <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 4<span class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                    </span>
+                  </span>
+                </span>
+
+                <span class="js-step-title">Get support with your health</span>
+              </h2>
+            </div>
+
+            <div class="app-step-nav__panel js-panel" id="step-panel-get-support-with-your-health">
+              {{ stepFour | safe }}
+            </div>
+
+          </li>
+
+          <li class="app-step-nav__step js-step" id="talk-to-your-employer-about-returning-to-work">
+
+            <div class="app-step-nav__header js-toggle-panel" data-position="5">
+
+              <h2 class="app-step-nav__title">
+                <span class="app-step-nav__circle app-step-nav__circle--number">
+                  <span class="app-step-nav__circle-inner">
+                    <span class="app-step-nav__circle-background">
+                      <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 5<span class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                    </span>
+                  </span>
+                </span>
+
+                <span class="js-step-title">Talk to your employer about returning to work</span>
+
+              </h2>
+            </div>
+
+            <div class="app-step-nav__panel js-panel" id="step-panel-talk-to-your-employer-about-returning-to-work">
+              {{ stepFive | safe }}
+            </div>
+
+          </li>
+
+          <li class="app-step-nav__step js-step" id="return-to-work">
+
+            <div class="app-step-nav__header js-toggle-panel" data-position="6">
+
+              <h2 class="app-step-nav__title">
+                <span class="app-step-nav__circle app-step-nav__circle--number">
+                  <span class="app-step-nav__circle-inner">
+                    <span class="app-step-nav__circle-background">
+                      <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 6<span class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                    </span>
+                  </span>
+                </span>
+
+                <span class="js-step-title">Return to work</span>
+
+              </h2>
+
+            </div>
+
+            <div class="app-step-nav__panel js-panel" id="step-panel-return-to-work">
+              {{ stepSix | safe }}
+            </div>
+
+          </li>
+
+          <li class="app-step-nav__step js-step" id="if-you-cannot-return-or-your-employer-wants-to-dismiss-you">
+
+            <div class="app-step-nav__header js-toggle-panel" data-position="7">
+
+              <h2 class="app-step-nav__title">
+                <span class="app-step-nav__circle app-step-nav__circle--number">
+                  <span class="app-step-nav__circle-inner">
+                    <span class="app-step-nav__circle-background">
+                      <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 6<span class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                    </span>
+                  </span>
+                </span>
+                <span class="js-step-title">If you cannot return or your employer wants to dismiss you</span>
+              </h2>
+
+            </div>
+
+            <div class="app-step-nav__panel js-panel" id="step-panel-if-you-cannot-return-or-your-employer-wants-to-dismiss-you">
+              {{ stepSeven | safe }}
+            </div>
+
+          </li>
+
+        </ol>
+
+      </div>
+
+    </div>
+
+  </div>
+
+{% endblock %}

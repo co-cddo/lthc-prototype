@@ -1,0 +1,30 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Application complete - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        "titleText": "Application complete",
+        "html": "Your reference number<br><strong>HDJ2123F</strong>"
+      }) }}
+
+      <p class="govuk-body">We have sent you a confirmation email.</p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p class="govuk-body">Now that you’ve applied for Universal Credit, you can find out what other support you may be entitled to.</p>
+
+      <p class="govuk-body">You may be eligible for additional support. This could include help with housing, health costs, and travel.</p>
+
+      <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="#0">See other support you may be entitled to</a></p>
+
+    </div>
+
+  </div>
+
+{% endblock %}

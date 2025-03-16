@@ -1,0 +1,48 @@
+.lthc-timeline {
+  margin-bottom: govuk-spacing(6);
+  margin-top: govuk-spacing(6);
+  padding-left: govuk-spacing(5);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    border-left: 4px solid govuk-colour("blue");
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 12px;
+  }
+
+}
+
+
+.lthc-timeline__item {
+  margin-bottom: govuk-spacing(5);
+  position: relative;
+
+    &::before {
+      background-color: govuk-colour("blue");
+      content: "";
+      height: 4px;
+      left: -1.5rem;
+      position: absolute;
+      top: 12px;
+      width: 12px;
+    }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+
+.lthc-timeline__heading {
+  margin-bottom: 20px;
+}
+
+
+.lthc-timeline__title {
+  margin-bottom: 5px;
+}

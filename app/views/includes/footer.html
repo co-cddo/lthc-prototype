@@ -1,0 +1,70 @@
+{% if (headerType == "signedin") or (headerType == "simple") %}
+
+  {{ govukFooter() }}
+
+{% else %}
+
+  {% include "includes/feedback.html" ignore missing %}
+
+  {% set footerOptions = {
+    classes: "govuk-footer--border",
+    navigation: [
+      {
+        title: "Services and information",
+        width: "two-thirds",
+        columns: 2,
+        items: [
+          { href: "#0", text: "Benefits" },
+          { href: "#0", text: "Births, deaths, marriages and care" },
+          { href: "#0", text: "Business and self-employed" },
+          { href: "#0", text: "Childcare and parenting" },
+          { href: "#0", text: "Citizenship and living in the UK" },
+          { href: "#0", text: "Crime, justice and the law" },
+          { href: "#0", text: "Disabled people" },
+          { href: "#0", text: "Driving and transport" },
+          { href: "#0", text: "Education and learning" },
+          { href: "#0", text: "Employing people" },
+          { href: "#0", text: "Environment and countryside" },
+          { href: "#0", text: "Housing and local services" },
+          { href: "#0", text: "Money and tax" },
+          { href: "#0", text: "Passports, travel and living abroad" },
+          { href: "#0", text: "Visas and immigration" },
+          { href: "#0", text: "Working, jobs and pensions" }
+        ]
+      },
+      {
+        title: "Government activity",
+        width: "one-third",
+        items: [
+          { href: "#0", text: "Departments" },
+          { href: "#0", text: "News" },
+          { href: "#0", text: "Guidance and regulations" },
+          { href: "#0", text: "Research and statistics" },
+          { href: "#0", text: "Policy papers and consultations" },
+          { href: "#0", text: "Transparency" },
+          { href: "#0", text: "How government works" },
+          { href: "#0", text: "Get involved" }
+        ]
+      }
+    ],
+    meta: {
+      items: [
+        { href: "#0", text: "Help" },
+        { href: "#0", text: "Privacy" },
+        { href: "#0", text: "Cookies" },
+        { href: "#0", text: "Accessibility statement" },
+        { href: "#0", text: "Contact" },
+        { href: "#0", text: "Terms and conditions" },
+        {
+          href: "#0",
+          text: "Rhestr o Wasanaethau Cymraeg",
+          attributes: { lang: "cy", hreflang: "cy" }
+        },
+        { href: "#0", text: "Government Digital Service" }
+      ]
+    }
+  } %}
+
+  {{ govukFooter(footerOptions) }}
+
+{% endif %}

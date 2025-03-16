@@ -1,0 +1,21 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{# LTHC components #}
+{%- from "app/assets/sass/components/header/macro.njk" import lthcHeader -%}
+{%- from "app/assets/sass/components/card/macro.njk" import lthcCard -%}
+{%- from "app/assets/sass/components/timeline/macro.njk" import lthcTimeline -%}
+{%- from "app/assets/sass/components/layout-super-navigation-header/macro.njk" import lthcLayoutSuperNavigationHeader -%}
+{%- from "app/assets/sass/components/related-navigation/macro.njk" import lthcRelatedNavigation -%}
+{%- from "app/assets/sass/components/step-by-step-nav/macro.njk" import lthcStepByStepNav -%}
+
+{% block header %}
+  {% include "includes/header.njk" ignore missing %}
+{% endblock %}
+
+{% block footer %}
+  {% include "includes/footer.njk" ignore missing %}
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/layout-super-navigation-header.js"></script>
+{% endblock %}

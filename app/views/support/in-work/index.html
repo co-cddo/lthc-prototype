@@ -1,0 +1,120 @@
+{% extends "layouts/browse.njk" %}
+
+{% set heading = "Support if you’re in work" %}
+{% set body    = "Help to manage your health condition or disability while staying in work." %}
+
+{% block pageTitle %}Support if you’re in work - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h2 class="govuk-heading-l">Support you may be entitled to</h2>
+
+      {{ govukAccordion({
+        classes: "govuk-!-margin-bottom-0",
+        id: "accordion-with-summary-sections",
+        items: [
+          {
+            heading: {
+              text: "Money and benefits"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--spaced">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/employment-support-allowance/">Employment and Support Allowance (ESA)</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/pip/">Personal Independence Payment (PIP)</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/universal-credit/">Universal Credit</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/apply-council-tax-reduction/">Council Tax Reduction</a></li>
+              </ul>'
+            }
+          },
+          {
+            heading: {
+              text: "Travel and transport"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--spaced">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/apply-for-disabled-bus-pass/">Disabled person’s bus pass</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://disabledpersons-railcard.co.uk/" rel="external nofollow">Disabled train pass</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/apply-blue-badge/">Blue Badge</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://motability.co.uk/" rel="external nofollow">Mobility Scheme</a></li>
+              </ul>'
+            }
+          },
+          {
+            heading: {
+              text: "Work and employment"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--spaced">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/reasonable-adjustments-for-disabled-workers/">Reasonable adjustments for workers</a></li>
+              </ul>'
+            }
+          },
+          {
+            heading: {
+              text: "Housing and home"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--spaced">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/housing-benefit/">Housing Benefit</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/support-for-mortgage-interest/">Mortgage Interest</a></li>
+              </ul>'
+            }
+          },
+          {
+            heading: {
+              text: "Health and care"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--spaced">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://skillsnorthtyneside.org.uk/support/workingwell/" rel="external nofollow">NHS working well</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="#0">Mental health counselling</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="#0">Digital Therapeutics</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://sleepio.com/sleepio/nhs/391#1/1/" rel="external nofollow">NHS Sleepio</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://nhs.uk/nhs-services/mental-health-services/find-nhs-talking-therapies-for-anxiety-and-depression/" rel="external nofollow">Talking Therapies</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://action-on-pain.co.uk/" rel="external nofollow">Pain Management</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://nhs.uk/nhs-services/help-with-health-costs/what-is-a-personal-health-budget/" rel="external nofollow">Personal Health Budget</a></li>
+              </ul>'
+            }
+          },
+          {
+            heading: {
+              text: "Education and learning"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--spaced">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://nationalcareers.service.gov.uk/" rel="external nofollow">National Careers Service</a></li>
+              </ul>'
+            }
+          },
+          {
+            heading: {
+              text: "Everyday life"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--spaced">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/carers-allowance/">Carer’s Allowance</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/energy-company-obligation/">Warm home discount scheme</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/cold-weather-payment/">Cold weather payment</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/disabled-facilities-grants/">Disabled facilities grants</a></li>
+              </ul>'
+            }
+          }
+        ]
+      }) }}
+
+    </div>
+
+  </div>
+
+{% endblock %}

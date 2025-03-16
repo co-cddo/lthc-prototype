@@ -1,0 +1,118 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Other help if you’ve applied for Access to Work - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Other help if you’ve applied for Access to Work</h1>
+
+      <p class="govuk-body">You may be entitled to other help and support with your condition.</p>
+
+      {% set stepOne %}
+        <p class="govuk-body">You can ask your employer to make changes you need at work. They have a duty to support you to remain in your job.</p>
+        <p class="govuk-body">You can use the <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/government/publications/health-adjustment-passport/">Health Adjustments Passport</a> form when talking with your employer.</p>
+        <p class="govuk-body">It helps you identify help or changes you need to stay in work. For example, you may need:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>flexible or part-time working</li>
+          <li>some <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/reasonable-adjustments-for-disabled-workers/">reasonable adjustments</a> in your job</li>
+          <li>to speak to an occupational health adviser in your organisation</li>
+          <li>time off for <a class="govuk-link govuk-link--no-visited-state" href="https://acas.org.uk/time-off-for-medical-appointments/" rel="nofollow external">health appointments</a></li>
+        </ul>
+        <h3 class="govuk-heading-s">If you’re having problems with your employer</h3>
+        <p class="govuk-body">Your employer must make any <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/reasonable-adjustments-for-disabled-workers/">reasonable adjustments</a> so that you’re not disadvantaged.</p>
+        <p class="govuk-body">Access to Work grants do not pay for reasonable adjustments, as it’s your employer’s responsibility to make these changes.</p>
+        <p class="govuk-body">If your employer is not supporting you, you can get advice and help.</p>
+        <p class="govuk-body">For example, if you’re in a <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/join-trade-union/">trade union</a>, they can represent you when talking to your employer.</p>
+        <p class="govuk-body">There are also other organisations you can contact for free advice:</p>
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://acas.org.uk/" rel="nofollow external">ACAS</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/" rel="nofollow external">Citizens Advice</a></li>
+        </ul>
+        <p class="govuk-body">More guidance:</p>
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://acas.org.uk/supporting-disabled-people/how-an-employer-should-support-disabled-people/" rel="nofollow external">What employers should do to support disability or long term health conditions</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://acas.org.uk/reasonable-adjustments/if-an-employer-does-not-make-reasonable-adjustments/" rel="nofollow external">If your employer fails to make reasonable adjustments for you</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/if-you-become-disabled/if-youre-in-employment-and-become-disabled/">What to do if you’re employed and become disabled</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/work/dismissal/check-your-rights-if-youre-dismissed/if-your-employer-wants-to-dismiss-you-because-of-long-term-sickness/" rel="nofollow external">If your employer wants to dismiss you because of health or disability</a></li>
+        </ul>
+      {% endset %}
+
+      {% set stepTwo %}
+        <p class="govuk-body">If you have a health condition that affects your work, you may be able to apply for benefits.</p>
+        <p class="govuk-body">Use a <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/benefits-calculators/">benefits calculator</a> to see which benefits you could get and how much you might receive each week.</p>
+        {{ govukInsetText({ html: "If your application for Access to Work is successful, it will not affect any benefits you’re entitled to" }) }}
+        <p class="govuk-body">You might also be able to get other financial help with health costs, bills and travel.</p>
+        <h3 class="govuk-heading-s" id="health-costs">Health costs</h3>
+        <p class="govuk-body">Get help with <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/help-nhs-costs/">NHS prescriptions, dental treatment, eye tests and other costs</a>.</p>
+        <h3 class="govuk-heading-s" id="bills">Bills</h3>
+        <p class="govuk-body">Get help with the <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/cost-of-living/">cost of living if you have a health condition or disability</a>.</p>
+        <p class="govuk-body">For example you might be able to get:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>your water bill capped through the <a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/consumer/water/problems-with-paying-your-water-bill/watersure-scheme-help-with-paying-water-bills/" rel="nofollow external">Watersure scheme</a></li>
+          <li>£150 off energy bills with the <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/the-warm-home-discount-scheme/">Warm Home Discount Scheme</a></li>
+          <li>a discount on your <a class="govuk-link govuk-link--no-visited-state" href="https://ofcom.org.uk/phones-and-broadband/saving-money/social-tariffs/" rel="nofollow external">broadband bills</a>, if you’re claiming benefits</li>
+        </ul>
+        <h3 class="govuk-heading-s" id="travel">Travel</h3>
+        <p class="govuk-body">You may get help with <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/financial-help-disabled/vehicles-and-transport/">transport costs</a> if you have a disability.</p>
+      {% endset %}
+
+      {% set stepThree %}
+        <p class="govuk-body">Talk with your healthcare professional about support you can get for your condition.</p>
+        <p class="govuk-body">You might qualify for a <a class="govuk-link govuk-link--no-visited-state" href="https://nhs.uk/nhs-services/help-with-health-costs/what-is-a-personal-health-budget/" rel="nofollow external">personal health budget</a> from the NHS to support you with treatment, equipment and personal care.</p>
+        <p class="govuk-body">If you’re eligible for it, an NHS local team will work with you to plan how to spend the money on your care.</p>
+        <h3 class="govuk-heading-s" id="help-with-specific-conditions">Help with specific conditions</h3>
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://rcseng.ac.uk/patient-care/recovering-from-surgery/" rel="nofollow external">Recovering from surgery</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://action-on-pain.co.uk/" rel="nofollow external">Help with managing pain</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://nhs.uk/mental-health/advice-for-life-situations-and-events/return-to-work-after-mental-health-issues/" rel="nofollow external">Returning to work after mental health issues</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://nhs.uk/nhs-services/mental-health-services/find-nhs-talking-therapies-for-anxiety-and-depression/" rel="nofollow external">Find NHS talking therapies for anxiety and depression</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://macmillan.org.uk/cancer-information-and-support/impacts-of-cancer/work-and-cancer/" rel="nofollow external">Work and cancer</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://csp.org.uk/documents/making-reasonable-adjustments/" rel="nofollow external">Reasonable-adjustments advice from Chartered Society of Physiotherapy</a></li>
+        </ul>
+        <h3 class="govuk-heading-s" id="group-and-charities-who-support-people-with-health-conditions">Group and charities who support people with health conditions</h3>
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/find-a-community-support-group-or-organisation/">Find a support group near you</a></li>
+          <li><a class="govuk-link govuk-link--no-visited-state" href="https://aboutmyhealth.org/patient-charities-list.php/" rel="nofollow external">List of charities who help with specific conditions</a></li>
+        </ul>
+      {% endset %}
+
+      {{ govukAccordion({
+        classes: "govuk-!-margin-bottom-0",
+        id: "get-help",
+        items: [
+          {
+            heading: {
+              text: "Asking your employer for support"
+            },
+            content: {
+              html: stepOne
+            }
+          },
+          {
+            heading: {
+              text: "Benefits and financial help"
+            },
+            content: {
+              html: stepTwo
+            }
+          },
+          {
+            heading: {
+              text: "Support with your health"
+            },
+            content: {
+              html: stepThree
+            }
+          }
+        ]
+      }) }}
+
+    </div>
+
+  </div>
+
+{% endblock %}

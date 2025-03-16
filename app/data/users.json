@@ -1,0 +1,347 @@
+{
+  "users": [
+    {
+      "id": "barbara",
+      "email": "barbara@example.com",
+      "name": "Barbara",
+      "entitledSupport": [
+        {
+          "id": "personal-independence-payment",
+          "name": "Personal Independence Payment (PIP)",
+          "description": "Assists with extra costs if you have a long-term health condition or disability that affects your daily life or mobility.",
+          "url": "#0",
+          "urlText": "Apply for Personal Independence Payment"
+        },
+        {
+          "id": "council-tax-reduction",
+          "name": "Council tax reduction",
+          "description": "Discount on your council tax bill if you live alone or are on a low income. The amount depends on your local council’s scheme.",
+          "url": "#0",
+          "urlText": "Apply for council tax reduction"
+        },
+        {
+          "id": "disabled-bus-pass",
+          "name": "Disabled bus pass",
+          "description": "Free or discounted bus travel if you have a disability that affects your ability to drive. Availability depends on your local council.",
+          "url": "#0",
+          "urlText": "Apply for a disabled bus pass"
+        },
+        {
+          "id": "disabled-persons-railcard",
+          "name": "Disabled persons railcard",
+          "description": "Reduced rail fares for disabled passengers and their companions, helping with transport costs for essential travel.",
+          "url": "#0",
+          "urlText": "Apply for a disabled persons railcard"
+        },
+        {
+          "id": "mobility-scheme",
+          "name": "Mobility scheme",
+          "description": "Lease a car, scooter, or powered wheelchair if your receive certain disability benefits, making travel easier and more accessible.",
+          "url": "#0",
+          "urlText": "Find out about the mobility scheme"
+        },
+        {
+          "id": "child-tax-credits",
+          "name": "Child tax credits",
+          "description": "Financial support if you are responsible for children, helping with the costs of raising them.",
+          "url": "#0",
+          "urlText": "Apply for child tax credits"
+        },
+        {
+          "id": "childcare-costs",
+          "name": "Help with childcare costs",
+          "description": "Financial assistance with childcare costs if you are working and on a low income, supporting parents in employment.",
+          "url": "#0",
+          "urlText": "Find out about help with childcare costs"
+        },
+        {
+          "id": "attendace-allowance",
+          "name": "Attendance Allowance",
+          "description": "Helps with extra costs if you have a disability or health condition severe enough that you need someone to help look after you.",
+          "url": "#0",
+          "urlText": "Apply for Attendance Allowance"
+        },
+        {
+          "id": "access-to-work",
+          "name": "Access to Work",
+          "description": "Supports you to start or stay in work with funding for equipment, a support worker, or travel costs.",
+          "url": "#0",
+          "urlText": "Apply for or renew Access to Work"
+        },
+        {
+          "id": "jobseekers-allowance",
+          "name": "Jobseeker’s Allowance (JSA)",
+          "description": "Provides financial support while you search for work. It’s quick to apply, and you’ll also get access to resources.",
+          "url": "#0",
+          "urlText": "Apply for Jobseeker’s Allowance"
+        },
+        {
+          "id": "nhs-dental-treatment",
+          "name": "NHS dental treatment",
+          "description": "Covers the cost of NHS prescriptions if you receive certain benefits or have a qualifying health condition.",
+          "url": "#0",
+          "urlText": "Check if you qualify for NHS dental treatment"
+        },
+        {
+          "id": "nhs-prescriptions",
+          "name": "NHS prescriptions",
+          "description": "Covers the cost of NHS prescriptions if you receive certain benefits or have a qualifying medical condition.",
+          "url": "#0",
+          "urlText": "Check if you qualify for NHS prescriptions"
+        }
+      ],
+      "relatedNavigation": {
+        "title": "Related content",
+        "links": [
+          { "href": "#0", "text": "Benefits calculators" },
+          { "href": "#0", "text": "Get support for mortgage interest" },
+          { "href": "#0", "text": "Financial support for carers" },
+          { "href": "#0", "text": "Managing money with a long-term health condition" }
+        ],
+        "sections": [
+          {
+            "id": "collections-managing",
+            "heading": "Managing your health condition",
+            "links": [
+              { "href": "#0", "text": "Find support groups in your area" }
+            ]
+          },
+          {
+            "id": "collections-mobility",
+            "heading": "Mobility and transport assistance",
+            "links": [
+              { "href": "#0", "text": "Disabled parking permits" },
+              { "href": "#0", "text": "Getting a mobility car" }
+            ]
+          }
+        ]
+      },
+      "supportApplications": [
+        {
+          "id": "ESA-2025-001234",
+          "type": "current",
+          "name": "Employment and Support Allowance",
+          "description": "Provides support to help you start or stay in work if you have a health condition. This can include funding for specialist equipment, a support worker, or travel costs.",
+          "status": "Approved",
+          "statusOverview": "Your ESA application has been approved. You will receive regular payments to support you while you are unable to work.",
+          "dateReceived": "2025-03-15",
+          "dateDecision": "2025-06-10",
+          "paymentDetails": [
+            {
+              "firstPaymentDate": "2025-06-20",
+              "paymentAmount": "£390 every two weeks",
+              "nextPaymentDate": "2025-07-04",
+              "paymentMethod": "Direct deposit to your bank account"
+            }
+          ],
+          "contentBlocks": [
+            {
+              "heading": "What happens next",
+              "content": [
+                "You do not need to reapply unless your circumstances change.",
+                "Your claim will be reviewed in June 2027 to check if you still qualify."
+              ],
+              "links": [
+                {
+                  "url": "#0",
+                  "urlText": "View full decision letter"
+                },
+                {
+                  "url": "#0",
+                  "urlText": "Report a change in circumstances"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UC-2025-001234",
+          "type": "progressing",
+          "name": "Universal Credit",
+          "description": "Provides support for essentials like rent, bills, and daily expenses, giving you peace of mind when you need it most.",
+          "status": "Action needed",
+          "statusOverview": "Universal Credit needs more information before they can process your application",
+          "dateReceived": "2025-03-15",
+          "dateDeadline": "2025-06-15",
+          "contentBlocks": [
+            {
+              "heading": "What you need to do",
+              "content": [
+                "Universal Credit has requested your last three months of bank statements to confirm your financial situation.",
+                "Deadline to submit is on the 15 June 2025."
+              ],
+              "links": [
+                {
+                  "url": "#0",
+                  "urlText": "Go to your Universal Credit account"
+                },
+                {
+                  "url": "#0",
+                  "urlText": "Find your nearest jobcentre Plus"
+                }
+              ]
+            },
+            {
+              "heading": "What this means for you",
+              "content": [
+                "Your application is still in progress, but it won’t be approved until the required documents are received. Once submitted, DWP will update you on the next steps.",
+                "You can contact Universal Credit support directly if you have questions about your application."
+              ],
+              "links": [
+                {
+                  "url": "#0",
+                  "urlText": "Get support from Universal Credit"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "BB-2025-001234",
+          "type": "progressing",
+          "name": "Blue Badge",
+          "description": "Helps you park closer to your destination if you have a disability or health condition that makes it hard to move around. It can be used at home or when travelling.",
+          "status": "Decision pending",
+          "statusOverview": "Your local authority is reviewing your eligibility and will update you when a decision has been made.",
+          "dateReceived": "2025-01-01",
+          "dateDecision": "2025-03-30",
+          "contentBlocks": [
+            {
+              "heading": "What happens next",
+              "content": [
+                {
+                  "subHeading": "Application review",
+                  "subContent": [
+                    "Your council will check your application and supporting documents. This usually takes up to 4 weeks."
+                  ]
+                },
+                {
+                  "subHeading": "Medical assessment",
+                  "subContent": [
+                    "If further evidence or an assessment is required, your council will let you know. This can take up to 8 weeks."
+                  ]
+                },
+                {
+                  "subHeading": "Decision",
+                  "subContent": [
+                    "You will be notified by email or post. Most applications are decided within 12 weeks, but it may take longer if extra checks are needed."
+                  ]
+                }
+              ]
+            },
+            {
+              "heading": "Get support",
+              "content": [
+                "If you have any questions or need support, you can contact your local council."
+              ],
+              "links": [
+                {
+                  "url": "#0",
+                  "urlText": "Contact your local council"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "BB-8765-432180",
+          "type": "previous",
+          "name": "Blue Badge",
+          "description": "Helps you park closer to your destination if you have a disability or health condition that makes it hard to move around. It can be used at home or when travelling.",
+          "status": "Rejected",
+          "statusOverview": "Blue Badge application was rejected because the assessment found that you did not meet the eligibility criteria.",
+          "dateReceived": "2024-07-10",
+          "dateRejected": "2025-07-25",
+          "contentBlocks": [
+            {
+              "heading": "What you can do next",
+              "content": [
+                {
+                  "subHeading": "Reapply for a Blue Badge",
+                  "subContent": [
+                    "If your condition has worsened or you now meet the eligibility criteria, you can submit a new application."
+                  ],
+                  "links": [
+                    {
+                      "url": "#0",
+                      "urlText": "Reapply for a Blue Badge"
+                    }
+                  ]
+                },
+                {
+                  "subHeading": "Request a review",
+                  "subContent": [
+                    "If you believe your application was wrongly rejected, you can ask for a review. You may need to provide new medical evidence or additional details about your mobility needs.",
+                    "The deadline to request a review is on the 25 August 2025."
+                  ],
+                  "links": [
+                    {
+                      "url": "#0",
+                      "urlText": "Request a review"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "heading": "Get support",
+              "content": [
+                "If you have any questions or need support, you can contact your local council."
+              ],
+              "links": [
+                {
+                  "url": "#0",
+                  "urlText": "Contact your local council"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "upcomingActions": [
+        {
+          "title": "Submit appeal (if needed)",
+          "date": "2025-06-30",
+          "content": "If you’re unhappy with your Blue Badge outcome, you can appeal by 30th June 2025."
+        },
+        {
+          "title": "GP follow up appointment",
+          "date": "2025-06-05",
+          "content": "You have a follow-up appointment to discuss medication adjustments for rheumatoid arthritis."
+        }
+      ],
+      "pastEvents": [
+        {
+          "title": "Blue Badge approved",
+          "date": "2025-06-25",
+          "content": "Your Blue Badge application was approved. The badge will arrive by post within 7 working days."
+        },
+        {
+          "title": "Employment Support and Allowance approved",
+          "date": "2025-06-20",
+          "content": "Your ESA application was approved. You will receive £390 every two weeks, your first payment on 20 June 2025."
+        },
+        {
+          "title": "Work capability assessment completed",
+          "date": "2025-05-30",
+          "content": "You attended your ESA Work Capability Assessment. The assessor confirmed further processing is required before a decision is made."
+        },
+        {
+          "title": "Employment Support and Allowance submitted",
+          "date": "2025-03-15",
+          "content": "You submitted your ESA application, including evidence from your GP and specialist."
+        },
+        {
+          "title": "Specialist appointment",
+          "date": "2024-12-20",
+          "content": "You attended a rheumatology appointment. The specialist confirmed the severity of your condition and provided a report."
+        },
+        {
+          "title": "GP appointment",
+          "date": "2024-12-05",
+          "content": "Your GP confirmed your diagnosis of rheumatoid arthritis and issued a referral to a specialist."
+        }
+      ]
+    }
+  ]
+}

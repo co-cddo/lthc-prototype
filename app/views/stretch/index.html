@@ -1,0 +1,56 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Manage a long term health condition or disability - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">{{ "" | greeting }}, {{ name }}</h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-7">Based on your medical condition, we personalise your experience by recommending benefits, tracking applications, and providing tailored resources to support your health and mobility.</p>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h2 class="govuk-heading-l">Support you may be entitled to</h2>
+
+      <p class="govuk-body">Based on your medical information, you may be eligible for the following.</p>
+
+      {% for item in entitledSupport %}
+        {{ lthcCard({
+          items: [
+            {
+              "name": item.name,
+              "description": item.description,
+              "url": item.url,
+              "urlText": item.urlText
+            }
+          ]
+        }) }}
+      {% endfor %}
+
+    </div>
+
+    {% if relatedNavigation %}
+
+      <div class="govuk-grid-column-one-third">
+        {{ lthcRelatedNavigation({
+          "title": "Related content",
+          "links": relatedNavigation.links,
+          "sections": relatedNavigation.sections
+        }) }}
+      </div>
+
+    {% endif %}
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Create your GOV.UK One login or sign in - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Create your GOV.UK One login or sign in</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <p class="govuk-body">You can use your GOV.UK One Login to access some government services.</p>
+
+      <p class="govuk-body">In future, you’ll be able to use it to access all services on GOV.UK.</p>
+
+      <p class="govuk-body">You’ll need:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>an email address</li>
+        <li>a way to get security codes - this can be a mobile phone number or an authenticator app</li>
+      </ul>
+
+      {{ govukInsetText({
+        "html": 'You can also use <a class="govuk-link govuk-link--no-visited-state" href="/index/">GOV.UK One Login in Welsh (Cymraeg)</a>.'
+      }) }}
+
+      {{ govukButton({
+        "text": "Create your GOV.UK One Login"
+      }) }}
+
+      <div>
+        {{ govukButton({
+          "classes": "govuk-button--secondary govuk-!-margin-bottom-0",
+          "text": "Sign in"
+        }) }}
+      </div>
+
+    </div>
+
+  </div>
+
+{% endblock %}

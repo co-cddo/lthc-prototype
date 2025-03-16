@@ -1,0 +1,54 @@
+{% if application.contentBlocks %}
+
+  {% for item in application.contentBlocks %}
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h2 class="govuk-heading-l">{{ item.heading }}</h2>
+
+    {% if item.content %}
+      {% for contentItem in item.content %}
+
+        {% if contentItem.subHeading %}
+          <h3 class="govuk-heading-m">{{ contentItem.subHeading }}</h3>
+        {% else %}
+          <p class="govuk-body">{{ contentItem | formatContent | safe }}</p>
+        {% endif %}
+
+        {% if contentItem.subContent %}
+          {% for subContent in contentItem.subContent %}
+            <p class="govuk-body">{{ subContent | formatContent | safe }}</p>
+          {% endfor %}
+        {% endif %}
+
+        {% if contentItem.links %}
+          {% if contentItem.links.length > 1 %}
+            <ul class="govuk-list">
+              {% for link in contentItem.links %}
+                <li><a class="govuk-link govuk-link--no-visited-state" href="{{ link.url }}">{{ link.urlText }}</a></li>
+              {% endfor %}
+            </ul>
+          {% elseif contentItem.links.length == 1 %}
+            <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="{{ contentItem.links[0].url }}">{{ contentItem.links[0].urlText }}</a></p>
+          {% endif %}
+        {% endif %}
+
+      {% endfor %}
+    {% endif %}
+
+    {% if item.links %}
+      {% if item.links.length > 1 %}
+        <ul class="govuk-list">
+          {% for link in item.links %}
+            <li><a class="govuk-link govuk-link--no-visited-state" href="{{ link.url }}">{{ link.urlText }}</a></li>
+          {% endfor %}
+        </ul>
+      {% elseif item.links.length == 1 %}
+        <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="{{ item.links[0].url }}">{{ item.links[0].urlText }}</a></p>
+      {% endif %}
+    {% endif %}
+
+  {% endfor %}
+
+{% endif %}
+

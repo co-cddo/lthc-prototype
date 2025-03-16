@@ -1,0 +1,104 @@
+{% extends "layouts/browse.njk" %}
+
+{% set heading = "Support if you’re not in work" %}
+{% set body    = "Help if your health condition or disability is stopping you from working." %}
+
+{% block pageTitle %}Support if you’re not in work - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h2 class="govuk-heading-l">Support you may be entitled to</h2>
+
+      {{ govukAccordion({
+        classes: "govuk-!-margin-bottom-0",
+        id: "accordion-with-summary-sections",
+        items: [
+          {
+            heading: {
+              text: "Money and benefits"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--spaced">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="#">Link</a></li>
+              </ul>'
+            }
+          },
+          {
+            heading: {
+              text: "Travel and transport"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--spaced">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="#">Link</a></li>
+              </ul>'
+            }
+          },
+          {
+            heading: {
+              text: "Work and employment"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--spaced">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="#">Link</a></li>
+              </ul>'
+            }
+          },
+          {
+            heading: {
+              text: "Housing and home"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--spaced">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="#">Link</a></li>
+              </ul>'
+            }
+          },
+          {
+            heading: {
+              text: "Health and care"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--spaced">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="#">Link</a></li>
+              </ul>'
+            }
+          },
+          {
+            heading: {
+              text: "Education and learning"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--spaced">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="#">Link</a></li>
+              </ul>'
+            }
+          },
+          {
+            heading: {
+              text: "Everyday life"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--spaced">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="#">Link</a></li>
+              </ul>'
+            }
+          }
+        ]
+      }) }}
+
+    </div>
+
+  </div>
+
+{% endblock %}

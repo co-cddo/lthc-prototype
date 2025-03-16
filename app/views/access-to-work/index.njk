@@ -1,0 +1,32 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Application complete - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        "titleText": "Application complete",
+        "html": "Your reference number<br><strong>HDJ2123F</strong>"
+      }) }}
+
+      <p class="govuk-body">We have sent you a confirmation email.</p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p class="govuk-body">We’ll email to let you know whether your application is successful.</p>
+
+      <p class="govuk-body">You should hear from us in the next 21 days.</p>
+
+      <h2 class="govuk-heading-m">Other support</h2>
+
+      <p class="govuk-body">Find out what <a class="govuk-link govuk-link--no-visited-state" href="/access-to-work/support/">other support</a> you may be able to get to help you stay in work. </p>
+
+    </div>
+
+  </div>
+
+{% endblock %}
