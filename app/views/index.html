@@ -1,97 +1,97 @@
 {% extends "layouts/base.html" %}
 
-{% set pageName="Menu" %}
+{% block pageTitle %}Menu - GOV.UK{% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
+  <div class="govuk-grid-row">
 
-  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">{{ serviceName }}</h1>
+      <h1 class="govuk-heading-xl">{{ serviceName }}</h1>
 
-    <p class="govuk-body">Explore a typical user journey and review individual pages.</p>
+      <p class="govuk-body">Explore a typical user journey and review individual pages.</p>
 
-    <h2 class="govuk-heading-l">Stretch prototype</h2>
+      <h2 class="govuk-heading-l">Stretch prototype</h2>
 
-    <p class="govuk-body">Personalised support based on your medical condition.</p>
+      <p class="govuk-body">Personalised support based on your medical condition.</p>
 
-    {{ govukButton({
-      classes: "govuk-!-margin-bottom-0",
-      text: "Start prototype",
-      href: "/stretch/",
-      isStartButton: true
-    }) }}
+      {{ govukButton({
+        classes: "govuk-!-margin-bottom-0",
+        text: "Start prototype",
+        href: "/stretch/",
+        isStartButton: true
+      }) }}
 
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-    <h2 class="govuk-heading-l">Fit note prototype</h2>
+      <h2 class="govuk-heading-l">Fit note prototype</h2>
 
-    <p class="govuk-body">Get support if you have a fit note.</p>
+      <p class="govuk-body">Get support if you have a fit note.</p>
 
-    {{ govukButton({
-      text: "Start prototype",
-      href: "/fit-note/",
-      isStartButton: true
-    }) }}
+      {{ govukButton({
+        text: "Start prototype",
+        href: "/fit-note/",
+        isStartButton: true
+      }) }}
 
-    <h2 class="govuk-heading-m">New versions for week commencing 3rd March</h2>
+      <h2 class="govuk-heading-m">New versions for week commencing 3rd March</h2>
 
-    <ul class="govuk-list govuk-list--spaced">
-      <li><a class="govuk-link govuk-link--no-visited-state" href="/fit-note/v2/">Accordion</a></li>
-      <li><a class="govuk-link govuk-link--no-visited-state" href="/fit-note/v3/">Step by step</a></li>
-      <li><a class="govuk-link govuk-link--no-visited-state" href="/fit-note/v4/">Accordion, no excerpts, includes charities and retraining</a></li>
-    </ul>
+      <ul class="govuk-list">
+        <li><a class="govuk-link govuk-link--no-visited-state" href="/fit-note/v2/">Accordion</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="/fit-note/v3/">Step by step</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="/fit-note/v4/">Accordion, no excerpts, includes charities and retraining</a></li>
+      </ul>
 
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-    <h2 class="govuk-heading-l">Access to Work prototype</h2>
+      <h2 class="govuk-heading-l">Access to Work prototype</h2>
 
-    <p class="govuk-body">Get support if you have completed an Access to Work application.</p>
+      <p class="govuk-body">Get support if you have completed an Access to Work application.</p>
 
-    {{ govukButton({
-      classes: "govuk-!-margin-bottom-0",
-      text: "Start prototype",
-      href: "/access-to-work/",
-      isStartButton: true
-    }) }}
+      {{ govukButton({
+        classes: "govuk-!-margin-bottom-0",
+        text: "Start prototype",
+        href: "/access-to-work/",
+        isStartButton: true
+      }) }}
 
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-    <h2 class="govuk-heading-l">Universal Credit prototype</h2>
+      <h2 class="govuk-heading-l">Universal Credit prototype</h2>
 
-    <p class="govuk-body">Get support if you have completed a Universal Credit application.</p>
+      <p class="govuk-body">Get support if you have completed a Universal Credit application.</p>
 
-    {{ govukButton({
-      classes: "govuk-!-margin-bottom-0",
-      text: "Start prototype",
-      href: "/universal-credit/",
-      isStartButton: true
-    }) }}
+      {{ govukButton({
+        classes: "govuk-!-margin-bottom-0",
+        text: "Start prototype",
+        href: "/universal-credit/",
+        isStartButton: true
+      }) }}
 
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-    <h2 class="govuk-heading-l">Support for people with a long term health condition</h2>
+      <h2 class="govuk-heading-l">Support for people with a long term health condition</h2>
 
-    <p class="govuk-body">Get support if you have a long term health condition.</p>
+      <p class="govuk-body">Get support if you have a long term health condition.</p>
 
-    {{ govukButton({
-      classes: "govuk-!-margin-bottom-0",
-      text: "Start prototype",
-      href: "/support/",
-      isStartButton: true
-    }) }}
+      {{ govukButton({
+        classes: "govuk-!-margin-bottom-0",
+        text: "Start prototype",
+        href: "/support/",
+        isStartButton: true
+      }) }}
 
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-    <h2 class="govuk-heading-l">Browse pages</h2>
+      <h2 class="govuk-heading-l">Browse pages</h2>
 
-    <p class="govuk-body">Select pages to review.</p>
+      <p class="govuk-body">Select pages to review.</p>
 
-    <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="/browse/">Browse pages</a><p>
+      <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="/browse/">Browse pages</a><p>
+
+    </div>
 
   </div>
-
-</div>
 
 {% endblock %}

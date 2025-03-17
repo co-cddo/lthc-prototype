@@ -58,7 +58,6 @@ router.use('/browse/start-now', (req, res, next) => {
 // SUPPORT IF YOU HAVE A LONG TERM HEALTH CONDITION
 // --------------------------------------------------------
 
-
 router.use('/support', (req, res, next) => {
   res.locals.headerType = 'signedout';
   res.locals.browse = true;
