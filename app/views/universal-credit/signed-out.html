@@ -1,0 +1,27 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}You’ve signed out of your Universal Credit account - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">You’ve signed out of your Universal Credit account</h1>
+
+      <p class="govuk-body">You can sign back in if you need to.</p>
+
+      {{ govukButton({
+        text: "Sign in"
+      }) }}
+
+      <h2 class="govuk-heading-m">Other support if you have a health condition</h2>
+
+      <p class="govuk-body">Find out what <a class="govuk-link govuk-link--no-visited-state" href="/universal-credit/support/">other support</a> you may be able to get to help you stay in work. </p>
+
+    </div>
+
+  </div>
+
+{% endblock %}
