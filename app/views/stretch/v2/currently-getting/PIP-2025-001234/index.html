@@ -1,0 +1,97 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Personal Independence Payment (PIP) - GOV.UK{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: '/stretch/v2/currently-getting/',
+    text: 'Back'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Personal Independence Payment (PIP)</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <p class="govuk-body">View the details of your application, including its status, key dates, and any required actions.</p>
+
+      <h2 class="govuk-heading-l">Award details</h2>
+
+      {% set status = govukTag({
+        classes: 'govuk-tag--green govuk-!-margin-bottom-1',
+        text: 'Approved'
+      }) %}
+
+      {% set rows = [
+        {
+          key: {
+            text: 'Status'
+          },
+          value: {
+            html: status
+          }
+        },
+        {
+          key: {
+            text: 'Reference number'
+          },
+          value: {
+            html: 'PIP-2025-001234'
+          }
+        },
+        {
+          key: {
+            text: 'Award type'
+          },
+          value: {
+            html: '<p class="govuk-body">Long-term award</p><p class="govuk-body govuk-text--secondary">Review in 3 years</p>'
+          }
+        },
+        {
+          key: {
+            text: 'Date received'
+          },
+          value: {
+            html: '18 December 2024'
+          }
+        },
+        {
+          key: {
+            text: 'Date awarded'
+          },
+          value: {
+            html: '18 March 2025'
+          }
+        }
+      ] %}
+
+      {{ govukSummaryList({
+        classes: 'govuk-summary-list--no-border',
+        rows: rows
+      }) }}
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l">What happens next</h2>
+
+      <p class="govuk-body">Your Personal Independence Payment award has been approved for a 3-year period, starting from 18 March 2025.</p>
+
+      <p class="govuk-body">You will receive regular monthly payments based on the level of award you’ve been granted.</p>
+
+      <p class="govuk-body">Your award will be reviewed in March 2028 to assess whether you still qualify for PIP based on your condition.</p>
+
+      <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="#0">Report a change in cicumstances</a></p>
+
+   </div>
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+.lthc-side-navigation {
+  @include govuk-font($size: 19);
+  margin-bottom: govuk-spacing(6);
+  border-left: 1px solid $govuk-border-colour;
+}
+
+
+.lthc-side-navigation__list {
+  margin-bottom: govuk-spacing(4);
+  margin: 0;
+  padding: 0;
+}
+
+
+.lthc-side-navigation__item {
+  border-left: govuk-spacing(1) solid transparent;
+  display: block;
+  padding: govuk-spacing(2);
+  position: relative;
+}
+
+
+.lthc-side-navigation__link {
+  display: inline-block;
+  color: $govuk-link-colour;
+
+  &:focus {
+    color: $govuk-link-active-colour;
+  }
+
+  &:visited:not(:hover):not(:focus) {
+    color: $govuk-link-colour;
+  }
+
+  &:not(:hover) {
+    text-decoration: none;
+  }
+
+  // Trick to increase click area
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0; right: 0; top: 0;
+  }
+
+}
+
+
+.lthc-side-navigation__item--active {
+  border-color: #1a65a6; // Match GOV (slightly darker shade)
+
+  .lthc-side-navigation__link {
+
+    &:not(:hover):not(:focus) {
+      color: $govuk-link-active-colour;
+    }
+
+  }
+
+}

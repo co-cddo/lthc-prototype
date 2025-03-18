@@ -1,0 +1,89 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Free NHS prescriptions - GOV.UK{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: '/stretch/v2/currently-getting/',
+    text: 'Back'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Free NHS prescriptions</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <p class="govuk-body">View the details of your application, including its status, key dates, and any required actions.</p>
+
+      <h2 class="govuk-heading-l">Award details</h2>
+
+      {% set status = govukTag({
+        classes: 'govuk-tag--green govuk-!-margin-bottom-1',
+        text: 'Approved'
+      }) %}
+
+      {% set rows = [
+        {
+          key: {
+            text: 'Status'
+          },
+          value: {
+            html: status
+          }
+        },
+        {
+          key: {
+            text: 'Reference number'
+          },
+          value: {
+            html: 'NHS-2025-001234'
+          }
+        },
+        {
+          key: {
+            text: 'Date received'
+          },
+          value: {
+            html: '18 March 2025'
+          }
+        },
+        {
+          key: {
+            text: 'Date awarded'
+          },
+          value: {
+            html: '<p class="govuk-body">25 March 2025</p><p class="govuk-body govuk-text--secondary">Renewal date on 25 March 2028</p>'
+          }
+        }
+      ] %}
+
+      {{ govukSummaryList({
+        classes: 'govuk-summary-list--no-border',
+        rows: rows
+      }) }}
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l">What happens next</h2>
+
+      <p class="govuk-body">You are now eligible for Free NHS prescriptions based on your long-term health condition.</p>
+
+      <p class="govuk-body">This means you will not need to pay for prescriptions related to your condition for the duration of your award.</p>
+
+      <p class="govuk-body">Your eligibility for free prescriptions will be reviewed in March 2028, at which time DWP will assess whether you still qualify for this service based on your condition.</p>
+
+      <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="#0">Report a change in cicumstances</a></p>
+
+   </div>
+
+  </div>
+
+{% endblock %}

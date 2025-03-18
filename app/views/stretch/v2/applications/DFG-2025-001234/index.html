@@ -1,0 +1,93 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Disability Facilities Grant - GOV.UK{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: '/stretch/v2/applications/',
+    text: 'Back'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Disability Facilities Grant</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <p class="govuk-body">View the details of your application, including its status, key dates, and any required actions.</p>
+
+      <h2 class="govuk-heading-l">Award details</h2>
+
+      {% set status = govukTag({
+        classes: 'govuk-tag--light-blue',
+        text: 'Pending decision'
+      }) %}
+
+      {% set rows = [
+        {
+          key: {
+            text: 'Status'
+          },
+          value: {
+            html: status
+          }
+        },
+        {
+          key: {
+            text: 'Reference number'
+          },
+          value: {
+            html: 'DFG-2025-001234'
+          }
+        },
+        {
+          key: {
+            text: 'Date received'
+          },
+          value: {
+            html: '18 March 2025'
+          }
+        },
+        {
+          key: {
+            text: 'Deadline date'
+          },
+          value: {
+            html: '15 June 2025'
+          }
+        }
+      ] %}
+
+      {{ govukSummaryList({
+        classes: 'govuk-summary-list--no-border',
+        rows: rows
+      }) }}
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l">What happens next</h2>
+
+      <p class="govuk-body">Your application for a Disabled Facilities Grant is being reviewed by your local council. They will assess whether you qualify for funding to make changes to your home that support your disability.</p>
+
+      <p class="govuk-body">The council may contact you if they need more information before making a decision.</p>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l">What this means for you</h2>
+
+      <p class="govuk-body">A decision is expected by 15 June 2025. If more information is needed, the council will contact you. If your grant is approved, it will help cover the cost of the agreed home adaptations.</p>
+
+      <p class="govuk-body">You do not need to do anything right now, but you can <a class="govuk-link govuk-link--no-visited-state" href="#0">contact your local council</a> if you have any questions.</p>
+
+   </div>
+
+  </div>
+
+{% endblock %}

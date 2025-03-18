@@ -1,6 +1,22 @@
 {% if (headerType == "signedin") or (headerType == "simple") %}
 
-  {{ govukFooter() }}
+  {% if stretchVersion == "2" %}
+
+    {{ govukFooter({
+      meta: {
+        items: [
+          { href: "#0", text: "Privacy" },
+          { href: "#0", text: "Cookies" },
+          { href: "#0", text: "Accessibility statement" }
+        ]
+      }
+    }) }}
+
+  {% else %}
+
+    {{ govukFooter() }}
+
+  {% endif %}
 
 {% else %}
 

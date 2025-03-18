@@ -1,0 +1,13 @@
+<nav class="lthc-side-navigation{% if params.classes %} {{ params.classes }}{% endif %}" aria-label="Side navigation">
+
+  <ul class="lthc-side-navigation__list">
+
+    {% for item in params.items %}
+    <li class="lthc-side-navigation__item{% if item.active %} lthc-side-navigation__item--active{% endif %}">
+      <a class="lthc-side-navigation__link" href="{{ item.href }}"{% if item.active %} aria-current="true"{% endif %}>{{ item.text }}</a>
+    </li>
+    {% endfor %}
+
+  </ul>
+
+</nav>

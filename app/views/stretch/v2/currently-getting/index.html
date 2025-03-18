@@ -1,0 +1,169 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}You currently get - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">You currently get</h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-7">You’re getting help with all of the following.</p>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h2 class="govuk-heading-l" id="benefits-and-financial-help">Benefits and financial help</h2>
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: "Employment and Support Allowance (ESA)"
+          },
+          actions: {
+            items: [
+              {
+                classes: "govuk-link--no-visited-state govuk-!-font-weight-regular",
+                href: "/stretch/v2/currently-getting/ESA-2025-001234/",
+                text: "View",
+                visuallyHiddenText: "Employment and Support Allowance (ESA)"
+              }
+            ]
+          }
+        },
+        rows: [
+          {
+            key: {
+              text: "Reference"
+            },
+            value: {
+              text: "ESA-2025-001234"
+            }
+          },
+          {
+            key: {
+              text: "Date awarded"
+            },
+            value: {
+              text: "18 March 2025"
+            }
+          },
+          {
+            key: {
+              text: "Award end date"
+            },
+            value: {
+              text: "18 March 2028"
+            }
+          }
+        ]
+      }) }}
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: "Personal Independence Payment (PIP)"
+          },
+          actions: {
+            items: [
+              {
+                classes: "govuk-link--no-visited-state govuk-!-font-weight-regular",
+                href: "/stretch/v2/currently-getting/PIP-2025-001234/",
+                text: "View",
+                visuallyHiddenText: "Personal Independence Payment (PIP)"
+              }
+            ]
+          }
+        },
+        rows: [
+          {
+            key: {
+              text: "Reference"
+            },
+            value: {
+              text: "PIP-2025-001234"
+            }
+          },
+          {
+            key: {
+              text: "Date awarded"
+            },
+            value: {
+              text: "18 March 2025"
+            }
+          },
+          {
+            key: {
+              text: "Award end date"
+            },
+            value: {
+              text: "18 March 2028"
+            }
+          }
+        ]
+      }) }}
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: "Free NHS prescriptions"
+          },
+          actions: {
+            items: [
+              {
+                classes: "govuk-link--no-visited-state govuk-!-font-weight-regular",
+                href: "/stretch/v2/currently-getting/NHS-2025-001234/",
+                text: "View",
+                visuallyHiddenText: "Free NHS prescriptions"
+              }
+            ]
+          }
+        },
+        rows: [
+          {
+            key: {
+              text: "Reference"
+            },
+            value: {
+              text: "NHS-2025-001234"
+            }
+          },
+          {
+            key: {
+              text: "Date awarded"
+            },
+            value: {
+              text: "Date"
+            }
+          },
+          {
+            key: {
+              text: "Expires"
+            },
+            value: {
+              text: "Date"
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-l" id="help-with-your-health">Help with your health</h2>
+
+      <p class="govuk-body">You’re not currently getting any other health help. You may be entitled to <a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/entitled-to/#help-with-your-health">help with your health</a>.</p>
+
+      <h2 class="govuk-heading-l" id="employer-help">Employer help</h2>
+
+      <p class="govuk-body">You’re not currently getting any other employer help. You may be entitled to <a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/entitled-to/#employer-help">employer help</a>.</p>
+
+    </div>
+
+  </div>
+
+{% endblock %}

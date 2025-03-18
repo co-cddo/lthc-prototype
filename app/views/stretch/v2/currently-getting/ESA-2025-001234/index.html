@@ -1,0 +1,136 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Employment and Support Allowance - GOV.UK{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: '/stretch/v2/currently-getting/',
+    text: 'Back'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Employment and Support Allowance</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <p class="govuk-body">View the details of your application, including its status, key dates, and any required actions.</p>
+
+      <h2 class="govuk-heading-l">Award details</h2>
+
+      {% set status = govukTag({
+        classes: 'govuk-tag--green govuk-!-margin-bottom-1',
+        text: 'Approved'
+      }) %}
+
+      {% set rows = [
+        {
+          key: {
+            text: 'Status'
+          },
+          value: {
+            html: status + '<p class="govuk-body">You’ll receive regular payments while you’re unable to work due to your health condition.</p>'
+          }
+        },
+        {
+          key: {
+            text: 'Reference number'
+          },
+          value: {
+            html: 'ESA-2025-001234'
+          }
+        },
+        {
+          key: {
+            text: 'Date received'
+          },
+          value: {
+            html: '25 December 2024'
+          }
+        },
+        {
+          key: {
+            text: 'Date awarded'
+          },
+          value: {
+            html: '18 March 2025'
+          }
+        }
+      ] %}
+
+      {{ govukSummaryList({
+        classes: 'govuk-summary-list--no-border',
+        rows: rows
+      }) }}
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l">Payment details</h2>
+
+      {% set rows = [
+        {
+          key: {
+            text: 'First payment'
+          },
+          value: {
+            text: '30 March 2025'
+          }
+        },
+        {
+          key: {
+            text: 'Next payment date'
+          },
+          value: {
+            html: '<p class="govuk-body">16 March 2025</p><p class="govuk-body govuk-text--secondary">Payments every two weeks</p>'
+          }
+        },
+        {
+          key: {
+            text: 'Payment amount'
+          },
+          value: {
+            text: '£390'
+          }
+        },
+        {
+          key: {
+            text: 'Payment method'
+          },
+          value: {
+            text: 'Direct deposit to your bank account'
+          }
+        }
+      ] %}
+
+      {{ govukSummaryList({
+        "classes": "govuk-summary-list--no-border",
+        "rows": rows
+      }) }}
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l">What happens next</h2>
+
+      <p class="govuk-body">You do not need to reapply unless your circumstances change.</p>
+
+      <p class="govuk-body">Your claim will be reviewed in March 2028 to check if you still qualify.</p>
+
+      <p class="govuk-body">Actions you can take:</p>
+
+      <ul class="govuk-list govuk-list--spaced">
+        <li><a class="govuk-link govuk-link--no-visited-state " href="#0">View full decision letter</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state " href="#0">Report a change in cicumstances</a></li>
+      </ul>
+
+   </div>
+
+  </div>
+
+{% endblock %}

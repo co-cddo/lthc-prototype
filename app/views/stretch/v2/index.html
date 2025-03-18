@@ -1,0 +1,97 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Get help if you have a long term health condition - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Personalised support for</span>
+
+      <h1 class="govuk-heading-xl">Barbara Clark</h1>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-half">
+
+      {% set html %}
+        <p>govuk-grid-column-full</p>
+      {% endset %}
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: "You currently get"
+          },
+          actions: {
+            items: [
+              {
+                classes: "govuk-link--no-visited-state govuk-!-font-weight-regular",
+                href: "/stretch/v2/currently-getting/",
+                text: "View all",
+                visuallyHiddenText: "support you currently get"
+              }
+            ]
+          }
+        }
+      }) }}
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: "You’re entitled to"
+          },
+          actions: {
+            items: [
+              {
+                classes: "govuk-link--no-visited-state govuk-!-font-weight-regular",
+                href: "/stretch/v2/entitled-to/",
+                text: "View all",
+                visuallyHiddenText: "support you’re entitled to"
+              }
+            ]
+          }
+        }
+      }) }}
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: "Your applications"
+          },
+          actions: {
+            items: [
+              {
+                classes: "govuk-link--no-visited-state govuk-!-font-weight-regular",
+                href: "/stretch/v2/applications/",
+                text: "View all",
+                visuallyHiddenText: "applications"
+              }
+            ]
+          }
+        }
+      }) }}
+
+    </div>
+
+  </div>
+
+{% endblock %}

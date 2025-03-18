@@ -17,12 +17,12 @@ const upcomingActions = userData.upcomingActions || [];
 const supportApplications = userData.supportApplications || [];
 const pastEvents = userData.pastEvents || [];
 
-
 // --------------------------------------------------------
 // GENERAL
 // --------------------------------------------------------
 
 router.use('/', function(req, res, next) {
+  res.locals.currentPath = req.path;
   res.locals.name = 'Barbara';
   res.locals.headerType = 'signedin';
   next();
@@ -219,6 +219,72 @@ router.get('/stretch/your-applications/:id', (req, res) => {
   }
 
 });
+
+
+// STRETCH V2
+
+function getNavigation(currentPath) {
+  return [
+    { text: 'Applications in progress', href: '/stretch/v2/applications/' },
+    { text: 'Actions you need to take', href: '/stretch/v2/applications/actions-you-need-to-take/' },
+    { text: 'Your activity log', href: '/stretch/v2/applications/your-activity-log/' },
+    { text: 'Previous applications', href: '/stretch/v2/applications/previous-applications/' }
+  ].map(item => ({
+    ...item,
+    active: item.href === currentPath
+  }));
+}
+
+router.use('/stretch/v2', (req, res, next) => {
+  res.locals.headerType = 'signedin';
+  res.locals.serviceNav = true;
+  res.locals.stretchVersion = '2';
+  next();
+});
+
+router.get('/stretch/v2', (req, res) => {
+  res.locals.currentPage = 'home'
+  res.render('stretch/v2/index');
+});
+
+router.get('/stretch/v2/currently-getting', (req, res) => {
+  res.locals.currentPage = 'currently-getting'
+  res.render('stretch/v2/currently-getting/index');
+});
+
+router.get('/stretch/v2/entitled-to', (req, res) => {
+  res.locals.currentPage = 'entitled-to'
+  res.render('stretch/v2/entitled-to/index');
+});
+
+router.get('/stretch/v2/applications', (req, res) => {
+  res.locals.currentPage = 'applications'
+  res.render('stretch/v2/applications/index', {
+    navigation: getNavigation(req.path)
+  });
+});
+
+router.get('/stretch/v2/applications/actions-you-need-to-take/', (req, res) => {
+  res.locals.currentPage = 'applications'
+  res.render('stretch/v2/applications/actions-you-need-to-take/index', {
+    navigation: getNavigation(req.path)
+  });
+});
+
+router.get('/stretch/v2/applications/your-activity-log/', (req, res) => {
+  res.locals.currentPage = 'applications'
+  res.render('stretch/v2/applications/your-activity-log/index', {
+    navigation: getNavigation(req.path)
+  });
+});
+
+router.get('/stretch/v2/applications/previous-applications/', (req, res) => {
+  res.locals.currentPage = 'applications'
+  res.render('stretch/v2/applications/previous-applications/index', {
+    navigation: getNavigation(req.path)
+  });
+});
+
 
 
 // --------------------------------------------------------
