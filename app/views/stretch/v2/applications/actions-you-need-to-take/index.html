@@ -1,0 +1,54 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Your applications - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Your applications</h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-7">View your applications in progress, any actions you need to take, your activity log, and previous applications.</p>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-third">
+      {{ lthcSideNavigation({
+        items: navigation
+      }) }}
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Actions you need to take</h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-6">What you need to do to ensure you get the support you need.</p>
+
+      {{ lthcTimeline({
+        items: [
+          {
+            title: 'Submit further evidence for ESA',
+            date: '2025-03-20',
+            isByDate: true,
+            html: '<p class="govuk-body">We need additional medical evidence to continue processing your ESA claim. Please <a class="govuk-link govuk-link--no-visited-state" href="#0">provide the requested information</a>.</p>'
+          },
+          {
+            title: 'Apply for Universal Credit',
+            date: '2025-04-30',
+            isByDate: true,
+            html: '<p class="govuk-body">If you’re facing financial difficulties, you may be eligible for Universal Credit. <a class="govuk-link govuk-link--no-visited-state" href="#0">Apply now for support</a>.</p>'
+          }
+        ]
+      }) }}
+
+    </div>
+
+  </div>
+
+{% endblock %}

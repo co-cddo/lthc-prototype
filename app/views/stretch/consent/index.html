@@ -19,37 +19,37 @@
       <p class="govuk-body">We will only use this to find out what support you may be eligible for.</p>
 
       {{ govukInsetText({
-        "text": "We will not share your full medical history—only the details needed to check what help is available."
+        text: 'We will not share your full medical history—only the details needed to check what help is available.'
       }) }}
 
       {# replace with a form tag #}
       <form class="govuk-!-margin-top-6" method="post">
 
         {{ govukRadios({
-          "name": "consent",
-          "id": "consent",
-          "fieldset": {
-            "legend": {
-              "text": "Do you give your consent?",
-              "isPageHeading": true,
-              "classes": "govuk-fieldset__legend--m"
+          name: 'consent',
+          id: 'consent',
+          fieldset: {
+            legend: {
+              text: 'Do you give your consent?',
+              isPageHeading: true,
+              classes: 'govuk-fieldset__legend--m'
             }
           },
-          "items": [
+          items: [
             {
-              "value": "yes",
-              "html": 'Yes<span class="govuk-visually-hidden">, I give my consent</span>'
+              value: 'yes',
+              html: 'Yes<span class="govuk-visually-hidden">, I give my consent</span>'
             },
             {
-              "value": "no",
-              "html": 'No<span class="govuk-visually-hidden">, I don’t give my consent</span>'
+              value: 'no',
+              html: 'No<span class="govuk-visually-hidden">, I don’t give my consent</span>'
             }
           ],
-          "errorMessage": consentError
+          errorMessage: consentError
         }) }}
 
         {{ govukButton({
-          "text": "Continue"
+          text: 'Continue'
         }) }}
 
     </form>

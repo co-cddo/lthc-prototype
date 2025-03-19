@@ -1,0 +1,102 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Access to Work - GOV.UK{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: '/stretch/v2/applications/',
+    text: 'Back'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Access to Work</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <p class="govuk-body">View the details of your application, including its status, key dates, and any required actions.</p>
+
+      <h2 class="govuk-heading-l">Application details</h2>
+
+      {% set status = govukTag({
+        classes: 'govuk-tag--yellow govuk-!-margin-bottom-1',
+        text: 'Action needed'
+      }) %}
+
+      {% set rows = [
+        {
+          key: {
+            text: 'Status'
+          },
+          value: {
+            html: status + '<p class="govuk-body">You need to provide supporting documents.</p>'
+          }
+        },
+        {
+          key: {
+            text: 'Reference number'
+          },
+          value: {
+            html: 'ATW-2025-001234'
+          }
+        },
+        {
+          key: {
+            text: 'Date received'
+          },
+          value: {
+            html: '18 March 2025'
+          }
+        },
+        {
+          key: {
+            text: 'Deadline date'
+          },
+          value: {
+            html: '2 April 2025'
+          }
+        }
+      ] %}
+
+      {{ govukSummaryList({
+        classes: 'govuk-summary-list--no-border',
+        rows: rows
+      }) }}
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l" id="what-you-need-to-do">What you need to do</h2>
+
+      <p class="govuk-body">Your Access to Work application is in progress, but a decision cannot be made until you provide the requested information.</p>
+
+      <p class="govuk-body">You need to submit a confirmation letter from your employer outlining your job role and how your condition affects your work.</p>
+
+      <p class="govuk-body">The deadline to submit this information is 2 April 2025.</p>
+
+      <ul class="govuk-list govuk-list--spaced">
+        <li><a class="govuk-link govuk-link--no-visited-state" href="#0">Submit your documents to Access to Work</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="#0">Find out how Access to Work can help</a></li>
+      </ul>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l" id="what-this-means-for-you">What this means for you</h2>
+
+      <p class="govuk-body">Your application remains open, but it will not be processed until the required information is received. If you do not provide it by the deadline, your application may be delayed or closed.</p>
+
+      <p class="govuk-body">Once you submit the requested documents, DWP will review your application and update you on the next steps.</p>
+
+      <p class="govuk-body">If you have any questions, you can <a class="govuk-link govuk-link--no-visited-state" href="#0">contact Access to Work support</a>.</p>
+
+   </div>
+
+  </div>
+
+{% endblock %}

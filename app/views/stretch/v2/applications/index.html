@@ -1,0 +1,131 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Your applications - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Your applications</h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-7">View your applications in progress, any actions you need to take, your activity log, and previous applications.</p>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-third">
+      {{ lthcSideNavigation({
+        items: navigation
+      }) }}
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Applications in progress</h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-6">Applications being assessed. We’ll let you know if more information is needed.</p>
+
+      {# Universal Credit #}
+      {% set status = govukTag(
+        {
+          classes: 'govuk-tag--yellow',
+          text: 'Action needed'
+        }
+      ) %}
+
+      {% set rows = [
+        { key: { text: 'Status' }, value: { html: status } },
+        { key: { text: 'Reference' }, value: { text: 'UC-2025-001234' } },
+        { key: { text: 'Deadline date' }, value: { text: '15 June 2025' } }
+      ] %}
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: 'Universal Credit'
+          },
+          actions: {
+            items: [
+              {
+                classes: 'govuk-link--no-visited-state govuk-!-font-weight-regular',
+                href: '/stretch/v2/applications/UC-2025-001234/',
+                text: 'View details'
+              }
+            ]
+          }
+        },
+        rows: rows
+      }) }}
+
+      {% set status = govukTag(
+        {
+          classes: 'govuk-tag--yellow',
+          text: 'Action needed'
+        }
+      ) %}
+
+      {% set rows = [
+        { key: { text: 'Status' }, value: { html: status } },
+        { key: { text: 'Reference' }, value: { text: 'ATW-2025-001234' } },
+        { key: { text: 'Deadline date' }, value: { text: '2 April 2025' } }
+      ] %}
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: 'Access to Work'
+          },
+          actions: {
+            items: [
+              {
+                classes: 'govuk-link--no-visited-state govuk-!-font-weight-regular',
+                href: '/stretch/v2/applications/ATW-2025-001234/',
+                text: 'View details'
+              }
+            ]
+          }
+        },
+        rows: rows
+      }) }}
+
+      {% set status = govukTag(
+        {
+          classes: 'govuk-tag--light-blue',
+          text: 'Pending decision'
+        }
+      ) %}
+
+      {% set rows = [
+        { key: { text: 'Status' }, value: { html: status } },
+        { key: { text: 'Reference' }, value: { text: 'DFG-2847592' } },
+        { key: { text: 'Decision date' }, value: { html: '15 June 2025 <span class="govuk-text--secondary">(estimated)</span>' } }
+      ] %}
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: 'Disability Facilities Grant'
+          },
+          actions: {
+            items: [
+              {
+                classes: 'govuk-link--no-visited-state govuk-!-font-weight-regular',
+                href: '/stretch/v2/applications/DFG-2025-001234/',
+                text: 'View details'
+              }
+            ]
+          }
+        },
+        rows: rows
+      }) }}
+
+    </div>
+
+  </div>
+
+{% endblock %}

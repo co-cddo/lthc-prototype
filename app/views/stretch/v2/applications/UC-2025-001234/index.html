@@ -1,0 +1,100 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Universal Credit - GOV.UK{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: '/stretch/v2/applications/',
+    text: 'Back'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Universal Credit</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <p class="govuk-body">View the details of your application, including its status, key dates, and any required actions.</p>
+
+      <h2 class="govuk-heading-l">Application details</h2>
+
+      {% set status = govukTag({
+        classes: 'govuk-tag--yellow govuk-!-margin-bottom-1',
+        text: 'Action needed'
+      }) %}
+
+      {% set rows = [
+        {
+          key: {
+            text: 'Status'
+          },
+          value: {
+            html: status + '<p class="govuk-body">More information is needed before your application can be processed.</p>'
+          }
+        },
+        {
+          key: {
+            text: 'Reference number'
+          },
+          value: {
+            html: 'UC-2025-001234'
+          }
+        },
+        {
+          key: {
+            text: 'Date received'
+          },
+          value: {
+            html: '18 March 2025'
+          }
+        },
+        {
+          key: {
+            text: 'Deadline date'
+          },
+          value: {
+            html: '15 June 2025'
+          }
+        }
+      ] %}
+
+      {{ govukSummaryList({
+        classes: 'govuk-summary-list--no-border',
+        rows: rows
+      }) }}
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l">What you need to do</h2>
+
+      <p class="govuk-body">Universal Credit has requested your last three months of bank statements to confirm your financial situation.</p>
+
+      <p class="govuk-body">You must submit these by 15 June 2025.</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Go to your <a class="govuk-link govuk-link--no-visited-state" href="#0">Universal Credit account</a> to upload the requested documents</a></li>
+        <li>You can also visit your nearest Jobcentre Plus for assistance</li>
+      </ul>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l">What this means for you</h2>
+
+      <p class="govuk-body">Your application is still in progress and will not be approved until the required documents are received.</p>
+
+      <p class="govuk-body">Once the requested documents are submitted, the Department for Work and Pensions (DWP) will review them and update you on the next steps.</p>
+
+      <p class="govuk-body">If you have any questions, you can <a class="govuk-link govuk-link--no-visited-state" href="#0">contact Universal Credit support</a>.</p>
+
+   </div>
+
+  </div>
+
+{% endblock %}

@@ -32,32 +32,32 @@
       <div class="govuk-!-margin-top-6">
 
         {{ govukRadios({
-          "name": "consent-v2",
-          "id": "consent-v2",
-          "fieldset": {
-            "legend": {
-              "text": "Do you consent to sharing your information?",
-              "isPageHeading": true,
-              "classes": "govuk-fieldset__legend--m"
+          name: 'consent-v2',
+          id: 'consent-v2',
+          fieldset: {
+            legend: {
+              text: 'Do you consent to sharing your information?',
+              isPageHeading: true,
+              classes: 'govuk-fieldset__legend--m'
             }
           },
-          "hint": {
-            "text": "We will use your information to check what benefits and support you may be\neligible for."
+          hint: {
+            text: 'We will use your information to check what benefits and support you may be\neligible for.'
           },
-          "items": [
+          items: [
             {
-              "value": "yes",
-              "html": 'Yes<span class="govuk-visually-hidden">, I give my consent</span>'
+              value: 'yes',
+              html: 'Yes<span class="govuk-visually-hidden">, I give my consent</span>'
             },
             {
-              "value": "no",
-              "html": 'No<span class="govuk-visually-hidden">, I don’t give my consent</span>'
+              value: 'no',
+              html: 'No<span class="govuk-visually-hidden">, I don’t give my consent</span>'
             }
           ]
         }) }}
 
         {{ govukButton({
-          "text": "Continue"
+          text: 'Continue'
         }) }}
 
       </div>

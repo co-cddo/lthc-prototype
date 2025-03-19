@@ -1,0 +1,133 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Your applications - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Your applications</h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-7">View your applications in progress, any actions you need to take, your activity log, and previous applications.</p>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-third">
+      {{ lthcSideNavigation({
+        items: navigation
+      }) }}
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Previous applications</h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-6">Applications that have expired, been withdrawn, or are no longer active.</p>
+
+      {# Blue Badge #}
+      {% set status = govukTag(
+        {
+          classes: 'govuk-tag--grey',
+          text: 'Expired'
+        }
+      ) %}
+
+      {% set rows = [
+        { key: { text: 'Status' }, value: { html: status } },
+        { key: { text: 'Reference' }, value: { text: 'BB-1837562'} },
+        { key: { text: 'Expiry date' }, value: { text: 'Date' } }
+      ] %}
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: 'Blue Badge'
+          },
+          actions: {
+            items: [
+              {
+                classes: 'govuk-link--no-visited-state govuk-!-font-weight-regular',
+                href: '#0',
+                text: 'View details'
+              }
+            ]
+          }
+        },
+        rows: rows
+      }) }}
+
+      {# Disability Living Allowance #}
+      {% set status = govukTag(
+        {
+          classes: 'govuk-tag--grey govuk-!-margin-bottom-2',
+          text: 'Superseded'
+        }
+      ) %}
+
+      {% set rows = [
+        { key: { text: 'Status' }, value: { html: status + '<p class="govuk-body">Replaced by Personal Independence Payment (PIP)</p>' } },
+        { key: { text: 'Reference' }, value: { text: 'DLA-8273645'} },
+        { key: { text: 'Replaced date' }, value: { text: 'Date' } }
+      ] %}
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: 'Disability Living Allowance (DLA)'
+          },
+          actions: {
+            items: [
+              {
+                classes: 'govuk-link--no-visited-state govuk-!-font-weight-regular',
+                href: '#0',
+                text: 'View details'
+              }
+            ]
+          }
+        },
+        rows: rows
+      }) }}
+
+      {# Access to Work #}
+      {% set status = govukTag(
+        {
+          classes: 'govuk-tag--grey govuk-!-margin-bottom-2',
+          text: 'Withdrawn'
+        }
+      ) %}
+
+      {% set rows = [
+        { key: { text: 'Status' }, value: { html: status + '<p class="govuk-body">Application withdrawn by Barbara Clark</p>' } },
+        { key: { text: 'Reference' }, value: { text: 'ATW-2948375'} },
+        { key: { text: 'Withdrawn date' }, value: { text: 'Date' } }
+      ] %}
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: 'Access to Work'
+          },
+          actions: {
+            items: [
+              {
+                classes: 'govuk-link--no-visited-state govuk-!-font-weight-regular',
+                href: ' #0',
+                text: 'View details'
+              }
+            ]
+          }
+        },
+        rows: rows
+      }) }}
+
+    </div>
+
+  </div>
+
+{% endblock %}

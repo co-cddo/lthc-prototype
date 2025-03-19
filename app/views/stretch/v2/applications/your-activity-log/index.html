@@ -1,0 +1,69 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Your applications - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Your applications</h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-7">View your applications in progress, any actions you need to take, your activity log, and previous applications.</p>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-third">
+      {{ lthcSideNavigation({
+        items: navigation
+      }) }}
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Your activity log</h1>
+
+      <p class="govuk-body govuk-!-margin-bottom-6">An activity log of key events and actions for your applications.</p>
+
+      {% set items = upcomingActions %}
+
+      {{ lthcTimeline({
+        items: [
+          {
+            title: 'Decision made for PIP',
+            date: '2025-02-5',
+            html: '<p class="govuk-body">Your application for PIP has been decided. You’ve been awarded the standard rate. <a class="govuk-link govuk-link--no-visited-state" href="#0">View your award details</a>.</p>'
+          },
+          {
+            title: 'Health assessment completed',
+            date: '2025-01-18',
+            text: 'You attended your PIP health assessment. We are now reviewing your information. No action needed until we reach a decision.'
+          },
+          {
+            title: 'Application submitted for ESA',
+            date: '2024-12-15',
+            text: 'Your ESA application has been received and is under review. No further action required at this stage.'
+          },
+          {
+            title: 'Blue Badge application expired',
+            date: '2024-12-01',
+            html: '<p class="govuk-body">Your Blue Badge application has expired. <a class="govuk-link govuk-link--no-visited-state" href="#0">Reapply if your mobility needs have changed</a>.</p>'
+          },
+          {
+            title: 'Application submitted for PIP',
+            date: '2024-11-20',
+            text: 'Your PIP application has been successfully submitted and is under review. No action required until you are contacted for further information.'
+          }
+        ]
+      }) }}
+
+    </div>
+
+  </div>
+
+{% endblock %}

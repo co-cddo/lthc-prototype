@@ -302,44 +302,44 @@
         {
           "title": "Submit appeal (if needed)",
           "date": "2025-06-30",
-          "content": "If you’re unhappy with your Blue Badge outcome, you can appeal by 30th June 2025."
+          "text": "If you’re unhappy with your Blue Badge outcome, you can appeal by 30th June 2025."
         },
         {
           "title": "GP follow up appointment",
           "date": "2025-06-05",
-          "content": "You have a follow-up appointment to discuss medication adjustments for rheumatoid arthritis."
+          "text": "You have a follow-up appointment to discuss medication adjustments for rheumatoid arthritis."
         }
       ],
       "pastEvents": [
         {
           "title": "Blue Badge approved",
           "date": "2025-06-25",
-          "content": "Your Blue Badge application was approved. The badge will arrive by post within 7 working days."
+          "text": "Your Blue Badge application was approved. The badge will arrive by post within 7 working days."
         },
         {
           "title": "Employment Support and Allowance approved",
           "date": "2025-06-20",
-          "content": "Your ESA application was approved. You will receive £390 every two weeks, your first payment on 20 June 2025."
+          "text": "Your ESA application was approved. You will receive £390 every two weeks, your first payment on 20 June 2025."
         },
         {
           "title": "Work capability assessment completed",
           "date": "2025-05-30",
-          "content": "You attended your ESA Work Capability Assessment. The assessor confirmed further processing is required before a decision is made."
+          "text": "You attended your ESA Work Capability Assessment. The assessor confirmed further processing is required before a decision is made."
         },
         {
           "title": "Employment Support and Allowance submitted",
           "date": "2025-03-15",
-          "content": "You submitted your ESA application, including evidence from your GP and specialist."
+          "text": "You submitted your ESA application, including evidence from your GP and specialist."
         },
         {
           "title": "Specialist appointment",
           "date": "2024-12-20",
-          "content": "You attended a rheumatology appointment. The specialist confirmed the severity of your condition and provided a report."
+          "text": "You attended a rheumatology appointment. The specialist confirmed the severity of your condition and provided a report."
         },
         {
           "title": "GP appointment",
           "date": "2024-12-05",
-          "content": "Your GP confirmed your diagnosis of rheumatoid arthritis and issued a referral to a specialist."
+          "text": "Your GP confirmed your diagnosis of rheumatoid arthritis and issued a referral to a specialist."
         }
       ]
     }

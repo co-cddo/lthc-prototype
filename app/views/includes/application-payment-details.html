@@ -6,29 +6,29 @@
 
     {% if item.firstPaymentDate %}
       {% set rows = rows | merge([{
-        "key": { "text": "First payment" },
-        "value": { "html": item.firstPaymentDate | friendlyDateLong }
+        key: { text: 'First payment' },
+        value: { html: item.firstPaymentDate | friendlyDateLong }
       }]) %}
     {% endif %}
 
     {% if item.paymentAmount %}
       {% set rows = rows | merge([{
-        "key": { "text": "Payment amount" },
-        "value": { "html": item.paymentAmount }
+        key: { text: 'Payment amount' },
+        value: { html: item.paymentAmount }
       }]) %}
     {% endif %}
 
     {% if item.nextPaymentDate %}
       {% set rows = rows | merge([{
-        "key": { "text": "Next payment date" },
-        "value": { "html": item.nextPaymentDate | friendlyDateLong }
+        key: { text: 'Next payment date' },
+        value: { html: item.nextPaymentDate | friendlyDateLong }
       }]) %}
     {% endif %}
 
     {% if item.paymentMethod %}
       {% set rows = rows | merge([{
-        "key": { "text": "Payment method" },
-        "value": { "html": item.paymentMethod }
+        key: { text: 'Payment method' },
+        value: { html: item.paymentMethod }
       }]) %}
     {% endif %}
 
@@ -39,8 +39,8 @@
   <h2 class="govuk-heading-l">Payment details</h2>
 
   {{ govukSummaryList({
-    "classes": "govuk-summary-list--no-border",
-    "rows": rows
+    classes: 'govuk-summary-list--no-border',
+    rows: rows
   }) }}
 
 {% endif %}

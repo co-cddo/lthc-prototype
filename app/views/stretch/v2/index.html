@@ -1,0 +1,159 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Personalised support for Barbara Clark - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-xl">Personalised support for</span>
+
+      <h1 class="govuk-heading-xl">Barbara Clark</h1>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row lthc-dashboard">
+
+    <div class="govuk-grid-column-one-half lthc-dashboard__column">
+
+      <div class="govuk-summary-card">
+
+        <div class="govuk-summary-card__title-wrapper">
+
+          <h2 class="govuk-summary-card__title">You currently get</h2>
+
+          <div class="govuk-summary-card__actions">
+            <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-regular" href="/stretch/v2/currently-getting/">View all<span class="govuk-visually-hidden"> support you currently get</span></a>
+          </div>
+
+        </div>
+
+        <div class="govuk-summary-card__content">
+
+          <p class="govuk-body">3 types of support:</p>
+
+          <ul class="govuk-list govuk-list--spaced">
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/currently-getting/ESA-2025-001234/">Employment and Support Allowance</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/currently-getting/PIP-2025-001234/">Personal Independence Payment</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/currently-getting/NHS-2025-001234/">Free NHS prescriptions</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half lthc-dashboard__column">
+
+      <div class="govuk-summary-card">
+
+        <div class="govuk-summary-card__title-wrapper">
+
+          <h2 class="govuk-summary-card__title">You’re entitled to</h2>
+
+          <div class="govuk-summary-card__actions">
+            <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-regular" href="/stretch/v2/currently-getting/">View all<span class="govuk-visually-hidden"> support you’re entitled to</span></a>
+          </div>
+
+        </div>
+
+        <div class="govuk-summary-card__content">
+
+          <p class="govuk-body">6 other types of support are available:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Industrial Injury Disablement</li>
+            <li>Disabled bus pass</li>
+            <li>Blue Badge</li>
+            <li>Free NHS dental treatment</li>
+            <li>Personal Health Budget</li>
+            <li>Reasonable adjustments</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+      <div class="govuk-summary-card">
+
+        <div class="govuk-summary-card__title-wrapper">
+
+          <h2 class="govuk-summary-card__title">Your applications</h2>
+
+          <div class="govuk-summary-card__actions">
+            <a class="govuk-link govuk-link--no-visited-state govuk-!-font-weight-regular" href="/stretch/v2/applications/">View all<span class="govuk-visually-hidden"> of your support applications</span></a>
+          </div>
+
+        </div>
+
+        <div class="govuk-summary-card__content">
+
+          <p class="govuk-body">You have 3 applications in progress:</p>
+
+          {% set ucStatus = govukTag({
+            classes: 'govuk-tag--yellow govuk-!-margin-bottom-1',
+            text: 'Action needed'
+          }) %}
+
+          {% set atwStatus = govukTag({
+            classes: 'govuk-tag--yellow govuk-!-margin-bottom-1',
+            text: 'Action needed'
+          }) %}
+
+          {% set dfgStatus = govukTag({
+            classes: 'govuk-tag--light-blue govuk-!-margin-bottom-1',
+            text: 'Pending decision'
+          }) %}
+
+          {{ govukSummaryList({
+            classes: 'govuk-summary-list--no-border',
+            rows: [
+              {
+                key: {
+                  text: 'Universal Credit'
+                },
+                value: {
+                  html: ucStatus + '<p class="govuk-body">More information is needed before your application can be processed.</p>'
+                }
+              },
+              {
+                key: {
+                  text: 'Access to Work'
+                },
+                value: {
+                  html: atwStatus + '<p class="govuk-body">You need to provide supporting documents.</p>'
+                }
+              },
+              {
+                key: {
+                  text: 'Disabled Facilities Grant'
+                },
+                value: {
+                  html: dfgStatus
+                }
+              }
+            ]
+          }) }}
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+{% endblock %}

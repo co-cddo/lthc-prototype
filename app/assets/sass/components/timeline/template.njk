@@ -5,11 +5,21 @@
 
       <div class="lthc-timeline__heading">
         <h3 class="lthc-timeline__title govuk-heading-m">{{ item.title }}</h3>
-        <time class="govuk-body-s govuk-text--secondary" datetime="{{ item.date }}">{{ item.date | friendlyDateLong }}</time>
+        <time class="govuk-body-s govuk-text--secondary" datetime="{{ item.date or item.byDate }}">
+          {% if item.isByDate %}
+            By {{ item.date | friendlyDateLong }}
+          {% else %}
+            {{ item.date | friendlyDateLong }}
+          {% endif %}
+        </time>
       </div>
 
       <div class="lthc-timeline__content">
-        {{ item.content | formatContent | safe }}
+        {% if item.text %}
+          <p class="govuk-body">{{ item.text }}</p>
+        {% elseif item.html %}
+          {{ item.html | safe }}
+        {% endif %}
       </div>
 
     </div>
