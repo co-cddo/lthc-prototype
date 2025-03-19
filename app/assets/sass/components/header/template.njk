@@ -1,4 +1,4 @@
-{# {% from "macros/attributes.njk" import govukAttributes %} #}
+{% from "node_modules/govuk-frontend/dist/govuk/macros/attributes.njk" import govukAttributes %}
 
 {%- set menuButtonText = params.menuButtonText if params.menuButtonText else 'Menu' -%}
 
@@ -76,8 +76,8 @@
           <a class="govuk-header__link" href="#0">GOV.UK One Login {{ _oneLoginPerson | safe | trim }}</a>
         </li>
 
-        <li class="govuk-header__navigation-item">
-          <a class="govuk-header__link" href="/signout">Sign out</a>
+        <li class="govuk-header__navigation-item govuk-header__navigation-item--sign-out">
+          <a class="govuk-header__link" href="#0">Sign out</a>
         </li>
 
       </ul>

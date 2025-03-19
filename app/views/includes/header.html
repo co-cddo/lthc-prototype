@@ -2,10 +2,15 @@
 
 {% if headerType == "signedin" %}
 
-  {{ govukHeader({
+  {{ lthcHeader({
+    classes: "govuk-header--full-width-border",
+    homepageUrl: homepageUrl
+  }) }}
+
+  {# {{ govukHeader({
     homepageUrl: homepageUrl,
     classes: 'govuk-header--full-width-border'
-  }) }}
+  }) }} #}
 
   {% if stretchVersion == '2' %}
 
