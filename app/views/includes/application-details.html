@@ -1,85 +1,85 @@
 <h2 class="govuk-heading-l">Application details</h2>
 
 {% set statusClassesLookup = {
-  "approved": "govuk-tag--green govuk-!-margin-bottom-1",
-  "decision pending": "govuk-tag--light-blue govuk-!-margin-bottom-1",
-  "action needed": "govuk-tag--yellow govuk-!-margin-bottom-1",
-  "rejected": "govuk-tag--red govuk-!-margin-bottom-1"
+  'approved': 'govuk-tag--green govuk-!-margin-bottom-1',
+  'decision pending': 'govuk-tag--light-blue govuk-!-margin-bottom-1',
+  'action needed': 'govuk-tag--yellow govuk-!-margin-bottom-1',
+  'rejected': 'govuk-tag--red govuk-!-margin-bottom-1'
 } %}
 
 {% set statusLower = application.status | lower %}
-{% set statusClasses = statusClassesLookup[statusLower] or "govuk-tag--grey govuk-!-margin-bottom-1" %}
+{% set statusClasses = statusClassesLookup[statusLower] or 'govuk-tag--grey govuk-!-margin-bottom-1' %}
 
 {% set status = govukTag({
-  "classes": statusClasses,
-  "text": application.status
+  'classes': statusClasses,
+  'text': application.status
 }) %}
 
 {% if application.statusOverview %}
-  {% set status = status + "<p class='govuk-body'>" + application.statusOverview + "</p>" %}
+  {% set status = status + '<p class="govuk-body">' + application.statusOverview + '</p>' %}
 {% endif %}
 
 {% set rows = [
   {
-    "key": {
-      "text": "Status"
+    key: {
+      text: 'Status'
     },
-    "value": {
-      "html": status
+    value: {
+      html: status
     }
   },
   {
-    "key": {
-      "text": "Reference number"
+    key: {
+      text: 'Reference number'
     },
-    "value": {
-      "html": application.id
+    value: {
+      html: application.id
     }
   },
   {
-    "key": {
-      "text": "Date received"
+    key: {
+      text: 'Date received'
     },
-    "value": {
-      "html": application.dateReceived | friendlyDateLong
+    value: {
+      html: application.dateReceived | friendlyDateLong
     }
   }
 ] %}
 
 {% if application.dateRejected %}
   {% set rows = rows | merge([{
-    "key": {
-      "text": "Date rejected"
+    key: {
+      text: 'Date rejected'
     },
-    "value": {
-      "html": application.dateRejected | friendlyDateLong
+    value: {
+      html: application.dateRejected | friendlyDateLong
     }
   }]) %}
 {% endif %}
 
 {% if application.dateDeadline %}
   {% set rows = rows | merge([{
-    "key": {
-      "text": "Deadline date"
+    key: {
+      text: 'Deadline date'
     },
-    "value": {
-      "html": application.dateDeadline | friendlyDateLong
+    value: {
+      html: application.dateDeadline | friendlyDateLong
     }
   }]) %}
 {% endif %}
 
 {% if application.dateDecision %}
   {% set rows = rows | merge([{
-    "key": {
-      "text": "Decision date"
+    key: {
+      text: 'Decision date'
     },
-    "value": {
-      "html": application.dateDecision | friendlyDateLong
+    value: {
+      html: application.dateDecision | friendlyDateLong
     }
   }]) %}
 {% endif %}
 
 {{ govukSummaryList({
-  "classes": "govuk-summary-list--no-border",
-  "rows": rows
+  classes: 'govuk-summary-list--no-border',
+  rows: rows
 }) }}

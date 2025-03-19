@@ -8,7 +8,7 @@
 
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">{{ "" | greeting }}, {{ name }}</h1>
+      <h1 class="govuk-heading-xl">{{ '' | greeting }}, {{ name }}</h1>
 
       <p class="govuk-body govuk-!-margin-bottom-7">Based on your medical condition, we personalise your experience by recommending benefits, tracking applications, and providing tailored resources to support your health and mobility.</p>
 
@@ -28,10 +28,10 @@
         {{ lthcCard({
           items: [
             {
-              "name": item.name,
-              "description": item.description,
-              "url": item.url,
-              "urlText": item.urlText
+              name: item.name,
+              description: item.description,
+              url: item.url,
+              urlText: item.urlText
             }
           ]
         }) }}
@@ -43,9 +43,9 @@
 
       <div class="govuk-grid-column-one-third">
         {{ lthcRelatedNavigation({
-          "title": "Related content",
-          "links": relatedNavigation.links,
-          "sections": relatedNavigation.sections
+          title: 'Related content',
+          links: relatedNavigation.links,
+          sections: relatedNavigation.sections
         }) }}
       </div>
 

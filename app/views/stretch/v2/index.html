@@ -20,22 +20,18 @@
 
     <div class="govuk-grid-column-one-half">
 
-      {% set html %}
-        <p>govuk-grid-column-full</p>
-      {% endset %}
-
       {{ govukSummaryList({
         card: {
           title: {
-            text: "You currently get"
+            text: 'You currently get'
           },
           actions: {
             items: [
               {
-                classes: "govuk-link--no-visited-state govuk-!-font-weight-regular",
-                href: "/stretch/v2/currently-getting/",
-                text: "View all",
-                visuallyHiddenText: "support you currently get"
+                classes: 'govuk-link--no-visited-state govuk-!-font-weight-regular',
+                href: '/stretch/v2/currently-getting/',
+                text: 'View all',
+                visuallyHiddenText: 'support you currently get'
               }
             ]
           }
@@ -49,15 +45,15 @@
       {{ govukSummaryList({
         card: {
           title: {
-            text: "You’re entitled to"
+            text: 'You’re entitled to'
           },
           actions: {
             items: [
               {
-                classes: "govuk-link--no-visited-state govuk-!-font-weight-regular",
-                href: "/stretch/v2/entitled-to/",
-                text: "View all",
-                visuallyHiddenText: "support you’re entitled to"
+                classes: 'govuk-link--no-visited-state govuk-!-font-weight-regular',
+                href: '/stretch/v2/entitled-to/',
+                text: 'View all',
+                visuallyHiddenText: 'support you’re entitled to'
               }
             ]
           }
@@ -75,15 +71,15 @@
       {{ govukSummaryList({
         card: {
           title: {
-            text: "Your applications"
+            text: 'Your applications'
           },
           actions: {
             items: [
               {
-                classes: "govuk-link--no-visited-state govuk-!-font-weight-regular",
-                href: "/stretch/v2/applications/",
-                text: "View all",
-                visuallyHiddenText: "applications"
+                classes: 'govuk-link--no-visited-state govuk-!-font-weight-regular',
+                href: '/stretch/v2/applications/',
+                text: 'View all',
+                visuallyHiddenText: 'applications'
               }
             ]
           }

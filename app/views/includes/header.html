@@ -4,34 +4,34 @@
 
   {{ govukHeader({
     homepageUrl: homepageUrl,
-    classes: "govuk-header--full-width-border"
+    classes: 'govuk-header--full-width-border'
   }) }}
 
-  {% if stretchVersion == "2" %}
+  {% if stretchVersion == '2' %}
 
     {% if serviceNav %}
       {{ govukServiceNavigation({
-        serviceName: "Get help if you have a health condition",
+        serviceName: 'Get help if you have a health condition',
         navigation: [
           {
-            href: "/stretch/v2/",
-            text: "Home",
-            active: (currentPage == "home")
+            href: '/stretch/v2/',
+            text: 'Home',
+            active: (currentPage == 'home')
           },
           {
-            href: "/stretch/v2/currently-getting",
-            text: "Currently getting",
-            active: (currentPage == "currently-getting")
+            href: '/stretch/v2/currently-getting',
+            text: 'Currently getting',
+            active: (currentPage == 'currently-getting')
           },
           {
-            href: "/stretch/v2/entitled-to",
-            text: "Entitled to",
-            active: (currentPage == "entitled-to")
+            href: '/stretch/v2/entitled-to',
+            text: 'Entitled to',
+            active: (currentPage == 'entitled-to')
           },
           {
-            href: "/stretch/v2/applications/",
-            text: "Applications",
-            active: (currentPage == "applications")
+            href: '/stretch/v2/applications/',
+            text: 'Applications',
+            active: (currentPage == 'applications')
           }
         ]
       }) }}
@@ -41,18 +41,18 @@
 
     {% if serviceNav %}
       {{ govukServiceNavigation({
-        serviceName: "Long term health condition",
-        serviceUrl: "/stretch/",
+        serviceName: 'Long term health condition',
+        serviceUrl: '/stretch/',
         navigation: [
           {
-            href: "/stretch/your-applications/",
-            text: "Your applications",
-            active: (currentPage == "your-applications")
+            href: '/stretch/your-applications/',
+            text: 'Your applications',
+            active: (currentPage == 'your-applications')
           },
           {
-            href: "/stretch/your-timeline/",
-            text: "Your timeline",
-            active:  (currentPage == "your-timeline")
+            href: '/stretch/your-timeline/',
+            text: 'Your timeline',
+            active:  (currentPage == 'your-timeline')
           }
         ]
       }) }}
@@ -60,7 +60,7 @@
 
   {% endif %}
 
-{% elif headerType == "signedout" %}
+{% elif headerType == 'signedout' %}
 
   {{ lthcLayoutSuperNavigationHeader() }}
 
@@ -68,7 +68,7 @@
     <div class="gem-c-layout-for-public__blue-bar govuk-width-container"></div>
   {% endif %}
 
-{% elif headerType == "simple" %}
+{% elif headerType == 'simple' %}
 
   {{ govukHeader({
     homepageUrl: homepageUrl,

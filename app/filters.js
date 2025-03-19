@@ -8,20 +8,20 @@ const addFilter = govukPrototypeKit.views.addFilter
 
 
 // Custom filter: get a greeting based on the time of day
-addFilter("greeting", function () {
+addFilter('greeting', function () {
   const hour = new Date().getHours();
   if (hour < 12) {
-    return "Good morning";
+    return 'Good morning';
   } else if (hour < 18) {
-    return "Good afternoon";
+    return 'Good afternoon';
   } else {
-    return "Good evening";
+    return 'Good evening';
   }
 });
 
 
 // Custom filter: formats content by wrapping it in <p> tags
-addFilter("formatContent", function (content) {
+addFilter('formatContent', function (content) {
   if (Array.isArray(content)) {
     return content.map(para => `<p class="govuk-body">${para}</p>`).join("\n");
   }
@@ -33,23 +33,23 @@ addFilter("formatContent", function (content) {
 
 
 // Custom filter: merges two arrays by concatenating them
-addFilter("merge", function (array1, array2) {
+addFilter('merge', function (array1, array2) {
   return array1.concat(array2);
 });
 
 
 // Custom filter: formats a date to a friendly long date string
-addFilter("friendlyDateLong", function (value) {
+addFilter('friendlyDateLong', function (value) {
   const date = new Date(value);
-  return date.toLocaleDateString("en-GB", {
-    year: "numeric",
-    month: "long",
-    day: "numeric"
+  return date.toLocaleDateString('en-GB', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
   });
 });
 
 
 // Custom filter: checks if a URL starts with "https://"
-addFilter("startsWithHttps", function (value) {
-  return value && value.startsWith("https://");
+addFilter('startsWithHttps', function (value) {
+  return value && value.startsWith('https://');
 });

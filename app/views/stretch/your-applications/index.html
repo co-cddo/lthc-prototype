@@ -18,10 +18,10 @@
       <div class="govuk-!-padding-right-6">
 
         {% set statusClassesLookup = {
-          "approved": "govuk-tag--green govuk-!-margin-bottom-1",
-          "decision pending": "govuk-tag--light-blue govuk-!-margin-bottom-1",
-          "action needed": "govuk-tag--yellow govuk-!-margin-bottom-1",
-          "rejected": "govuk-tag--red govuk-!-margin-bottom-1"
+          'approved': 'govuk-tag--green govuk-!-margin-bottom-1',
+          'decision pending': 'govuk-tag--light-blue govuk-!-margin-bottom-1',
+          'action needed': 'govuk-tag--yellow govuk-!-margin-bottom-1',
+          'rejected': 'govuk-tag--red govuk-!-margin-bottom-1'
         } %}
 
         {% set currentApplications = [] %}
@@ -58,17 +58,17 @@
             {% endif %}
 
             {% set rows = [
-              { "key": { "text": "Status" }, "value": { "html": status } },
-              { "key": { "text": "Reference" }, "value": { "html": item.id } },
-              { "key": { "text": "Date received" }, "value": { "html": item.dateReceived | friendlyDateLong } }
+              { key: { text: "Status" }, value: { html: status } },
+              { key: { text: "Reference" }, value: { html: item.id } },
+              { key: { text: "Date received" }, value: { html: item.dateReceived | friendlyDateLong } }
             ] %}
 
             {% if item.dateRejected %}
-              {% set rows = rows | merge([{ "key": { "text": "Date rejected" }, "value": { "html": item.dateRejected | friendlyDateLong } }]) %}
+              {% set rows = rows | merge([{ key: { text: "Date rejected" }, value: { html: item.dateRejected | friendlyDateLong } }]) %}
             {% endif %}
 
             {% if item.dateDeadline %}
-              {% set rows = rows | merge([{ "key": { "text": "Deadline date" }, "value": { "html": item.dateDeadline | friendlyDateLong } }]) %}
+              {% set rows = rows | merge([{ key: { text: "Deadline date" }, value: { html: item.dateDeadline | friendlyDateLong } }]) %}
             {% endif %}
 
             {{ govukSummaryList({
@@ -97,17 +97,17 @@
             {% endif %}
 
             {% set rows = [
-              { "key": { "text": "Status" }, "value": { "html": status } },
-              { "key": { "text": "Reference" }, "value": { "html": item.id } },
-              { "key": { "text": "Date received" }, "value": { "html": item.dateReceived | friendlyDateLong } }
+              { key: { text: "Status" }, value: { html: status } },
+              { key: { text: "Reference" }, value: { html: item.id } },
+              { key: { text: "Date received" }, value: { html: item.dateReceived | friendlyDateLong } }
             ] %}
 
             {% if item.dateRejected %}
-              {% set rows = rows | merge([{ "key": { "text": "Date rejected" }, "value": { "html": item.dateRejected | friendlyDateLong } }]) %}
+              {% set rows = rows | merge([{ key: { text: "Date rejected" }, value: { html: item.dateRejected | friendlyDateLong } }]) %}
             {% endif %}
 
             {% if item.dateDeadline %}
-              {% set rows = rows | merge([{ "key": { "text": "Deadline date" }, "value": { "html": item.dateDeadline | friendlyDateLong } }]) %}
+              {% set rows = rows | merge([{ key: { text: "Deadline date" }, value: { html: item.dateDeadline | friendlyDateLong } }]) %}
             {% endif %}
 
             {{ govukSummaryList({
@@ -136,17 +136,17 @@
             {% endif %}
 
             {% set rows = [
-              { "key": { "text": "Status" }, "value": { "html": status } },
-              { "key": { "text": "Reference" }, "value": { "html": item.id } },
-              { "key": { "text": "Date received" }, "value": { "html": item.dateReceived | friendlyDateLong } }
+              { key: { text: "Status" }, value: { html: status } },
+              { key: { text: "Reference" }, value: { html: item.id } },
+              { key: { text: "Date received" }, value: { html: item.dateReceived | friendlyDateLong } }
             ] %}
 
             {% if item.dateRejected %}
-              {% set rows = rows | merge([{ "key": { "text": "Date rejected" }, "value": { "html": item.dateRejected | friendlyDateLong } }]) %}
+              {% set rows = rows | merge([{ key: { text: "Date rejected" }, value: { html: item.dateRejected | friendlyDateLong } }]) %}
             {% endif %}
 
             {% if item.dateDeadline %}
-              {% set rows = rows | merge([{ "key": { "text": "Deadline date" }, "value": { "html": item.dateDeadline | friendlyDateLong } }]) %}
+              {% set rows = rows | merge([{ key: { text: "Deadline date" }, value: { html: item.dateDeadline | friendlyDateLong } }]) %}
             {% endif %}
 
             {{ govukSummaryList({

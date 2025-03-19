@@ -33,28 +33,28 @@
       {# Universal Credit #}
       {% set status = govukTag(
         {
-          classes: "govuk-tag--yellow",
-          text: "Action needed"
+          classes: 'govuk-tag--yellow',
+          text: 'Action needed'
         }
       ) %}
 
       {% set rows = [
-        { key: { text: "Status" }, "value": { html: status } },
-        { key: { text: "Reference" }, "value": { text: "UC-2025-001234" } },
-        { key: { text: "Deadline date" }, "value": { text: "15 June 2025" } }
+        { key: { text: 'Status' }, value: { html: status } },
+        { key: { text: 'Reference' }, value: { text: 'UC-2025-001234' } },
+        { key: { text: 'Deadline date' }, value: { text: '15 June 2025' } }
       ] %}
 
       {{ govukSummaryList({
         card: {
           title: {
-            text: "Universal Credit"
+            text: 'Universal Credit'
           },
           actions: {
             items: [
               {
-                classes: "govuk-link--no-visited-state govuk-!-font-weight-regular",
-                href: "/stretch/v2/applications/UC-2025-001234/",
-                text: "View details"
+                classes: 'govuk-link--no-visited-state govuk-!-font-weight-regular',
+                href: '/stretch/v2/applications/UC-2025-001234/',
+                text: 'View details'
               }
             ]
           }
@@ -64,28 +64,28 @@
 
       {% set status = govukTag(
         {
-          classes: "govuk-tag--yellow",
-          text: "Action needed"
+          classes: 'govuk-tag--yellow',
+          text: 'Action needed'
         }
       ) %}
 
       {% set rows = [
-        { key: { text: "Status" }, "value": { html: status } },
-        { key: { text: "Reference" }, "value": { text: "ATW-2025-001234" } },
-        { key: { text: "Deadline date" }, "value": { text: "2 April 2025" } }
+        { key: { text: 'Status' }, value: { html: status } },
+        { key: { text: 'Reference' }, value: { text: 'ATW-2025-001234' } },
+        { key: { text: 'Deadline date' }, value: { text: '2 April 2025' } }
       ] %}
 
       {{ govukSummaryList({
         card: {
           title: {
-            text: "Access to Work"
+            text: 'Access to Work'
           },
           actions: {
             items: [
               {
-                classes: "govuk-link--no-visited-state govuk-!-font-weight-regular",
-                href: "/stretch/v2/applications/ATW-2025-001234/",
-                text: "View details"
+                classes: 'govuk-link--no-visited-state govuk-!-font-weight-regular',
+                href: '/stretch/v2/applications/ATW-2025-001234/',
+                text: 'View details'
               }
             ]
           }
@@ -95,28 +95,28 @@
 
       {% set status = govukTag(
         {
-          classes: "govuk-tag--light-blue",
-          text: "Pending decision"
+          classes: 'govuk-tag--light-blue',
+          text: 'Pending decision'
         }
       ) %}
 
       {% set rows = [
-        { key: { text: "Status" }, "value": { html: status } },
-        { key: { text: "Reference" }, "value": { text: "DFG-2847592" } },
-        { key: { text: "Decision date" }, "value": { html: '15 June 2025 <span class="govuk-text--secondary">(estimated)</span>' } }
+        { key: { text: 'Status' }, value: { html: status } },
+        { key: { text: 'Reference' }, value: { text: 'DFG-2847592' } },
+        { key: { text: 'Decision date' }, value: { html: '15 June 2025 <span class="govuk-text--secondary">(estimated)</span>' } }
       ] %}
 
       {{ govukSummaryList({
         card: {
           title: {
-            text: "Disability Facilities Grant"
+            text: 'Disability Facilities Grant'
           },
           actions: {
             items: [
               {
-                classes: "govuk-link--no-visited-state govuk-!-font-weight-regular",
-                href: "/stretch/v2/applications/DFG-2025-001234/",
-                text: "View details"
+                classes: 'govuk-link--no-visited-state govuk-!-font-weight-regular',
+                href: '/stretch/v2/applications/DFG-2025-001234/',
+                text: 'View details'
               }
             ]
           }
