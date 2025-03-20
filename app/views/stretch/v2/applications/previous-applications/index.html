@@ -40,8 +40,8 @@
 
       {% set rows = [
         { key: { text: 'Status' }, value: { html: status } },
-        { key: { text: 'Reference' }, value: { text: 'BB-1837562'} },
-        { key: { text: 'Expiry date' }, value: { text: 'Date' } }
+        { key: { text: 'Reference' }, value: { text: 'BB-2022-004567'} },
+        { key: { text: 'Expiry date' }, value: { text: '5 April 2025' } }
       ] %}
 
       {{ govukSummaryList({
@@ -53,7 +53,7 @@
             items: [
               {
                 classes: 'govuk-link--no-visited-state govuk-!-font-weight-regular',
-                href: '#0',
+                href: '/stretch/v2/applications/previous-applications/BB-2022-004567/',
                 text: 'View details'
               }
             ]
@@ -71,9 +71,9 @@
       ) %}
 
       {% set rows = [
-        { key: { text: 'Status' }, value: { html: status + '<p class="govuk-body">Replaced by Personal Independence Payment (PIP)</p>' } },
-        { key: { text: 'Reference' }, value: { text: 'DLA-8273645'} },
-        { key: { text: 'Replaced date' }, value: { text: 'Date' } }
+        { key: { text: 'Status' }, value: { html: status + '<p class="govuk-body">This benefit has been replaced by Personal Independence Payment (PIP).</p>' } },
+        { key: { text: 'Reference' }, value: { text: 'DLA-2021-002345'} },
+        { key: { text: 'Superseded date' }, value: { text: '10 May 2024' } }
       ] %}
 
       {{ govukSummaryList({
@@ -85,7 +85,7 @@
             items: [
               {
                 classes: 'govuk-link--no-visited-state govuk-!-font-weight-regular',
-                href: '#0',
+                href: '/stretch/v2/applications/previous-applications/DLA-2021-002345/',
                 text: 'View details'
               }
             ]
@@ -103,9 +103,9 @@
       ) %}
 
       {% set rows = [
-        { key: { text: 'Status' }, value: { html: status + '<p class="govuk-body">Application withdrawn by Barbara Clark</p>' } },
-        { key: { text: 'Reference' }, value: { text: 'ATW-2948375'} },
-        { key: { text: 'Withdrawn date' }, value: { text: 'Date' } }
+        { key: { text: 'Status' }, value: { html: status + '<p class="govuk-body">Application withdrawn by Barbara Clark.</p>' } },
+        { key: { text: 'Reference' }, value: { text: 'ATW-2023-007890'} },
+        { key: { text: 'Withdrawn date' }, value: { text: '14 September 2024' } }
       ] %}
 
       {{ govukSummaryList({
@@ -117,7 +117,7 @@
             items: [
               {
                 classes: 'govuk-link--no-visited-state govuk-!-font-weight-regular',
-                href: '#0',
+                href: '/stretch/v2/applications/previous-applications/ATW-2023-007890/',
                 text: 'View details'
               }
             ]

@@ -1,0 +1,91 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Access to Work - GOV.UK{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: '/stretch/v2/applications/previous-applications/',
+    text: 'Back'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Access to Work</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <p class="govuk-body">View the details of your application, including its status, key dates, and any required actions.</p>
+
+      <h2 class="govuk-heading-l">Application details</h2>
+
+      {% set status = govukTag({
+        classes: 'govuk-tag--grey govuk-!-margin-bottom-1',
+        text: 'Withdrawn'
+      }) %}
+
+      {% set rows = [
+        {
+          key: {
+            text: 'Status'
+          },
+          value: {
+            html: status + '<p class="govuk-body">Application withdrawn by Barbara Clark.</p>'
+          }
+        },
+        {
+          key: {
+            text: 'Reference number'
+          },
+          value: {
+            html: 'ATW-2023-007890'
+          }
+        },
+        {
+          key: {
+            text: 'Date received'
+          },
+          value: {
+            html: '22 January 2023'
+          }
+        },
+        {
+          key: {
+            text: 'Withdrawn date'
+          },
+          value: {
+            html: '14 September 2024'
+          }
+        }
+      ] %}
+
+      {{ govukSummaryList({
+        classes: 'govuk-summary-list--no-border',
+        rows: rows
+      }) }}
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l" id="support-details">Support details</h2>
+
+      <p class="govuk-body">Your application was for support to help you stay in work. This could have included funding for transport, equipment, or a support worker.</p>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l" id="what-happens-next">What happens next</h2>
+
+      <p class="govuk-body">Since your application was withdrawn, you will need to submit a new application if you still require support.</p>
+
+      <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="#0">Apply for Access to Work</a></p>
+
+   </div>
+
+  </div>
+
+{% endblock %}

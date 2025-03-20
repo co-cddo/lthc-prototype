@@ -1,0 +1,99 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Blue Badge - GOV.UK{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: '/stretch/v2/applications/previous-applications/',
+    text: 'Back'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Blue Badge</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <p class="govuk-body">View the details of your application, including its status, key dates, and any required actions.</p>
+
+      <h2 class="govuk-heading-l">Award details</h2>
+
+      {% set status = govukTag({
+        classes: 'govuk-tag--grey govuk-!-margin-bottom-1',
+        text: 'Expired'
+      }) %}
+
+      {% set rows = [
+        {
+          key: {
+            text: 'Status'
+          },
+          value: {
+            html: status + '<p class="govuk-body">Your Blue Badge was valid for 3 years and is no longer active.</p>'
+          }
+        },
+        {
+          key: {
+            text: 'Reference number'
+          },
+          value: {
+            html: 'BB-2022-004567'
+          }
+        },
+        {
+          key: {
+            text: 'Date received'
+          },
+          value: {
+            html: '12 March 2022'
+          }
+        },
+        {
+          key: {
+            text: 'Date awarded'
+          },
+          value: {
+            html: '5 April 2022'
+          }
+        },
+        {
+          key: {
+            text: 'Expiry date'
+          },
+          value: {
+            html: '5 April 2025'
+          }
+        }
+      ] %}
+
+      {{ govukSummaryList({
+        classes: 'govuk-summary-list--no-border',
+        rows: rows
+      }) }}
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l" id="usage-details">Usage details</h2>
+
+      <p class="govuk-body">You used your Blue Badge for parking concessions while travelling. It allowed you to park closer to your destination in permitted areas.</p>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l" id="what-happens-next">What happens next</h2>
+
+      <p class="govuk-body">Your Blue Badge has expired. You may be eligible to apply for a new one if you still meet the criteria.</p>
+
+      <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="#0">Apply for a new Blue Badge</a></p>
+
+   </div>
+
+  </div>
+
+{% endblock %}

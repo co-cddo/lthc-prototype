@@ -1,0 +1,99 @@
+{% extends "layouts/base.njk" %}
+
+{% block pageTitle %}Access to Work - GOV.UK{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: '/stretch/v2/applications/previous-applications/',
+    text: 'Back'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Disability Living Allowance (DLA)</h1>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <p class="govuk-body">View the details of your application, including its status, key dates, and any required actions.</p>
+
+      <h2 class="govuk-heading-l">Award details</h2>
+
+      {% set status = govukTag({
+        classes: 'govuk-tag--grey govuk-!-margin-bottom-1',
+        text: 'Superseded'
+      }) %}
+
+      {% set rows = [
+        {
+          key: {
+            text: 'Status'
+          },
+          value: {
+            html: status + '<p class="govuk-body">This benefit has been replaced by Personal Independence Payment (PIP).</p>'
+          }
+        },
+        {
+          key: {
+            text: 'Reference number'
+          },
+          value: {
+            html: 'DLA-2021-002345'
+          }
+        },
+        {
+          key: {
+            text: 'Date received'
+          },
+          value: {
+            html: '8 August 2021'
+          }
+        },
+        {
+          key: {
+            text: 'Date awarded'
+          },
+          value: {
+            html: '1 October 2021'
+          }
+        },
+        {
+          key: {
+            text: 'Superseded date'
+          },
+          value: {
+            html: '10 May 2024'
+          }
+        }
+      ] %}
+
+      {{ govukSummaryList({
+        classes: 'govuk-summary-list--no-border',
+        rows: rows
+      }) }}
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l" id="payment-details">Payment details</h2>
+
+      <p class="govuk-body">Your Disability Living Allowance payments stopped when your claim was moved to Personal Independence Payment (PIP).</p>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l" id="what-happens-next">What happens next</h2>
+
+      <p class="govuk-body">You are now receiving PIP. If your circumstances change, you may need to report changes to your PIP claim.</p>
+
+      <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="#0">Manage your PIP claim</a></p>
+
+   </div>
+
+  </div>
+
+{% endblock %}
