@@ -1,6 +1,6 @@
 {% extends "layouts/base.njk" %}
 
-{% block pageTitle %}You currently get - GOV.UK{% endblock %}
+{% block pageTitle %}What you currently get - GOV.UK{% endblock %}
 
 {% block content %}
 
@@ -8,7 +8,7 @@
 
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">You currently get</h1>
+      <h1 class="govuk-heading-xl">What you currently get</h1>
 
       <p class="govuk-body govuk-!-margin-bottom-7">You’re getting help with all of the following.</p>
 
@@ -25,7 +25,7 @@
       {{ govukSummaryList({
         card: {
           title: {
-            text: 'Employment and Support Allowance (ESA)'
+            text: 'Employment and Support Allowance'
           },
           actions: {
             items: [
@@ -33,7 +33,7 @@
                 classes: 'govuk-link--no-visited-state govuk-!-font-weight-regular',
                 href: '/stretch/v2/currently-getting/ESA-2025-001234/',
                 text: 'View',
-                visuallyHiddenText: 'Employment and Support Allowance (ESA)'
+                visuallyHiddenText: 'Employment and Support Allowance'
               }
             ]
           }
@@ -49,7 +49,7 @@
           },
           {
             key: {
-              text: 'Date awarded'
+              text: 'Awarded'
             },
             value: {
               text: '18 March 2025'
@@ -57,7 +57,7 @@
           },
           {
             key: {
-              text: 'Award end date'
+              text: 'Expires'
             },
             value: {
               text: '18 March 2028'
@@ -69,7 +69,7 @@
       {{ govukSummaryList({
         card: {
           title: {
-            text: 'Personal Independence Payment (PIP)'
+            text: 'Personal Independence Payment'
           },
           actions: {
             items: [
@@ -77,7 +77,7 @@
                 classes: 'govuk-link--no-visited-state govuk-!-font-weight-regular',
                 href: '/stretch/v2/currently-getting/PIP-2025-001234/',
                 text: 'View',
-                visuallyHiddenText: 'Personal Independence Payment (PIP)'
+                visuallyHiddenText: 'Personal Independence Payment'
               }
             ]
           }
@@ -93,7 +93,7 @@
           },
           {
             key: {
-              text: 'Date awarded'
+              text: 'Awarded'
             },
             value: {
               text: '18 March 2025'
@@ -101,7 +101,7 @@
           },
           {
             key: {
-              text: 'Award end date'
+              text: 'Expires'
             },
             value: {
               text: '18 March 2028'
@@ -137,7 +137,7 @@
           },
           {
             key: {
-              text: 'Date awarded'
+              text: 'Awarded'
             },
             value: {
               text: '25 March 2025'
@@ -145,7 +145,7 @@
           },
           {
             key: {
-              text: 'Renewal date'
+              text: 'Expires'
             },
             value: {
               text: '25 March 2028'

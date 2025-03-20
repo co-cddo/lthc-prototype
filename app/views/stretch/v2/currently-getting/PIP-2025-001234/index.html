@@ -1,6 +1,6 @@
 {% extends "layouts/base.njk" %}
 
-{% block pageTitle %}Personal Independence Payment (PIP) - GOV.UK{% endblock %}
+{% block pageTitle %}Personal Independence Payment - GOV.UK{% endblock %}
 
 {% block beforeContent %}
   {{ govukBackLink({
@@ -13,7 +13,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">Personal Independence Payment (PIP)</h1>
+      <h1 class="govuk-heading-xl">Personal Independence Payment</h1>
     </div>
   </div>
 
@@ -41,7 +41,7 @@
         },
         {
           key: {
-            text: 'Reference number'
+            text: 'Reference'
           },
           value: {
             html: 'PIP-2025-001234'
@@ -57,7 +57,7 @@
         },
         {
           key: {
-            text: 'Date received'
+            text: 'Received'
           },
           value: {
             html: '18 December 2024'
@@ -65,10 +65,18 @@
         },
         {
           key: {
-            text: 'Date awarded'
+            text: 'Awarded'
           },
           value: {
             html: '18 March 2025'
+          }
+        },
+        {
+          key: {
+            text: 'Expires'
+          },
+          value: {
+            html: '18 March 2028'
           }
         }
       ] %}

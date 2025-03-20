@@ -41,7 +41,7 @@
       {% set rows = [
         { key: { text: 'Status' }, value: { html: status } },
         { key: { text: 'Reference' }, value: { text: 'BB-2022-004567'} },
-        { key: { text: 'Expiry date' }, value: { text: '5 April 2025' } }
+        { key: { text: 'Expired' }, value: { text: '20 March 2025' } }
       ] %}
 
       {{ govukSummaryList({
@@ -73,7 +73,7 @@
       {% set rows = [
         { key: { text: 'Status' }, value: { html: status + '<p class="govuk-body">This benefit has been replaced by Personal Independence Payment (PIP).</p>' } },
         { key: { text: 'Reference' }, value: { text: 'DLA-2021-002345'} },
-        { key: { text: 'Superseded date' }, value: { text: '10 May 2024' } }
+        { key: { text: 'Superseded' }, value: { text: '10 May 2024' } }
       ] %}
 
       {{ govukSummaryList({
@@ -105,7 +105,7 @@
       {% set rows = [
         { key: { text: 'Status' }, value: { html: status + '<p class="govuk-body">Application withdrawn by Barbara Clark.</p>' } },
         { key: { text: 'Reference' }, value: { text: 'ATW-2023-007890'} },
-        { key: { text: 'Withdrawn date' }, value: { text: '14 September 2024' } }
+        { key: { text: 'Withdrawn' }, value: { text: '14 September 2024' } }
       ] %}
 
       {{ govukSummaryList({
