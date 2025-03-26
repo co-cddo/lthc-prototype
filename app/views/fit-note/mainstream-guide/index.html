@@ -1,0 +1,89 @@
+{% extends "layouts/mainstream-guide.njk" %}
+
+{% block pageTitle %}Get help if you’re taking time off work due to a health condition - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Get help if you’re taking time off work due to a health condition</h1>
+
+      <aside class="govuk-part-navigation-container" role="complementary">
+        {{ lthcContentsList({
+          items: [
+            {
+              href: '/fit-note/mainstream-guide/',
+              text: 'Overview',
+              active: true
+            },
+            {
+              href: '/fit-note/mainstream-guide/fit-notes-and-sick-pay/',
+              text: 'Fit notes and sick pay'
+            },
+            {
+              href: '/fit-note/mainstream-guide/contact-with-your-employer-during-sick-leave/',
+              text: 'Contact with your employer during sick leave'
+            },
+            {
+              href: '/fit-note/mainstream-guide/other-financial-help/',
+              text: 'Other financial help'
+            },
+            {
+              href: '/fit-note/mainstream-guide/health-support/',
+              text: 'Health support'
+            },
+            {
+              href: '/fit-note/mainstream-guide/preparing-to-return-to-work/',
+              text: 'Preparing to return to work'
+            },
+            {
+              href: '/fit-note/mainstream-guide/when-youre-back-at-work/',
+              text: 'When you’re back at work'
+            },
+            {
+              href: '/fit-note/mainstream-guide/if-you-cannot-return-or-your-employer-wants-to-dismiss-you/',
+              text: 'If you cannot return or your employer wants to dismiss you'
+            }
+          ]
+        }) }}
+      </aside>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6">
+
+      <h2 class="govuk-heading-l">Overview</h2>
+
+      <p class="govuk-body">Content goes here.</p>
+
+      {{ govukPagination({
+        next: {
+          labelText: 'Fit notes and sick pay',
+          href: '/fit-note/mainstream-guide/fit-notes-and-sick-pay/'
+        }
+      }) }}
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      {{ lthcRelatedNavigation({
+        title: "Related content",
+        links: [
+          { href: '#0', text: 'Statutory Sick Pay guidance and forms for employees and employers' },
+          { href: '#0', text: 'Statutory Sick Pay (SSP)' },
+          { href: '#0', text: 'Send your fit note for your ESA claim' }
+        ]
+      }) }}
+
+    </div>
+
+  </div>
+
+{% endblock %}

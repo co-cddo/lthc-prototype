@@ -1,0 +1,79 @@
+{% extends "layouts/mainstream-guide.njk" %}
+
+{% block pageTitle %}Other help if you’ve applied for Universal Credit and have a health condition - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Other help if you’ve applied for Universal Credit and have a health condition</h1>
+
+      <aside class="govuk-part-navigation-container" role="complementary">
+        {{ lthcContentsList({
+          items: [
+            {
+              href: '/universal-credit/mainstream-guide/',
+              text: 'Overview'
+            },
+            {
+              href: '/universal-credit/mainstream-guide/support-to-get-a-job-or-stay-in-work/',
+              text: 'Support to get a job or stay in work'
+            },
+            {
+              href: '/universal-credit/mainstream-guide/if-youre-having-problems-with-your-employer/',
+              text: 'If you’re having problems with your employer'
+            },
+            {
+              href: '/universal-credit/mainstream-guide/health-support/',
+              text: 'Health support'
+            },
+            {
+              href: '/universal-credit/mainstream-guide/other-benefits-and-financial-help/',
+              text: 'Other benefits and financial help',
+              active: true
+            }
+          ]
+        }) }}
+      </aside>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6">
+
+      <h2 class="govuk-heading-l">Other benefits and financial help</h2>
+
+      <p class="govuk-body">Content goes here.</p>
+
+      {{ govukPagination({
+        previous: {
+          labelText: 'Health support',
+          href: '/universal-credit/mainstream-guide/health-support/'
+        }
+      }) }}
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      {{ lthcRelatedNavigation({
+        title: "Related content",
+        links: [
+          { href: '#0', text: 'Easy read: Access to Work - get support if you have a disability or health condition' },
+          { href: '#0', text: 'Reasonable adjustments for workers with disabilities or health conditions' },
+          { href: '#0', text: 'Definition of disability under the Equality Act 2010' },
+          { href: '#0', text: 'Disability rights' },
+          { href: '#0', text: 'Looking for work if you’re disabled' }
+        ]
+      }) }}
+
+    </div>
+
+  </div>
+
+{% endblock %}
