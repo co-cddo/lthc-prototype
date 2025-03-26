@@ -14,8 +14,7 @@
         items: [
           {
             href: '/universal-credit/mainstream-guide/',
-            text: 'Overview',
-            active: true
+            text: 'Overview'
           },
           {
             href: '/universal-credit/mainstream-guide/support-to-get-a-job-or-stay-in-work/',
@@ -23,7 +22,8 @@
           },
           {
             href: '/universal-credit/mainstream-guide/if-youre-having-problems-with-your-employer/',
-            text: 'If you’re having problems with your employer'
+            text: 'If you’re having problems with your employer',
+            active: true
           },
           {
             href: '/universal-credit/mainstream-guide/health-support/',
@@ -49,9 +49,13 @@
       <p class="govuk-body">Content goes here.</p>
 
       {{ govukPagination({
-        next: {
+        previous: {
           labelText: 'Support to get a job or stay in work',
           href: '/universal-credit/mainstream-guide/support-to-get-a-job-or-stay-in-work/'
+        },
+        next: {
+          labelText: 'Health support',
+          href: '/universal-credit/mainstream-guide/health-support/'
         }
       }) }}
 
@@ -62,7 +66,7 @@
       {{ lthcRelatedNavigation({
         title: "Related content",
         links: [
-          { href: '#0', text: 'Easy read: Access to Work - get support if you have a disability or health condition' },
+          { href: '#0', text: 'Easy read: Access to Work – get support if you have a disability or health condition' },
           { href: '#0', text: 'Reasonable adjustments for workers with disabilities or health conditions' },
           { href: '#0', text: 'Definition of disability under the Equality Act 2010' },
           { href: '#0', text: 'Disability rights' },

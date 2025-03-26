@@ -14,8 +14,7 @@
         items: [
           {
             href: '/universal-credit/mainstream-guide/',
-            text: 'Overview',
-            active: true
+            text: 'Overview'
           },
           {
             href: '/universal-credit/mainstream-guide/support-to-get-a-job-or-stay-in-work/',
@@ -27,7 +26,8 @@
           },
           {
             href: '/universal-credit/mainstream-guide/health-support/',
-            text: 'Health support'
+            text: 'Health support',
+            active: true
           },
           {
             href: '/universal-credit/mainstream-guide/other-benefits-and-financial-help/',
@@ -49,9 +49,13 @@
       <p class="govuk-body">Content goes here.</p>
 
       {{ govukPagination({
+        previous: {
+          labelText: 'If you’re having problems with your employer',
+          href: '/universal-credit/mainstream-guide/if-youre-having-problems-with-your-employer/'
+        },
         next: {
-          labelText: 'Support to get a job or stay in work',
-          href: '/universal-credit/mainstream-guide/support-to-get-a-job-or-stay-in-work/'
+          labelText: 'Other benefits and financial help',
+          href: '/universal-credit/mainstream-guide/other-benefits-and-financial-help/'
         }
       }) }}
 
