@@ -10,31 +10,33 @@
 
       <h1 class="govuk-heading-xl">Other help if you’ve applied for Universal Credit and have a health condition</h1>
 
-      {{ lthcContentsList({
-        items: [
-          {
-            href: '/universal-credit/mainstream-guide/',
-            text: 'Overview'
-          },
-          {
-            href: '/universal-credit/mainstream-guide/support-to-get-a-job-or-stay-in-work/',
-            text: 'Support to get a job or stay in work'
-          },
-          {
-            href: '/universal-credit/mainstream-guide/if-youre-having-problems-with-your-employer/',
-            text: 'If you’re having problems with your employer',
-            active: true
-          },
-          {
-            href: '/universal-credit/mainstream-guide/health-support/',
-            text: 'Health support'
-          },
-          {
-            href: '/universal-credit/mainstream-guide/other-benefits-and-financial-help/',
-            text: 'Other benefits and financial help'
-          }
-        ]
-      }) }}
+      <aside class="govuk-part-navigation-container" role="complementary">
+        {{ lthcContentsList({
+          items: [
+            {
+              href: '/universal-credit/mainstream-guide/',
+              text: 'Overview'
+            },
+            {
+              href: '/universal-credit/mainstream-guide/support-to-get-a-job-or-stay-in-work/',
+              text: 'Support to get a job or stay in work'
+            },
+            {
+              href: '/universal-credit/mainstream-guide/if-youre-having-problems-with-your-employer/',
+              text: 'If you’re having problems with your employer',
+              active: true
+            },
+            {
+              href: '/universal-credit/mainstream-guide/health-support/',
+              text: 'Health support'
+            },
+            {
+              href: '/universal-credit/mainstream-guide/other-benefits-and-financial-help/',
+              text: 'Other benefits and financial help'
+            }
+          ]
+        }) }}
+      </aside>
 
     </div>
 
