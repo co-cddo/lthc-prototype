@@ -15,8 +15,7 @@
           items: [
             {
               href: '/access-to-work/mainstream-guide/',
-              text: 'Overview',
-              active: true
+              text: 'Overview'
             },
             {
               href: '/access-to-work/mainstream-guide/support-from-your-employer/',
@@ -24,7 +23,8 @@
             },
             {
               href: '/access-to-work/mainstream-guide/benefits-and-financial-help/',
-              text: 'Benefits and financial help'
+              text: 'Benefits and financial help',
+              active: true
             },
             {
               href: '/access-to-work/mainstream-guide/support-with-your-health/',
@@ -42,14 +42,18 @@
 
     <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6">
 
-      <h2 class="govuk-heading-l">Overview</h2>
+      <h2 class="govuk-heading-l">Benefits and financial help</h2>
 
       <p class="govuk-body">Content goes here.</p>
 
       {{ govukPagination({
-        next: {
+        previous: {
           labelText: 'Support from your employer',
           href: '/access-to-work/mainstream-guide/support-from-your-employer/'
+        },
+        next: {
+          labelText: 'Support with your health',
+          href: '/access-to-work/mainstream-guide/support-with-your-health/'
         }
       }) }}
 
