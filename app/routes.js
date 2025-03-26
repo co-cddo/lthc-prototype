@@ -315,13 +315,12 @@ router.get('/fit-note/v4', (req, res) => {
 
 // Mainstream guide version
 
-router.get('/fit-note/mainstream-guide', (req, res) => {
-  res.render('fit-note/mainstream-guide/index', {
-    breadcrumbs: [
-      { text: 'Home', href: '#0' },
-      { text: 'Benefits', href: '#0' }
-    ]
-  });
+router.use('/fit-note/mainstream-guide/', (req, res, next) => {
+  res.locals.breadcrumbs = [
+    { text: 'Home', href: '#0' },
+    { text: 'Benefits', href: '#0' }
+  ];
+  next();
 });
 
 
@@ -348,13 +347,12 @@ router.get('/access-to-work/support', (req, res) => {
 
 // Mainstream guide version
 
-router.get('/access-to-work/mainstream-guide', (req, res) => {
-  res.render('access-to-work/mainstream-guide/index', {
-    breadcrumbs: [
-      { text: 'Home', href: '#0' },
-      { text: 'Benefits', href: '#0' }
-    ]
-  });
+router.use('/access-to-work/mainstream-guide/', (req, res, next) => {
+  res.locals.breadcrumbs = [
+    { text: 'Home', href: '#0' },
+    { text: 'Benefits', href: '#0' }
+  ];
+  next();
 });
 
 
@@ -380,11 +378,10 @@ router.get('/universal-credit/support', (req, res) => {
 
 // Mainstream guide version
 
-router.get('/universal-credit/mainstream-guide', (req, res) => {
-  res.render('universal-credit/mainstream-guide/index', {
-    breadcrumbs: [
-      { text: 'Home', href: '#0' },
-      { text: 'Benefits', href: '#0' }
-    ]
-  });
+router.use('/universal-credit/mainstream-guide/', (req, res, next) => {
+  res.locals.breadcrumbs = [
+    { text: 'Home', href: '#0' },
+    { text: 'Benefits', href: '#0' }
+  ];
+  next();
 });

@@ -15,8 +15,7 @@
           items: [
             {
               href: '/fit-note/mainstream-guide/',
-              text: 'Overview',
-              active: true
+              text: 'Overview'
             },
             {
               href: '/fit-note/mainstream-guide/fit-notes-and-sick-pay/',
@@ -24,7 +23,8 @@
             },
             {
               href: '/fit-note/mainstream-guide/contact-with-your-employer-during-sick-leave/',
-              text: 'Contact with your employer during sick leave'
+              text: 'Contact with your employer during sick leave',
+              active: true
             },
             {
               href: '/fit-note/mainstream-guide/other-financial-help/',
@@ -58,14 +58,18 @@
 
     <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6">
 
-      <h2 class="govuk-heading-l">Overview</h2>
+      <h2 class="govuk-heading-l">Contact with your employer during sick leave</h2>
 
       <p class="govuk-body">Content goes here.</p>
 
       {{ govukPagination({
-        next: {
+        previous: {
           labelText: 'Fit notes and sick pay',
           href: '/fit-note/mainstream-guide/fit-notes-and-sick-pay/'
+        },
+        next: {
+          labelText: 'Other financial help',
+          href: '/fit-note/mainstream-guide/other-financial-help/'
         }
       }) }}
 

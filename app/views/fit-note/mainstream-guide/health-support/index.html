@@ -15,8 +15,7 @@
           items: [
             {
               href: '/fit-note/mainstream-guide/',
-              text: 'Overview',
-              active: true
+              text: 'Overview'
             },
             {
               href: '/fit-note/mainstream-guide/fit-notes-and-sick-pay/',
@@ -32,7 +31,8 @@
             },
             {
               href: '/fit-note/mainstream-guide/health-support/',
-              text: 'Health support'
+              text: 'Health support',
+              active: true
             },
             {
               href: '/fit-note/mainstream-guide/preparing-to-return-to-work/',
@@ -58,14 +58,18 @@
 
     <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6">
 
-      <h2 class="govuk-heading-l">Overview</h2>
+      <h2 class="govuk-heading-l">Health support</h2>
 
       <p class="govuk-body">Content goes here.</p>
 
       {{ govukPagination({
+        previous: {
+          labelText: 'Other financial help',
+          href: '/fit-note/mainstream-guide/other-financial-help/'
+        },
         next: {
-          labelText: 'Fit notes and sick pay',
-          href: '/fit-note/mainstream-guide/fit-notes-and-sick-pay/'
+          labelText: 'Preparing to return to work',
+          href: '/fit-note/mainstream-guide/preparing-to-return-to-work/'
         }
       }) }}
 
