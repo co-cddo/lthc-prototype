@@ -313,6 +313,18 @@ router.get('/fit-note/v4', (req, res) => {
   res.render('fit-note/v4/index');
 });
 
+// Mainstream guide version
+
+router.get('/fit-note/mainstream-guide', (req, res) => {
+  res.render('fit-note/mainstream-guide/index', {
+    breadcrumbs: [
+      { text: 'Home', href: '#0' },
+      { text: 'Benefits', href: '#0' }
+    ]
+  });
+});
+
+
 
 // --------------------------------------------------------
 // ACCESS TO WORK
@@ -334,6 +346,17 @@ router.get('/access-to-work/support', (req, res) => {
   res.render('access-to-work/support');
 });
 
+// Mainstream guide version
+
+router.get('/access-to-work/mainstream-guide', (req, res) => {
+  res.render('access-to-work/mainstream-guide/index', {
+    breadcrumbs: [
+      { text: 'Home', href: '#0' },
+      { text: 'Benefits', href: '#0' }
+    ]
+  });
+});
+
 
 // --------------------------------------------------------
 // UNIVERSAL CREDIT
@@ -353,4 +376,15 @@ router.get('/universal-credit', (req, res) => {
 
 router.get('/universal-credit/support', (req, res) => {
   res.render('universal-credit/support');
+});
+
+// Mainstream guide version
+
+router.get('/universal-credit/mainstream-guide', (req, res) => {
+  res.render('universal-credit/mainstream-guide/index', {
+    breadcrumbs: [
+      { text: 'Home', href: '#0' },
+      { text: 'Benefits', href: '#0' }
+    ]
+  });
 });

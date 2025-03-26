@@ -1,0 +1,18 @@
+{# Breadcrumb #}
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+      {% block beforeContent %}
+        {{ govukBreadcrumbs({
+          items: breadcrumbs
+        }) }}
+      {% endblock %}
+
+    </div>
+
+  </div>
+
+</div>

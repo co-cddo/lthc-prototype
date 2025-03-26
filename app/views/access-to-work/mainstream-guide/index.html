@@ -1,0 +1,39 @@
+{% extends "layouts/mainstream-guide.njk" %}
+
+{% block pageTitle %}Other help if you’ve applied for Access to Work - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Other help if you’ve applied for Access to Work</h1>
+
+      {{ lthcContentsList({
+        items: [
+          {
+            href: '#0',
+            text: 'Overview',
+            active: true
+          },
+          {
+            href: '#0',
+            text: 'Support from your employer'
+          },
+          {
+            href: '#0',
+            text: 'Benefits and financial help'
+          },
+          {
+            href: '#0',
+            text: 'Support with your health'
+          }
+        ]
+      }) }}
+
+    </div>
+
+  </div>
+
+{% endblock %}

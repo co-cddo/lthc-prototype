@@ -1,0 +1,43 @@
+{% extends "layouts/mainstream-guide.njk" %}
+
+{% block pageTitle %}Other help if you’ve applied for Universal Credit and have a health condition - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Other help if you’ve applied for Universal Credit and have a health condition</h1>
+
+      {{ lthcContentsList({
+        items: [
+          {
+            href: '#0',
+            text: 'Overview',
+            active: true
+          },
+          {
+            href: '#0',
+            text: 'Support to get a job or stay in work'
+          },
+          {
+            href: '#0',
+            text: 'If you’re having problems with your employer'
+          },
+          {
+            href: '#0',
+            text: 'Health support'
+          },
+          {
+            href: '#0',
+            text: 'Other benefits and financial help'
+          }
+        ]
+      }) }}
+
+    </div>
+
+  </div>
+
+{% endblock %}
