@@ -15,10 +15,6 @@
           items: [
             {
               href: '/fit-note/mainstream-guide/',
-              text: 'Overview'
-            },
-            {
-              href: '/fit-note/mainstream-guide/fit-notes-and-sick-pay/',
               text: 'Fit notes and sick pay'
             },
             {
@@ -88,7 +84,6 @@
       </ul>
 
       {{ govukPagination({
-        classes:'govuk-!-margin-0',
         previous: {
           labelText: 'Health support',
           href: '/fit-note/mainstream-guide/health-support/'
@@ -106,9 +101,9 @@
       {{ lthcRelatedNavigation({
         title: "Related content",
         links: [
-          { href: '#0', text: 'Statutory Sick Pay guidance and forms for employees and employers' },
-          { href: '#0', text: 'Statutory Sick Pay (SSP)' },
-          { href: '#0', text: 'Send your fit note for your ESA claim' }
+          { href: 'https://gov.uk/government/collections/statutory-sick-pay-and-leave/', text: 'Statutory Sick Pay guidance and forms for employees and employers' },
+          { href: 'https://gov.uk/statutory-sick-pay/', text: 'Statutory Sick Pay (SSP)' },
+          { href: 'https://gov.uk/send-fit-note/', text: 'Send your fit note for your ESA claim' }
         ]
       }) }}
 

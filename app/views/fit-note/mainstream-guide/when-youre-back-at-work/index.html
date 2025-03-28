@@ -15,10 +15,6 @@
           items: [
             {
               href: '/fit-note/mainstream-guide/',
-              text: 'Overview'
-            },
-            {
-              href: '/fit-note/mainstream-guide/fit-notes-and-sick-pay/',
               text: 'Fit notes and sick pay'
             },
             {
@@ -83,7 +79,6 @@
       <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="https://acas.org.uk/" rel="nofollow external">Get free advice from ACAS</a></p>
 
       {{ govukPagination({
-        classes:'govuk-!-margin-0',
         previous: {
           labelText: 'Preparing to return to work',
           href: '/fit-note/mainstream-guide/preparing-to-return-to-work/'
@@ -101,9 +96,9 @@
       {{ lthcRelatedNavigation({
         title: "Related content",
         links: [
-          { href: '#0', text: 'Statutory Sick Pay guidance and forms for employees and employers' },
-          { href: '#0', text: 'Statutory Sick Pay (SSP)' },
-          { href: '#0', text: 'Send your fit note for your ESA claim' }
+          { href: 'https://gov.uk/government/collections/statutory-sick-pay-and-leave/', text: 'Statutory Sick Pay guidance and forms for employees and employers' },
+          { href: 'https://gov.uk/statutory-sick-pay/', text: 'Statutory Sick Pay (SSP)' },
+          { href: 'https://gov.uk/send-fit-note/', text: 'Send your fit note for your ESA claim' }
         ]
       }) }}
 

@@ -15,12 +15,8 @@
           items: [
             {
               href: '/fit-note/mainstream-guide/',
-              text: 'Overview',
+              text: 'Fit notes and sick pay',
               active: true
-            },
-            {
-              href: '/fit-note/mainstream-guide/fit-notes-and-sick-pay/',
-              text: 'Fit notes and sick pay'
             },
             {
               href: '/fit-note/mainstream-guide/contact-with-your-employer-during-sick-leave/',
@@ -58,15 +54,39 @@
 
     <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6">
 
-      <h2 class="govuk-heading-l">Overview</h2>
+      <h2 class="govuk-heading-l">Fit notes and sick pay</h2>
 
-      <p class="govuk-body">Content goes here.</p>
+      <p class="govuk-body">Once you’ve received a fit note from your healthcare professional, give it to your employer immediately.</p>
+
+      <p class="govuk-body">You need to do this to claim sick pay.</p>
+
+      <p class="govuk-body">You can scan it and email it to your employer. Or you can forward them a digital copy.</p>
+
+      <h3 class="govuk-heading-m">Ask your employer if you’ll get sick pay</h3>
+
+      <p class="govuk-body">Some employers have their own sick pay scheme and you may get full pay for a period of time.</p>
+
+      <p class="govuk-body">If your employer does not have its own sick pay scheme, check if you’re eligible for <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/statutory-sick-pay/what-youll-get/">Statutory Sick Pay (SSP)</a>.</p>
+
+      <p class="govuk-body">SSP is £116.75 for 26 weeks.</p>
+
+      <p class="govuk-body">If you’re not eligible for sick pay, check <a class="govuk-link govuk-link--no-visited-state" href="/fit-note/mainstream-guide/other-financial-help/">other benefits</a> you can get.</p>
+
+      <h3 class="govuk-heading-m">More guidance on sick pay</h3>
+
+      <ul class="govuk-list govuk-list--spaced">
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/work/sick-leave-and-sick-pay/check-if-you-can-get-sick-pay/" rel="nofollow external">Check if you can get sick pay</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/work/sick-leave-and-sick-pay/how-to-get-sick-pay/" rel="nofollow external">How to to get sick pay</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/work/sick-leave-and-sick-pay/getting-sick-pay-when-youre-pregnant/" rel="nofollow external">Getting sick pay if you’re pregnant</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/work/sick-leave-and-sick-pay/if-your-employer-refuses-to-pay-you-sick-pay/" rel="nofollow external">If your employer refuses to pay you sick pay</a></li>
+      </ul>
+
+      <p class="govuk-body">You can get advice and help from <a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/" rel="nofollow external">Citizens Advice</a> or <a class="govuk-link govuk-link--no-visited-state" href="https://acas.org.uk/" rel="nofollow external">ACAS</a>.</p>
 
       {{ govukPagination({
-        classes:'govuk-!-margin-0',
         next: {
-          labelText: 'Fit notes and sick pay',
-          href: '/fit-note/mainstream-guide/fit-notes-and-sick-pay/'
+          labelText: 'Contact with your employer during sick leave',
+          href: '/fit-note/mainstream-guide/contact-with-your-employer-during-sick-leave/'
         }
       }) }}
 
@@ -77,9 +97,9 @@
       {{ lthcRelatedNavigation({
         title: "Related content",
         links: [
-          { href: '#0', text: 'Statutory Sick Pay guidance and forms for employees and employers' },
-          { href: '#0', text: 'Statutory Sick Pay (SSP)' },
-          { href: '#0', text: 'Send your fit note for your ESA claim' }
+          { href: 'https://gov.uk/government/collections/statutory-sick-pay-and-leave/', text: 'Statutory Sick Pay guidance and forms for employees and employers' },
+          { href: 'https://gov.uk/statutory-sick-pay/', text: 'Statutory Sick Pay (SSP)' },
+          { href: 'https://gov.uk/send-fit-note/', text: 'Send your fit note for your ESA claim' }
         ]
       }) }}
 
