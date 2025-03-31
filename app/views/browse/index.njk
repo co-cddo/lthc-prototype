@@ -4,8 +4,8 @@
 
 {% block beforeContent %}
   {{ govukBackLink({
-    href: "/",
-    text: "Back"
+    href: '/',
+    text: 'Back'
   }) }}
 {% endblock %}
 
@@ -19,56 +19,84 @@
 
       <p class="govuk-body govuk-!-margin-bottom-7">Select a page to review.</p>
 
-      <h2 class="govuk-heading-l">Stretch prototype</h2>
+      <h2 class="govuk-heading-l">Stretch</h2>
+
+      <h3 class="govuk-heading-m">Version 2</h3>
+
+      <ul class="govuk-list govuk-list--spaced">
+        <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/">Home</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/currently-getting/">What you currently get</a>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/currently-getting/ESA-2025-001234/">Employement and Support Allowance</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/currently-getting/PIP-2025-001234/">Personal Independence Payment</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/currently-getting/NHS-2025-001234/">Free NHS prescriptions</a></li>
+          </ul>
+        </li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/entitled-to/">You’re entitled to</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/applications/">Applications in progress</a>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/applications/UC-2025-001234/">Universal Credit</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/applications/ATW-2025-001234/">Access to Work</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/applications/DFG-2025-001234/">Disability Facilities Grant</a></li>
+          </ul>
+        </li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/applications/actions-you-need-to-take/">Actions you need to take</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/applications/your-activity-log/">Your activity log</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/applications/previous-applications/">Previous applications</a>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/applications/previous-applications/BB-2022-004567/">Blue Badge</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/applications/previous-applications/DLA-2021-002345/">Disability Living Allowance</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/v2/applications/previous-applications/ATW-2023-007890/">Access to Work</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3 class="govuk-heading-m">Version 1</h3>
 
       <ul class="govuk-list govuk-list--spaced">
         <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/">Home</a></li>
-        <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/your-applications/">Your applications</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/your-applications/">Your applications</a>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/your-applications/ESA-2025-001234/">Employment and Support Allowance</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/your-applications/UC-2025-001234/">Universal Credit</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/your-applications/BB-2025-001234/">Blue Badge</a></li>
+          </ul>
+        </li>
         <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/your-timeline/">Your timeline</a></li>
-      </ul>
-
-      <h3 class="govuk-heading-m">Support applications</h3>
-
-      <ul class="govuk-list govuk-list--spaced">
-        <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/your-applications/ESA-2025-001234/">Employment and Support Allowance</a></li>
-        <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/your-applications/UC-2025-001234/">Universal Credit</a></li>
-        <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/your-applications/BB-2025-001234/">Blue Badge</a></li>
-      </ul>
-
-      <h3 class="govuk-heading-m">Consent to share</h3>
-
-      <ul class="govuk-list govuk-list--spaced">
         <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/consent/v1">Consent to check what support you can get</a></li>
         <li><a class="govuk-link govuk-link--no-visited-state" href="/stretch/consent/v2">Give consent to share your information</a></li>
       </ul>
 
       <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-      <h2 class="govuk-heading-l">Fit note prototype</h2>
+      <h2 class="govuk-heading-l">Fit Note</h2>
 
       <ul class="govuk-list govuk-list--spaced">
         <li><a class="govuk-link govuk-link--no-visited-state" href="/fit-note/">Browse</a></li>
         <li><a class="govuk-link govuk-link--no-visited-state" href="/fit-note/v2/">Accordion</a></li>
         <li><a class="govuk-link govuk-link--no-visited-state" href="/fit-note/v3/">Step by step</a></li>
         <li><a class="govuk-link govuk-link--no-visited-state" href="/fit-note/v4/">Accordion, no excerpts, includes charities and retraining</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="/fit-note/mainstream-guide/">Mainstream guide</a></li>
       </ul>
 
       <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-      <h2 class="govuk-heading-l">Access to Work prototype</h2>
+      <h2 class="govuk-heading-l">Access to Work</h2>
 
       <ul class="govuk-list govuk-list--spaced">
         <li><a class="govuk-link govuk-link--no-visited-state" href="/access-to-work/">Application complete</a></li>
         <li><a class="govuk-link govuk-link--no-visited-state" href="/access-to-work/support/">Support (accordion)</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="/access-to-work/mainstream-guide/">Mainstream guide</a></li>
       </ul>
 
       <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-      <h2 class="govuk-heading-l">Universal Credit prototype</h2>
+      <h2 class="govuk-heading-l">Universal Credit</h2>
 
       <ul class="govuk-list govuk-list--spaced">
         <li><a class="govuk-link govuk-link--no-visited-state" href="/universal-credit/">You’ve signed out of your Universal Credit account</a></li>
         <li><a class="govuk-link govuk-link--no-visited-state" href="/universal-credit/support/">Support (accordion)</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="/universal-credit/mainstream-guide/">Mainstream guide</a></li>
       </ul>
 
       <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
