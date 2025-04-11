@@ -385,3 +385,24 @@ router.use('/universal-credit/mainstream-guide/', (req, res, next) => {
   ];
   next();
 });
+
+
+// --------------------------------------------------------
+// PERSONAL INDEPENDENCE PAYMENT
+// --------------------------------------------------------
+
+router.use('/personal-independence-payment', (req, res, next) => {
+  res.locals.headerType = 'signedout';
+  next();
+});
+
+
+// Mainstream guide version
+
+router.use('/personal-independence-payment/mainstream-guide/', (req, res, next) => {
+  res.locals.breadcrumbs = [
+    { text: 'Home', href: '#0' },
+    { text: 'Benefits', href: '#0' }
+  ];
+  next();
+});

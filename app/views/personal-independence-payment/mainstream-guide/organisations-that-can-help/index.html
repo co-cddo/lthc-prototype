@@ -1,0 +1,102 @@
+{% extends "layouts/mainstream-guide.njk" %}
+
+{% block pageTitle %}Get help if you receive a Personal Independence Payment (PIP) - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Get help if you receive a Personal Independence Payment (PIP)</h1>
+
+      <aside class="govuk-part-navigation-container" role="complementary">
+        {{ lthcContentsList({
+          items: [
+            {
+              href: '/personal-independence-payment/mainstream-guide/',
+              text: 'Help with day-to-day living'
+            },
+            {
+              href: '/personal-independence-payment/mainstream-guide/benefits-and-financial-help/',
+              text: 'Benefits and financial help'
+            },
+            {
+              href: '/personal-independence-payment/mainstream-guide/support-with-your-health-and-wellbeing/',
+              text: 'Support with your health and wellbeing'
+            },
+            {
+              href: '/personal-independence-payment/mainstream-guide/help-with-work/',
+              text: 'Help with work'
+            },
+            {
+              href: '/personal-independence-payment/mainstream-guide/organisations-that-can-help/',
+              text: 'Organisations that can help',
+              active: true
+            }
+          ]
+        }) }}
+      </aside>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6">
+
+      <h2 class="govuk-heading-l">Organisations that can help</h2>
+
+      <p class="govuk-body">You can get free, independent advice from:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/">Citizens Advice</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://scope.org.uk/">Scope</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://disabilityrightsuk.org/">Disability Rights UK</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://turn2us.org.uk/">Turn2us</a> (financial help)</li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://acas.org.uk/">ACAS</a> (problems at work)</li>
+      </ul>
+
+      {{ govukPagination({
+        previous: {
+          labelText: 'Help with work',
+          href: '/personal-independence-payment/mainstream-guide/help-with-work/'
+        }
+      }) }}
+
+      <div class="govuk-!-padding-bottom-6">
+        <p class="govuk-body">
+          <a class="govuk-link govuk-link--no-visited-state" href="#0">View a printable version of the whole guide</a>
+        </p>
+      </div>
+
+      {{ lthcContextualFooter({
+        title: 'Explore the topic',
+        links: [
+          { href: 'https://gov.uk/financial-help-disabled/', text: 'Benefits and financial support if you’re disabled or have a health condition' },
+          { href: 'https://gov.uk/apply-blue-badge/', text: 'How to get a Blue Badge' },
+          { href: 'https://gov.uk/transport-disabled/', text: 'Help with transport if you’re disabled' },
+          { href: 'https://gov.uk/reasonable-adjustments-for-disabled-workers/', text: 'Reasonable adjustments at work' },
+          { href: 'https://gov.uk/rights-disabled-person/', text: 'Disability rights' }
+        ]
+      }) }}
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      {{ lthcRelatedNavigation({
+        title: "Related content",
+        links: [
+          { href: '#0', text: 'Link' },
+          { href: '#0', text: 'Link' },
+          { href: '#0', text: 'Link' }
+        ]
+      }) }}
+
+    </div>
+
+  </div>
+
+{% endblock %}
