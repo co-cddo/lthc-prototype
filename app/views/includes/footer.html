@@ -20,7 +20,17 @@
 
 {% elif (headerType == 'pilot')  %}
 
-  {{ govukFooter() }}
+  {{ govukFooter({
+    meta: {
+      html: '<p class="govuk-body-s">This is not a live service. It is a prototype used for research and testing only.<br>It is confidential and not for public sharing.</p>',
+      items: [
+        {
+          href: '#0',
+          text: 'Share your feedback'
+        }
+      ]
+    }
+  }) }}
 
 {% else %}
 
