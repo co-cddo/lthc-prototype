@@ -1,0 +1,22 @@
+{% extends "layouts/base.html" %}
+
+{% block main %}
+
+  <div class="govuk-width-container">
+    {{ govukPhaseBanner({
+      tag: {
+        text: 'Prototype'
+      },
+      html: 'This is a prototype. Help us improve it and <a class="govuk-link govuk-link--no-visited-state" href="#0">give your feedback by email</a>.'
+    }) }}
+  </div>
+
+  <main class="govuk-main-wrapper" id="main-content" role="main">
+
+    <div class="govuk-width-container">
+      {% block content %}{% endblock %}
+    </div>
+
+  </main>
+
+{% endblock %}

@@ -1,0 +1,145 @@
+{% extends "layouts/pilot.njk" %}
+
+{% block pageTitle %}Get help if you’re taking time off work due to a health condition - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Get help if you’re taking time off work due to a health condition</h1>
+
+      <aside class="govuk-part-navigation-container" role="complementary">
+       {{ lthcContentsList({
+          items: [
+            {
+              href: '/fit-note/pilot/',
+              text: 'Fit notes and sick pay'
+            },
+            {
+              href: '/fit-note/pilot/contact-with-your-employer-during-sick-leave/',
+              text: 'Contact with your employer during sick leave'
+            },
+            {
+              href: '/fit-note/pilot/benefits-and-other-financial-help/',
+              text: 'Benefits and other financial help'
+            },
+            {
+              href: '/fit-note/pilot/health-support/',
+              text: 'Health support'
+            },
+            {
+              href: '/fit-note/pilot/preparing-to-return-to-work/',
+              text: 'Preparing to return to work'
+            },
+            {
+              href: '/fit-note/pilot/when-youre-back-at-work/',
+              text: 'When you’re back at work'
+            },
+            {
+              href: '/fit-note/pilot/if-you-cannot-return-or-your-employer-wants-to-dismiss-you/',
+              text: 'If you cannot return or your employer wants to dismiss you',
+              active: true
+            }
+          ]
+        }) }}
+      </aside>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6">
+
+      <h2 class="govuk-heading-l">If you cannot return or your employer wants to dismiss you</h2>
+
+      <p class="govuk-body">It may not be possible to continue doing the same job as before.</p>
+
+      <p class="govuk-body">Depending on your employer, some options could be:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a class="govuk-link govuk-link--no-visited-state" href="#retraining">retraining</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://moneyhelper.org.uk/en/pensions-and-retirement/taking-your-pension/early-retirement-because-of-illness-sickness-or-disability/" rel="nofollow external">ill-heath retirement</a></li>
+        <li>voluntary redundancy</li>
+      </ul>
+
+      <p class="govuk-body">You employer could potentially dismiss you if you have an ongoing or long-term illness that makes it impossible to do your job.</p>
+
+      <p class="govuk-body">But before this, your employer must:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>consider how to support you, for example, check whether your job itself is making you ill and make changes</li>
+        <li>make any reasonable adjustments so that you’re not disadvantaged</li>
+        <li>give you reasonable time to recover from illness</li>
+      </ul>
+
+      <p class="govuk-body">Your employer has a legal duty to <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/rights-disabled-person/employment/">support disability (which includes long-term sickness) in the workplace</a>.</p>
+
+      <p class="govuk-body">Dismissal because of a disability may be unlawful discrimination.</p>
+
+      <p class="govuk-body">Your long term condition might count as a disability and, if so, you might be able to argue discrimination.</p>
+
+      <h3 class="govuk-heading-m" id="get-help-and-legal-advice">Get help and legal advice</h3>
+
+      <p class="govuk-body">If your employer is not supporting you, you can get advice and help.</p>
+
+      <p class="govuk-body">For example, if you’re in a <a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/join-trade-union/">trade union</a>, they can represent you when talking to your employer.</p>
+
+      <p class="govuk-body">There are also other organisations you can contact for free advice:</p>
+
+      <ul class="govuk-list govuk-list--spaced">
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://acas.org.uk/" rel="nofollow external">ACAS</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/" rel="nofollow external">Citizens Advice</a></li>
+      </ul>
+
+      <h4 class="govuk-heading-s" id="more-guidance">More guidance</h4>
+
+      <ul class="govuk-list govuk-list--spaced">
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://acas.org.uk/supporting-disabled-people/how-an-employer-should-support-disabled-people/" rel="nofollow external">What employers should do to support disability or long term health conditions</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://acas.org.uk/reasonable-adjustments/if-an-employer-does-not-make-reasonable-adjustments/" rel="nofollow external">If your employer fails to make reasonable adjustments for you</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/if-you-become-disabled/if-youre-in-employment-and-become-disabled/">What to do if you’re employed and become disabled</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://citizensadvice.org.uk/work/dismissal/check-your-rights-if-youre-dismissed/if-your-employer-wants-to-dismiss-you-because-of-long-term-sickness/" rel="nofollow external">If your employer wants to dismiss you because of health or disability</a></li>
+      </ul>
+
+      <h3 class="govuk-heading-m" id="retraining">Retraining</h3>
+
+      <p class="govuk-body">If you’ve explored all options and you still cannot return to your old job, you could consider retraining.</p>
+
+      <p class="govuk-body">The <a class="govuk-link govuk-link--no-visited-state" href="https://nationalcareers.service.gov.uk/careers-advice/advice-for-if-you-lose-your-job/">National Careers Service</a> offers advice on how to develop your skills, access free online courses and find help getting a job.</p>
+
+      {{ govukPagination({
+        previous: {
+          labelText: 'When you’re back at work',
+          href: '/fit-note/pilot/when-youre-back-at-work/'
+        }
+      }) }}
+
+      {{ lthcContextualFooter({
+        title: 'Explore the topic',
+        links: [
+          { href: 'https://gov.uk/browse/benefits/disability/', text: 'Benefits and financial support if you’re disabled or have a health condition' },
+          { href: 'https://gov.uk/financial-help-disabled/', text: 'Benefits and financial help' }
+        ]
+      }) }}
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      {{ lthcRelatedNavigation({
+        title: "Related content",
+        links: [
+          { href: 'https://gov.uk/government/collections/statutory-sick-pay-and-leave/', text: 'Statutory Sick Pay guidance and forms for employees and employers' },
+          { href: 'https://gov.uk/statutory-sick-pay/', text: 'Statutory Sick Pay (SSP)' },
+          { href: 'https://gov.uk/send-fit-note/', text: 'Send your fit note for your ESA claim' }
+        ]
+      }) }}
+
+    </div>
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,119 @@
+{% extends "layouts/pilot.njk" %}
+
+{% block pageTitle %}Get help if you’re taking time off work due to a health condition - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Get help if you’re taking time off work due to a health condition</h1>
+
+      <aside class="govuk-part-navigation-container" role="complementary">
+        {{ lthcContentsList({
+          items: [
+            {
+              href: '/fit-note/pilot/',
+              text: 'Fit notes and sick pay'
+            },
+            {
+              href: '/fit-note/pilot/contact-with-your-employer-during-sick-leave/',
+              text: 'Contact with your employer during sick leave'
+            },
+            {
+              href: '/fit-note/pilot/benefits-and-other-financial-help/',
+              text: 'Benefits and other financial help'
+            },
+            {
+              href: '/fit-note/pilot/health-support/',
+              text: 'Health support',
+              active: true
+            },
+            {
+              href: '/fit-note/pilot/preparing-to-return-to-work/',
+              text: 'Preparing to return to work'
+            },
+            {
+              href: '/fit-note/pilot/when-youre-back-at-work/',
+              text: 'When you’re back at work'
+            },
+            {
+              href: '/fit-note/pilot/if-you-cannot-return-or-your-employer-wants-to-dismiss-you/',
+              text: 'If you cannot return or your employer wants to dismiss you'
+            }
+          ]
+        }) }}
+      </aside>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6">
+
+      <h2 class="govuk-heading-l">Health support</h2>
+
+      <p class="govuk-body">Talk with your healthcare professional about support you can get for your condition.</p>
+
+      <p class="govuk-body">You might qualify for a <a class="govuk-link govuk-link--no-visited-state" href="https://nhs.uk/nhs-services/help-with-health-costs/what-is-a-personal-health-budget/" rel="nofollow external">personal health budget</a> from the NHS to support you with treatment, equipment and personal care.</p>
+
+      <p class="govuk-body">If you’re eligible for it, an NHS local team will work with you to plan how to spend the money on your care.</p>
+
+      <h3 class="govuk-heading-m">Help with specific conditions</h3>
+
+      <ul class="govuk-list govuk-list--spaced">
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://rcseng.ac.uk/patient-care/recovering-from-surgery/" rel="nofollow external">Recovering from surgery</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://action-on-pain.co.uk/" rel="nofollow external">Help with managing pain</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://nhs.uk/mental-health/advice-for-life-situations-and-events/return-to-work-after-mental-health-issues/" rel="nofollow external">Returning to work after mental health issues</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://nhs.uk/nhs-services/mental-health-services/find-nhs-talking-therapies-for-anxiety-and-depression/" rel="nofollow external">Find NHS talking therapies for anxiety and depression</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://macmillan.org.uk/cancer-information-and-support/impacts-of-cancer/work-and-cancer/" rel="nofollow external">Work and cancer</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://csp.org.uk/documents/making-reasonable-adjustments/" rel="nofollow external">Reasonable-adjustments advice from Chartered Society of Physiotherapy</a></li>
+      </ul>
+
+      <h3 class="govuk-heading-m">Groups and charities who support people with health conditions</h3>
+
+      <ul class="govuk-list govuk-list--spaced">
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://gov.uk/find-a-community-support-group-or-organisation/">Find a support group near you</a></li>
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://aboutmyhealth.org/patient-charities-list.php/" rel="nofollow external">List of charities who help with specific conditions</a></li>
+      </ul>
+
+      {{ govukPagination({
+        previous: {
+          labelText: 'Benefits and other financial help',
+          href: '/fit-note/pilot/benefits-and-other-financial-help/'
+        },
+        next: {
+          labelText: 'Preparing to return to work',
+          href: '/fit-note/pilot/preparing-to-return-to-work/'
+        }
+      }) }}
+
+      {{ lthcContextualFooter({
+        title: 'Explore the topic',
+        links: [
+          { href: 'https://gov.uk/browse/benefits/disability/', text: 'Benefits and financial support if you’re disabled or have a health condition' },
+          { href: 'https://gov.uk/financial-help-disabled/', text: 'Benefits and financial help' }
+        ]
+      }) }}
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      {{ lthcRelatedNavigation({
+        title: "Related content",
+        links: [
+          { href: 'https://gov.uk/government/collections/statutory-sick-pay-and-leave/', text: 'Statutory Sick Pay guidance and forms for employees and employers' },
+          { href: 'https://gov.uk/statutory-sick-pay/', text: 'Statutory Sick Pay (SSP)' },
+          { href: 'https://gov.uk/send-fit-note/', text: 'Send your fit note for your ESA claim' }
+        ]
+      }) }}
+
+    </div>
+
+  </div>
+
+{% endblock %}

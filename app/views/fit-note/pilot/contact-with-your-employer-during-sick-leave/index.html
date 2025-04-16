@@ -1,0 +1,107 @@
+{% extends "layouts/pilot.njk" %}
+
+{% block pageTitle %}Get help if you’re taking time off work due to a health condition - GOV.UK{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Get help if you’re taking time off work due to a health condition</h1>
+
+      <aside class="govuk-part-navigation-container" role="complementary">
+        {{ lthcContentsList({
+          items: [
+            {
+              href: '/fit-note/pilot/',
+              text: 'Fit notes and sick pay'
+            },
+            {
+              href: '/fit-note/pilot/contact-with-your-employer-during-sick-leave/',
+              text: 'Contact with your employer during sick leave',
+              active: true
+            },
+            {
+              href: '/fit-note/pilot/benefits-and-other-financial-help/',
+              text: 'Benefits and other financial help'
+            },
+            {
+              href: '/fit-note/pilot/health-support/',
+              text: 'Health support'
+            },
+            {
+              href: '/fit-note/pilot/preparing-to-return-to-work/',
+              text: 'Preparing to return to work'
+            },
+            {
+              href: '/fit-note/pilot/when-youre-back-at-work/',
+              text: 'When you’re back at work'
+            },
+            {
+              href: '/fit-note/pilot/if-you-cannot-return-or-your-employer-wants-to-dismiss-you/',
+              text: 'If you cannot return or your employer wants to dismiss you'
+            }
+          ]
+        }) }}
+      </aside>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6">
+
+      <h2 class="govuk-heading-l">Contact with your employer during sick leave</h2>
+
+      <p class="govuk-body">Employers can contact you during sick leave but the amount of contact should be reasonable.</p>
+
+      <p class="govuk-body">You do not have to tell them private and confidential information, if you do not want to.</p>
+
+      <p class="govuk-body">Agree what’s appropriate between you. If the contact is too overwhelming for you, you can say that.</p>
+
+      <p class="govuk-body">You could also have a friend of family member who liaises with your employer on your behalf instead.</p>
+
+      <ul class="govuk-list govuk-list--spaced">
+        <li><a class="govuk-link govuk-link--no-visited-state" href="https://acas.org.uk/keeping-in-touch-during-absence/" rel="nofollow external">Keeping in touch during absence</a></li>
+      </ul>
+
+      {{ govukPagination({
+        previous: {
+          labelText: 'Fit notes and sick pay',
+          href: '/fit-note/pilot/fit-notes-and-sick-pay/'
+        },
+        next: {
+          labelText: 'Benefits and other financial help',
+          href: '/fit-note/pilot/benefits-and-other-financial-help/'
+        }
+      }) }}
+
+      {{ lthcContextualFooter({
+        title: 'Explore the topic',
+        links: [
+          { href: 'https://gov.uk/browse/benefits/disability/', text: 'Benefits and financial support if you’re disabled or have a health condition' },
+          { href: 'https://gov.uk/financial-help-disabled/', text: 'Benefits and financial help' }
+        ]
+      }) }}
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      {{ lthcRelatedNavigation({
+        title: "Related content",
+        links: [
+          { href: 'https://gov.uk/government/collections/statutory-sick-pay-and-leave/', text: 'Statutory Sick Pay guidance and forms for employees and employers' },
+          { href: 'https://gov.uk/statutory-sick-pay/', text: 'Statutory Sick Pay (SSP)' },
+          { href: 'https://gov.uk/send-fit-note/', text: 'Send your fit note for your ESA claim' }
+        ]
+      }) }}
+
+    </div>
+
+  </div>
+
+{% endblock %}

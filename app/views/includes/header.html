@@ -81,6 +81,12 @@
     serviceUrl: serviceUrl if serviceUrl
   }) }}
 
+{% elif headerType == 'pilot' %}
+
+  {{ govukHeader({
+    homepageUrl: homepageUrl
+  }) }}
+
 {% else %}
 
   {{ govukHeader({

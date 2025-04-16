@@ -18,6 +18,10 @@
 
   {% endif %}
 
+{% elif (headerType == 'pilot')  %}
+
+  {{ govukFooter() }}
+
 {% else %}
 
   {% include "includes/feedback.html" ignore missing %}

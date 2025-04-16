@@ -324,6 +324,14 @@ router.use('/fit-note/mainstream-guide/', (req, res, next) => {
 });
 
 
+// Mainstream pilot version
+
+router.use('/fit-note/pilot/', (req, res, next) => {
+  res.locals.headerType = 'pilot';
+  next();
+});
+
+
 
 // --------------------------------------------------------
 // ACCESS TO WORK
